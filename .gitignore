@@ -1,0 +1,198 @@
+# Cascadia AI Systems Lab - Git Ignore
+
+# Lab metadata and runtime state
+.lab/cache/
+.lab/tmp/
+.lab/state/
+
+# Experiment outputs and artifacts
+experiments/**/data/
+experiments/**/outputs/
+experiments/**/logs/
+experiments/**/*.log
+
+# Large files and datasets
+*.tar.gz
+*.zip
+*.tar
+*.7z
+*.bin
+*.safetensors
+*.gguf
+*.ckpt
+*.pt
+*.pth
+
+# Model files and weights
+models/
+*.model
+*.weights
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Secrets and credentials
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+*.env
+.env*
+secrets.yml
+secrets.yaml
+credentials.json
+service-account.json
+
+# SSH keys
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Ansible
+*.retry
+
+# Docker
+*.dockerignore
+
+# Logs
+*.log
+logs/
+*.out
+*.err
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.cache
+
+# OS files
+Thumbs.db
+.DS_Store
+*.bak
+*.orig
+
+# Backup files
+*.backup
+*.bkp
+*~
+
+# Data directories (typically gitignored)
+data/raw/
+data/processed/
+data/cache/
+
+# Output directories
+outputs/
+results/
+artifacts/
+
+# Monitoring data
+prometheus-data/
+grafana-data/
+loki-data/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Compiled files
+*.o
+*.a
+*.exe
+*.dll
+
+# CUDA cache
+.nv/
+
+# Research papers (often large PDFs)
+research/papers/*.pdf
+
+# Large benchmark data
+benchmarks/data/
+benchmarks/results/*.json
+
+# System monitoring dumps
+*.dump
+*.core
+
+# Config overrides (keep templates, ignore local overrides)
+*local.yml
+*local.yaml
+*local.conf
+
+# Keep template files
+!*.template
+!TEMPLATE.md
+
+# Keep README files
+!README.md
+!**/README.md
+
+# Astro build artifacts
+dist/
+.astro/
+node_modules/
+
+# TypeScript
+*.tsbuildinfo
+
+# npm/yarn/pnpm
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.npm
+.yarn
+
+# Astro dev server
+.astro/

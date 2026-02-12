@@ -1,0 +1,193 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Cascadia AI Systems Lab">
+  <!-- Hero Section -->
+  <section class="section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl text-center">
+        <h1 class="mb-6 text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
+          <span class="text-gradient">Cascadia AI Systems Lab</span>
+        </h1>
+        <p class="mb-8 text-xl text-text-secondary sm:text-2xl">
+          Independent AI Infrastructure Research & Development Environment
+        </p>
+        <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a href="/research" class="btn btn-primary">
+            View Research
+          </a>
+          <a href="/infrastructure" class="btn btn-secondary">
+            Explore Infrastructure
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="mb-6 text-center text-3xl font-bold sm:text-4xl">Mission</h2>
+        <p class="mb-4 text-center text-xl text-accent-blue">
+          Build practical, self-hosted AI infrastructure that works.
+        </p>
+        <p class="text-center text-lg text-text-secondary">
+          Cascadia AI Systems Lab is a long-term infrastructure laboratory focused on designing,
+          building, and operating practical AI systems at the intersection of GPU computing, data
+          engineering, and modern infrastructure.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Focus Areas -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">Core Focus Areas</h2>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="card card-hover">
+          <div class="mb-4 text-4xl">🔧</div>
+          <h3 class="mb-2 text-xl font-semibold">Infrastructure Design</h3>
+          <p class="text-sm text-text-secondary">
+            AI infrastructure patterns for GPU workloads, model serving, and data processing
+          </p>
+        </div>
+
+        <div class="card card-hover">
+          <div class="mb-4 text-4xl">💾</div>
+          <h3 class="mb-2 text-xl font-semibold">Storage Architecture</h3>
+          <p class="text-sm text-text-secondary">
+            Optimized storage systems for AI/ML data patterns and distributed filesystems
+          </p>
+        </div>
+
+        <div class="card card-hover">
+          <div class="mb-4 text-4xl">⚡</div>
+          <h3 class="mb-2 text-xl font-semibold">Performance</h3>
+          <p class="text-sm text-text-secondary">
+            Real-world performance characteristics of hardware and architectural decisions
+          </p>
+        </div>
+
+        <div class="card card-hover">
+          <div class="mb-4 text-4xl">🔬</div>
+          <h3 class="mb-2 text-xl font-semibold">Experimentation</h3>
+          <p class="text-sm text-text-secondary">
+            Hands-on research with GPU optimization, model serving, and cluster computing
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Build -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">What We Build</h2>
+      <div class="grid gap-8 lg:grid-cols-3">
+        <div>
+          <h3 class="mb-4 text-xl font-semibold text-accent-blue">Experiments</h3>
+          <ul class="space-y-2 text-text-secondary">
+            <li>• GPU acceleration and CUDA optimization</li>
+            <li>• Model serving architectures (vLLM, Triton)</li>
+            <li>• Data pipeline design and orchestration</li>
+            <li>• Storage systems and filesystem benchmarking</li>
+            <li>• Virtualization and containerization strategies</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="mb-4 text-xl font-semibold text-accent-cyan">Infrastructure</h3>
+          <ul class="space-y-2 text-text-secondary">
+            <li>• System provisioning and configuration management</li>
+            <li>• Monitoring, observability, and alerting</li>
+            <li>• Cluster orchestration and resource scheduling</li>
+            <li>• Network topology and performance tuning</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="mb-4 text-xl font-semibold text-accent-green">Tooling</h3>
+          <ul class="space-y-2 text-text-secondary">
+            <li>• Diagnostic and debugging tools</li>
+            <li>• Performance benchmarking suites</li>
+            <li>• Deployment and lifecycle management scripts</li>
+            <li>• Custom utilities for lab operations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-center text-3xl font-bold sm:text-4xl">
+          How This Differs from a Software Project
+        </h2>
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
+            <h3 class="mb-3 font-semibold text-accent-blue">Infrastructure-First</h3>
+            <p class="text-sm text-text-secondary">
+              The primary artifact is not code, but running systems and operational knowledge
+            </p>
+          </div>
+
+          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
+            <h3 class="mb-3 font-semibold text-accent-cyan">Experiment-Driven</h3>
+            <p class="text-sm text-text-secondary">
+              Many experiments may fail or be abandoned—that's expected and valuable
+            </p>
+          </div>
+
+          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
+            <h3 class="mb-3 font-semibold text-accent-green">Hardware-Aware</h3>
+            <p class="text-sm text-text-secondary">
+              Decisions are made in the context of specific physical infrastructure
+            </p>
+          </div>
+
+          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
+            <h3 class="mb-3 font-semibold text-accent-purple">Documentation-Heavy</h3>
+            <p class="text-sm text-text-secondary">
+              Writing down what was learned is as important as building the system
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Status -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="mb-6 text-3xl font-bold sm:text-4xl">Current Status</h2>
+        <div class="mb-8 inline-flex items-center rounded-full border border-accent-green/30 bg-accent-green/10 px-4 py-2">
+          <span class="mr-2 h-2 w-2 rounded-full bg-accent-green"></span>
+          <span class="text-sm font-medium text-accent-green">Phase: Foundation</span>
+        </div>
+        <p class="mb-8 text-text-secondary">
+          This lab is in active development. Expect frequent changes to structure, tooling, and
+          documentation as the infrastructure matures.
+        </p>
+        <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a href="/about" class="btn btn-primary">
+            Learn More About the Lab
+          </a>
+          <a
+            href="https://github.com/cascadia-ai-lab"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary"
+          >
+            View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,349 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Infrastructure"
+  description="Hardware inventory, system architecture, and infrastructure components of Cascadia AI Systems Lab"
+>
+  <!-- Hero -->
+  <section class="section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
+    <div class="container-custom">
+      <div class="mx-auto max-w-3xl text-center">
+        <h1 class="mb-6 text-4xl font-bold tracking-tight sm:text-5xl">Infrastructure</h1>
+        <p class="text-lg text-text-secondary">
+          Physical hardware, system architecture, and core infrastructure components powering AI
+          research and experimentation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hardware Overview -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <h2 class="mb-8 text-3xl font-bold">Hardware Inventory</h2>
+
+      <div class="mb-12 rounded-lg border border-accent-blue/30 bg-accent-blue/5 p-6">
+        <div class="flex items-start">
+          <svg
+            class="mr-3 mt-0.5 h-5 w-5 flex-shrink-0 text-accent-blue"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <div>
+            <p class="mb-2 font-medium text-text-primary">Hardware specifications are documented in detail</p>
+            <p class="text-sm text-text-secondary">
+              For complete hardware inventory, specifications, and performance profiles, see the
+              <a
+                href="https://github.com/cascadia-ai-lab/cascadia-ai-lab.github.io/blob/main/docs/hardware/INVENTORY.md"
+                class="link"
+              >
+                Hardware Inventory documentation
+              </a>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-2">
+        <!-- Compute -->
+        <div class="card">
+          <div class="mb-4 flex items-center">
+            <div class="mr-3 text-3xl">⚡</div>
+            <h3 class="text-xl font-semibold">Compute Infrastructure</h3>
+          </div>
+          <div class="space-y-3 text-sm text-text-secondary">
+            <div class="flex justify-between border-b border-dark-border pb-2">
+              <span>GPU Acceleration</span>
+              <span class="font-mono text-text-primary">NVIDIA GPUs</span>
+            </div>
+            <div class="flex justify-between border-b border-dark-border pb-2">
+              <span>Primary Workloads</span>
+              <span class="font-mono text-text-primary">LLM Inference</span>
+            </div>
+            <div class="flex justify-between border-b border-dark-border pb-2">
+              <span>Orchestration</span>
+              <span class="font-mono text-text-primary">Container-based</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Focus</span>
+              <span class="font-mono text-text-primary">Self-hosted AI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Storage -->
+        <div class="card">
+          <div class="mb-4 flex items-center">
+            <div class="mr-3 text-3xl">💾</div>
+            <h3 class="text-xl font-semibold">Storage Architecture</h3>
+          </div>
+          <div class="space-y-3 text-sm text-text-secondary">
+            <div class="flex justify-between border-b border-dark-border pb-2">
+              <span>Hot Tier</span>
+              <span class="font-mono text-text-primary">NVMe SSD</span>
+            </div>
+            <div class="flex justify-between border-b border-dark-border pb-2">
+              <span>Warm/Cold Tier</span>
+              <span class="font-mono text-text-primary">HDD Arrays</span>
+            </div>
+            <div class="flex justify-between border-b border-dark-border pb-2">
+              <span>Use Cases</span>
+              <span class="font-mono text-text-primary">Model weights, datasets</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Strategy</span>
+              <span class="font-mono text-text-primary">Tiered storage</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Network -->
+        <div class="card">
+          <div class="mb-4 flex items-center">
+            <div class="mr-3 text-3xl">🌐</div>
+            <h3 class="text-xl font-semibold">Network Topology</h3>
+          </div>
+          <div class="space-y-3 text-sm text-text-secondary">
+            <div class="flex justify-between border-b border-dark-border pb-2">
+              <span>Internal Network</span>
+              <span class="font-mono text-text-primary">10GbE+</span>
+            </div>
+            <div class="flex justify-between border-b border-dark-border pb-2">
+              <span>Design Goal</span>
+              <span class="font-mono text-text-primary">Low latency</span>
+            </div>
+            <div class="flex justify-between border-b border-dark-border pb-2">
+              <span>Future Expansion</span>
+              <span class="font-mono text-text-primary">Multi-node clusters</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Optimization</span>
+              <span class="font-mono text-text-primary">Distributed workloads</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Monitoring -->
+        <div class="card">
+          <div class="mb-4 flex items-center">
+            <div class="mr-3 text-3xl">📊</div>
+            <h3 class="text-xl font-semibold">Observability Stack</h3>
+          </div>
+          <div class="space-y-3 text-sm text-text-secondary">
+            <div class="flex justify-between border-b border-dark-border pb-2">
+              <span>Metrics</span>
+              <span class="font-mono text-text-primary">Prometheus</span>
+            </div>
+            <div class="flex justify-between border-b border-dark-border pb-2">
+              <span>Visualization</span>
+              <span class="font-mono text-text-primary">Grafana</span>
+            </div>
+            <div class="flex justify-between border-b border-dark-border pb-2">
+              <span>GPU Monitoring</span>
+              <span class="font-mono text-text-primary">DCGM/nvtop</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Logs</span>
+              <span class="font-mono text-text-primary">Loki/structured</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- System Architecture -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <h2 class="mb-8 text-3xl font-bold">System Architecture</h2>
+
+      <div class="grid gap-8 lg:grid-cols-2">
+        <div>
+          <h3 class="mb-4 text-xl font-semibold text-accent-blue">Infrastructure Layers</h3>
+          <div class="space-y-3">
+            <div class="card">
+              <h4 class="mb-2 font-semibold text-text-primary">Hardware Layer</h4>
+              <p class="text-sm text-text-secondary">
+                Physical servers, GPUs, storage arrays, networking equipment
+              </p>
+            </div>
+            <div class="card">
+              <h4 class="mb-2 font-semibold text-text-primary">Virtualization Layer</h4>
+              <p class="text-sm text-text-secondary">
+                GPU passthrough, resource isolation, containerization (Docker/Podman)
+              </p>
+            </div>
+            <div class="card">
+              <h4 class="mb-2 font-semibold text-text-primary">Orchestration Layer</h4>
+              <p class="text-sm text-text-secondary">
+                Workload scheduling, resource management, service deployment
+              </p>
+            </div>
+            <div class="card">
+              <h4 class="mb-2 font-semibold text-text-primary">Application Layer</h4>
+              <p class="text-sm text-text-secondary">
+                Model serving (vLLM, Triton), data pipelines, custom tooling
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="mb-4 text-xl font-semibold text-accent-cyan">Key Technologies</h3>
+          <div class="space-y-3">
+            <div class="card">
+              <h4 class="mb-2 font-semibold text-text-primary">Model Serving</h4>
+              <p class="mb-2 text-sm text-text-secondary">
+                Production-grade LLM inference engines
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">vLLM</span>
+                <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Triton</span>
+                <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">TGI</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h4 class="mb-2 font-semibold text-text-primary">GPU Optimization</h4>
+              <p class="mb-2 text-sm text-text-secondary">
+                CUDA libraries and acceleration frameworks
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">CUDA</span>
+                <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">cuBLAS</span>
+                <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Flash Attention</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h4 class="mb-2 font-semibold text-text-primary">Data Pipeline</h4>
+              <p class="mb-2 text-sm text-text-secondary">
+                Processing and orchestration tools
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Airflow</span>
+                <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">DuckDB</span>
+                <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Parquet</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h4 class="mb-2 font-semibold text-text-primary">Infrastructure as Code</h4>
+              <p class="mb-2 text-sm text-text-secondary">
+                Provisioning and configuration management
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Ansible</span>
+                <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Terraform</span>
+                <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Packer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Projects -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <h2 class="mb-8 text-3xl font-bold">Current Infrastructure Projects</h2>
+
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="card card-hover">
+          <div class="mb-2 flex items-center justify-between">
+            <h3 class="text-lg font-semibold">GPU Baseline Performance</h3>
+            <span class="rounded-full bg-accent-green/20 px-3 py-1 text-xs font-medium text-accent-green">
+              Active
+            </span>
+          </div>
+          <p class="text-sm text-text-secondary">
+            Establishing performance baselines for GPU compute, memory bandwidth, and thermal
+            characteristics under sustained AI workloads.
+          </p>
+        </div>
+
+        <div class="card card-hover">
+          <div class="mb-2 flex items-center justify-between">
+            <h3 class="text-lg font-semibold">Storage Tier Strategy</h3>
+            <span class="rounded-full bg-accent-blue/20 px-3 py-1 text-xs font-medium text-accent-blue">
+              Planning
+            </span>
+          </div>
+          <p class="text-sm text-text-secondary">
+            Designing hot/warm/cold storage tiers optimized for model weights, training datasets,
+            and long-term archival.
+          </p>
+        </div>
+
+        <div class="card card-hover">
+          <div class="mb-2 flex items-center justify-between">
+            <h3 class="text-lg font-semibold">Monitoring Stack</h3>
+            <span class="rounded-full bg-accent-green/20 px-3 py-1 text-xs font-medium text-accent-green">
+              Active
+            </span>
+          </div>
+          <p class="text-sm text-text-secondary">
+            Deploying comprehensive observability for GPU utilization, power consumption, and
+            inference latency.
+          </p>
+        </div>
+
+        <div class="card card-hover">
+          <div class="mb-2 flex items-center justify-between">
+            <h3 class="text-lg font-semibold">Network Optimization</h3>
+            <span class="rounded-full bg-accent-blue/20 px-3 py-1 text-xs font-medium text-accent-blue">
+              Future
+            </span>
+          </div>
+          <p class="text-sm text-text-secondary">
+            Planning network topology for multi-node GPU clusters and distributed inference
+            workloads.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documentation Links -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="mb-6 text-3xl font-bold">Infrastructure Documentation</h2>
+        <p class="mb-8 text-text-secondary">
+          Detailed specifications, architecture decisions, and operational runbooks are maintained
+          in the GitHub repository.
+        </p>
+        <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <a
+            href="https://github.com/cascadia-ai-lab/cascadia-ai-lab.github.io/blob/main/docs/hardware/INVENTORY.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            Hardware Inventory
+          </a>
+          <a
+            href="https://github.com/cascadia-ai-lab/cascadia-ai-lab.github.io/tree/main/infrastructure"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary"
+          >
+            Infrastructure Configs
+          </a>
+          <a href="/documentation" class="btn btn-secondary">
+            All Documentation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

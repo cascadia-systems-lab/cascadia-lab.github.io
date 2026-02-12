@@ -1,0 +1,64 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-dark-border bg-dark-surface">
+  <div class="container-custom py-12">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <!-- About -->
+      <div>
+        <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-text-primary">
+          Cascadia AI Systems Lab
+        </h3>
+        <p class="text-sm text-text-secondary">
+          Independent infrastructure research laboratory focused on practical AI systems,
+          GPU computing, and distributed infrastructure.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-text-primary">
+          Resources
+        </h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="https://github.com/cascadia-ai-lab" class="link">
+              GitHub Organization
+            </a>
+          </li>
+          <li>
+            <a href="/documentation" class="link">
+              Documentation
+            </a>
+          </li>
+          <li>
+            <a href="/research" class="link">
+              Research & Experiments
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact & Status -->
+      <div>
+        <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-text-primary">
+          Status
+        </h3>
+        <div class="space-y-2 text-sm text-text-secondary">
+          <p class="flex items-center">
+            <span class="mr-2 h-2 w-2 rounded-full bg-accent-green"></span>
+            Phase: Foundation
+          </p>
+          <p>Last Updated: {new Date().toISOString().split('T')[0]}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 border-t border-dark-border pt-8 text-center text-sm text-text-muted">
+      <p>
+        &copy; {currentYear} Cascadia AI Systems Lab. Independent research laboratory.
+      </p>
+    </div>
+  </div>
+</footer>

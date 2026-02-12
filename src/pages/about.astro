@@ -1,0 +1,248 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About"
+  description="Learn about the philosophy, principles, and people behind Cascadia AI Systems Lab"
+>
+  <!-- Hero -->
+  <section class="section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
+    <div class="container-custom">
+      <div class="mx-auto max-w-3xl text-center">
+        <h1 class="mb-6 text-4xl font-bold tracking-tight sm:text-5xl">About the Lab</h1>
+        <p class="text-lg text-text-secondary">
+          A research environment built on practical infrastructure principles, hands-on
+          experimentation, and honest documentation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lab Philosophy -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-3xl font-bold">Lab Philosophy</h2>
+
+        <div class="prose-custom space-y-6 text-text-secondary">
+          <div class="card">
+            <h3 class="mb-3 text-xl font-semibold text-text-primary">
+              Build What You Can Run
+            </h3>
+            <p>
+              This lab prioritizes infrastructure that runs on real hardware. No hypothetical
+              systems, no purely theoretical architectures. Every design decision is validated
+              against actual workloads on physical machines.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="mb-3 text-xl font-semibold text-text-primary">
+              Document Failure as Thoroughly as Success
+            </h3>
+            <p>
+              Failed experiments are documented with the same rigor as successful ones. A negative
+              result that prevents future wasted effort is as valuable as a positive breakthrough.
+              We maintain a living knowledge base of what doesn't work and why.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="mb-3 text-xl font-semibold text-text-primary">
+              Infrastructure Before Abstraction
+            </h3>
+            <p>
+              We don't build frameworks for hypothetical use cases. We solve real infrastructure
+              problems, extract patterns that emerge organically, and only then consider
+              generalizing. Premature abstraction is avoided.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="mb-3 text-xl font-semibold text-text-primary">
+              Measure, Don't Assume
+            </h3>
+            <p>
+              Performance characteristics are measured, not estimated. Benchmarks are run on actual
+              hardware. Architectural decisions are backed by empirical data from the lab
+              environment.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="mb-3 text-xl font-semibold text-text-primary">Long-Term Thinking</h3>
+            <p>
+              This is a multi-year research initiative. We optimize for learning and understanding
+              over quick wins. Systems are built to evolve. Documentation is written for future
+              maintainers, including our future selves.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Principles -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-3xl font-bold">Operating Principles</h2>
+
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
+            <div class="mb-3 text-3xl">🎯</div>
+            <h3 class="mb-2 font-semibold text-accent-blue">Focus on Fundamentals</h3>
+            <p class="text-sm text-text-secondary">
+              Deep understanding of GPU compute, storage I/O, network topology, and system
+              architecture before adding complexity.
+            </p>
+          </div>
+
+          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
+            <div class="mb-3 text-3xl">🔄</div>
+            <h3 class="mb-2 font-semibold text-accent-cyan">Iterative Refinement</h3>
+            <p class="text-sm text-text-secondary">
+              Start simple, measure, learn, refine. Each iteration is documented. Systems evolve
+              based on real operational experience.
+            </p>
+          </div>
+
+          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
+            <div class="mb-3 text-3xl">📊</div>
+            <h3 class="mb-2 font-semibold text-accent-green">Data-Driven Decisions</h3>
+            <p class="text-sm text-text-secondary">
+              Infrastructure choices backed by benchmarks, profiling data, and measured performance
+              characteristics.
+            </p>
+          </div>
+
+          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
+            <div class="mb-3 text-3xl">📚</div>
+            <h3 class="mb-2 font-semibold text-accent-purple">Knowledge Preservation</h3>
+            <p class="text-sm text-text-secondary">
+              Comprehensive documentation of decisions, experiments, and operational insights.
+              Context is preserved for future reference.
+            </p>
+          </div>
+
+          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
+            <div class="mb-3 text-3xl">🔧</div>
+            <h3 class="mb-2 font-semibold text-accent-blue">Operational Excellence</h3>
+            <p class="text-sm text-text-secondary">
+              Systems are designed to be operated, monitored, debugged, and maintained—not just
+              built once and forgotten.
+            </p>
+          </div>
+
+          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
+            <div class="mb-3 text-3xl">🌱</div>
+            <h3 class="mb-2 font-semibold text-accent-cyan">Sustainable Complexity</h3>
+            <p class="text-sm text-text-secondary">
+              Only add complexity that can be understood, maintained, and justified by operational
+              requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What This Is Not -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="mb-8 text-3xl font-bold">What This Is Not</h2>
+
+        <div class="space-y-4 text-text-secondary">
+          <div class="card">
+            <p class="mb-2 font-semibold text-text-primary">Not a Product</p>
+            <p class="text-sm">
+              This is a research laboratory, not a software product. There are no roadmaps,
+              releases, or customer commitments.
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="mb-2 font-semibold text-text-primary">Not a Startup</p>
+            <p class="text-sm">
+              No business model, no monetization strategy, no growth metrics. This is independent
+              infrastructure research.
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="mb-2 font-semibold text-text-primary">Not a Cloud Service</p>
+            <p class="text-sm">
+              Everything runs on self-hosted, physical infrastructure. We study systems we can
+              touch, measure, and control.
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="mb-2 font-semibold text-text-primary">Not a Tutorial Site</p>
+            <p class="text-sm">
+              Documentation captures real work and decisions, not step-by-step guides for
+              beginners. We assume technical literacy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintainer -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="mb-8 text-3xl font-bold">Maintainer</h2>
+
+        <div class="card">
+          <p class="mb-4 text-text-secondary">
+            This lab is maintained by an independent infrastructure engineer focused on practical
+            AI systems research. The work emphasizes hands-on experimentation with GPU computing,
+            distributed systems, and storage architecture.
+          </p>
+
+          <p class="mb-4 text-text-secondary">
+            The lab operates as a long-term research environment—measuring, documenting, and
+            iterating on real infrastructure rather than building products or pursuing commercial
+            objectives.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a
+              href="https://github.com/cascadia-ai-lab"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+            >
+              GitHub Organization
+            </a>
+            <a href="/documentation" class="btn btn-secondary">
+              View Documentation
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Collaboration -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="mb-6 text-3xl font-bold">Collaboration</h2>
+        <p class="mb-8 text-text-secondary">
+          This lab is focused on independent research. While collaboration is not actively sought,
+          the work is documented publicly to contribute to the broader infrastructure engineering
+          community.
+        </p>
+        <p class="text-sm text-text-muted">
+          All experiments, decisions, and findings are shared via the GitHub repository and this
+          documentation site.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

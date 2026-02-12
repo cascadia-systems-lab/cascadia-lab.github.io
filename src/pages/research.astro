@@ -1,0 +1,292 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Research"
+  description="Experiments, findings, and research initiatives at Cascadia AI Systems Lab"
+>
+  <!-- Hero -->
+  <section class="section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
+    <div class="container-custom">
+      <div class="mx-auto max-w-3xl text-center">
+        <h1 class="mb-6 text-4xl font-bold tracking-tight sm:text-5xl">Research</h1>
+        <p class="text-lg text-text-secondary">
+          Infrastructure experiments, performance studies, and operational findings from hands-on AI
+          systems work.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Focus -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <h2 class="mb-8 text-3xl font-bold">Research Areas</h2>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="card card-hover">
+          <h3 class="mb-3 text-lg font-semibold text-accent-blue">GPU Infrastructure</h3>
+          <ul class="space-y-2 text-sm text-text-secondary">
+            <li>• CUDA optimization and kernel profiling</li>
+            <li>• GPU utilization patterns under inference loads</li>
+            <li>• Thermal and power characteristics</li>
+            <li>• Multi-GPU communication and scaling</li>
+          </ul>
+        </div>
+
+        <div class="card card-hover">
+          <h3 class="mb-3 text-lg font-semibold text-accent-cyan">Model Serving</h3>
+          <ul class="space-y-2 text-sm text-text-secondary">
+            <li>• vLLM deployment and tuning</li>
+            <li>• Batch size vs. latency trade-offs</li>
+            <li>• Quantization impact on throughput</li>
+            <li>• KV cache optimization strategies</li>
+          </ul>
+        </div>
+
+        <div class="card card-hover">
+          <h3 class="mb-3 text-lg font-semibold text-accent-green">Storage Systems</h3>
+          <ul class="space-y-2 text-sm text-text-secondary">
+            <li>• Model loading performance (NVMe vs HDD)</li>
+            <li>• Dataset I/O patterns</li>
+            <li>• Filesystem benchmarking (ext4, XFS, ZFS)</li>
+            <li>• Storage tiering strategies</li>
+          </ul>
+        </div>
+
+        <div class="card card-hover">
+          <h3 class="mb-3 text-lg font-semibold text-accent-purple">Network Performance</h3>
+          <ul class="space-y-2 text-sm text-text-secondary">
+            <li>• Inference API latency profiling</li>
+            <li>• Network topology for distributed workloads</li>
+            <li>• Bandwidth requirements for model synchronization</li>
+            <li>• Multi-node communication overhead</li>
+          </ul>
+        </div>
+
+        <div class="card card-hover">
+          <h3 class="mb-3 text-lg font-semibold text-accent-blue">Virtualization</h3>
+          <ul class="space-y-2 text-sm text-text-secondary">
+            <li>• GPU passthrough performance</li>
+            <li>• Container vs. bare metal inference</li>
+            <li>• Resource isolation strategies</li>
+            <li>• Overhead measurements</li>
+          </ul>
+        </div>
+
+        <div class="card card-hover">
+          <h3 class="mb-3 text-lg font-semibold text-accent-cyan">Monitoring & Observability</h3>
+          <ul class="space-y-2 text-sm text-text-secondary">
+            <li>• GPU metrics collection (DCGM)</li>
+            <li>• Inference latency tracking</li>
+            <li>• Resource utilization dashboards</li>
+            <li>• Alerting strategies for AI workloads</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Active Experiments -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <h2 class="mb-8 text-3xl font-bold">Active Experiments</h2>
+
+      <div class="space-y-6">
+        <div class="card">
+          <div class="mb-4 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+            <div>
+              <h3 class="mb-1 text-xl font-semibold">GPU Baseline Characterization</h3>
+              <p class="text-sm text-text-muted">Experiment ID: EXP-001 | Started: 2026-02-01</p>
+            </div>
+            <span class="inline-flex w-fit items-center rounded-full bg-accent-green/20 px-3 py-1 text-sm font-medium text-accent-green">
+              Active
+            </span>
+          </div>
+          <p class="mb-4 text-text-secondary">
+            Establishing baseline performance metrics for GPU compute under sustained LLM inference
+            workloads. Measuring throughput, latency, power consumption, and thermal behavior across
+            different model sizes and batch configurations.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">NVIDIA GPU</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">vLLM</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Llama 3.3 70B</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">DCGM</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="mb-4 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+            <div>
+              <h3 class="mb-1 text-xl font-semibold">Storage Tier Performance Study</h3>
+              <p class="text-sm text-text-muted">Experiment ID: EXP-002 | Started: 2026-02-05</p>
+            </div>
+            <span class="inline-flex w-fit items-center rounded-full bg-accent-green/20 px-3 py-1 text-sm font-medium text-accent-green">
+              Active
+            </span>
+          </div>
+          <p class="mb-4 text-text-secondary">
+            Comparing model loading times and I/O patterns across NVMe, SATA SSD, and HDD storage.
+            Evaluating filesystem performance (ext4, XFS, ZFS) for large model weight files and
+            dataset access patterns.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">NVMe</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">fio</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Model Loading</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Benchmarking</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="mb-4 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+            <div>
+              <h3 class="mb-1 text-xl font-semibold">Inference Latency Optimization</h3>
+              <p class="text-sm text-text-muted">Experiment ID: EXP-003 | Started: 2026-02-08</p>
+            </div>
+            <span class="inline-flex w-fit items-center rounded-full bg-accent-blue/20 px-3 py-1 text-sm font-medium text-accent-blue">
+              Planning
+            </span>
+          </div>
+          <p class="mb-4 text-text-secondary">
+            Investigating latency reduction techniques including continuous batching, speculative
+            decoding, and KV cache tuning. Measuring p50, p95, and p99 latency under varying load
+            conditions.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">vLLM</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Continuous Batching</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Latency</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Load Testing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiment Methodology -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <h2 class="mb-8 text-3xl font-bold">Experiment Methodology</h2>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="card">
+          <h3 class="mb-3 text-lg font-semibold text-accent-blue">Measurement Principles</h3>
+          <ul class="space-y-2 text-sm text-text-secondary">
+            <li>• Benchmark on actual hardware, not cloud instances</li>
+            <li>• Run multiple iterations to account for variance</li>
+            <li>• Document environmental conditions (temperature, load)</li>
+            <li>• Use production-representative workloads</li>
+            <li>• Isolate variables to measure specific impacts</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="mb-3 text-lg font-semibold text-accent-cyan">Documentation Standards</h3>
+          <ul class="space-y-2 text-sm text-text-secondary">
+            <li>• Record hypothesis, methodology, and results</li>
+            <li>• Include hardware specs and software versions</li>
+            <li>• Document failures and negative results</li>
+            <li>• Share reproducible benchmark scripts</li>
+            <li>• Link to raw data and analysis notebooks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications & Findings -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <h2 class="mb-8 text-3xl font-bold">Publications & Findings</h2>
+
+      <div class="rounded-lg border border-dark-border bg-dark-bg p-8 text-center">
+        <div class="mb-4 text-4xl">📋</div>
+        <h3 class="mb-2 text-lg font-semibold text-text-primary">Experiments in Progress</h3>
+        <p class="mb-6 text-sm text-text-secondary">
+          Research findings and experiment reports will be published here as work progresses.
+          Initial experiments are currently in the baseline measurement phase.
+        </p>
+        <a
+          href="https://github.com/cascadia-ai-lab/cascadia-ai-lab.github.io/tree/main/docs/experiments"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-secondary"
+        >
+          View Experiment Documentation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Philosophy -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="mb-8 text-3xl font-bold">Research Philosophy</h2>
+
+        <div class="space-y-6 text-text-secondary">
+          <div class="card">
+            <p class="mb-2 font-semibold text-text-primary">Negative Results Matter</p>
+            <p class="text-sm">
+              Failed experiments are documented with the same rigor as successful ones. Knowing what
+              doesn't work is as valuable as knowing what does.
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="mb-2 font-semibold text-text-primary">Measure, Don't Assume</p>
+            <p class="text-sm">
+              All performance claims are backed by empirical measurements on real hardware. No
+              theoretical estimates or vendor benchmarks without validation.
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="mb-2 font-semibold text-text-primary">Reproducibility First</p>
+            <p class="text-sm">
+              Experiments include complete methodology, hardware specifications, and benchmark
+              scripts to enable reproduction of results.
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="mb-2 font-semibold text-text-primary">Share Findings Publicly</p>
+            <p class="text-sm">
+              All research is documented and shared via GitHub. The goal is to contribute to the
+              broader infrastructure engineering community.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="mb-6 text-3xl font-bold">Follow the Research</h2>
+        <p class="mb-8 text-text-secondary">
+          Experiment documentation, findings, and methodology are maintained in the GitHub
+          repository. New results are published as experiments progress.
+        </p>
+        <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <a
+            href="https://github.com/cascadia-ai-lab/cascadia-ai-lab.github.io/tree/main/docs/experiments"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            Experiment Index
+          </a>
+          <a href="/documentation" class="btn btn-secondary">
+            All Documentation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

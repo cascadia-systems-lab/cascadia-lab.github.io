@@ -1,0 +1,365 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const githubBase = 'https://github.com/cascadia-ai-lab/cascadia-ai-lab.github.io';
+---
+
+<Layout
+  title="Documentation"
+  description="Technical documentation, architecture guides, and operational runbooks for Cascadia AI Systems Lab"
+>
+  <!-- Hero -->
+  <section class="section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
+    <div class="container-custom">
+      <div class="mx-auto max-w-3xl text-center">
+        <h1 class="mb-6 text-4xl font-bold tracking-tight sm:text-5xl">Documentation</h1>
+        <p class="text-lg text-text-secondary">
+          Technical documentation, architectural decisions, experiment reports, and operational
+          guides maintained in the GitHub repository.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <a
+          href={`${githubBase}/blob/main/README.md`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <div class="mb-3 text-3xl">📘</div>
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">README</h3>
+          <p class="text-sm text-text-secondary">Lab overview, mission, and project structure</p>
+        </a>
+
+        <a
+          href={`${githubBase}/blob/main/QUICKSTART.md`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <div class="mb-3 text-3xl">🚀</div>
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">Quickstart</h3>
+          <p class="text-sm text-text-secondary">Getting started guide for new contributors</p>
+        </a>
+
+        <a
+          href={`${githubBase}/blob/main/PROJECT_STRUCTURE.md`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <div class="mb-3 text-3xl">🗂️</div>
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">
+            Project Structure
+          </h3>
+          <p class="text-sm text-text-secondary">Repository organization and file layout</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Documentation -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <h2 class="mb-8 text-3xl font-bold">Architecture</h2>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <a
+          href={`${githubBase}/blob/main/docs/architecture/OVERVIEW.md`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">
+            Architecture Overview
+          </h3>
+          <p class="text-sm text-text-secondary">
+            High-level system architecture, components, and design principles
+          </p>
+        </a>
+
+        <a
+          href={`${githubBase}/blob/main/docs/architecture/LAB_PHILOSOPHY.md`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">Lab Philosophy</h3>
+          <p class="text-sm text-text-secondary">
+            Operating principles, values, and research methodology
+          </p>
+        </a>
+
+        <a
+          href={`${githubBase}/blob/main/docs/architecture/STANDARDS.md`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">
+            Standards & Conventions
+          </h3>
+          <p class="text-sm text-text-secondary">
+            Coding standards, naming conventions, and documentation guidelines
+          </p>
+        </a>
+
+        <a
+          href={`${githubBase}/tree/main/docs/decisions`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">Decision Log</h3>
+          <p class="text-sm text-text-secondary">
+            Architectural Decision Records (ADRs) documenting key infrastructure choices
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiments & Research -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <h2 class="mb-8 text-3xl font-bold">Experiments & Research</h2>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <a
+          href={`${githubBase}/blob/main/docs/experiments/INDEX.md`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">
+            Experiments Index
+          </h3>
+          <p class="text-sm text-text-secondary">
+            Directory of all experiments, including active, archived, and failed studies
+          </p>
+        </a>
+
+        <a
+          href={`${githubBase}/blob/main/docs/experiments/TEMPLATE.md`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">
+            Experiment Template
+          </h3>
+          <p class="text-sm text-text-secondary">
+            Standardized template for documenting new experiments and research
+          </p>
+        </a>
+
+        <a
+          href={`${githubBase}/tree/main/experiments`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">
+            Experiment Results
+          </h3>
+          <p class="text-sm text-text-secondary">
+            Detailed findings, benchmarks, and data from completed experiments
+          </p>
+        </a>
+
+        <a
+          href={`${githubBase}/tree/main/research`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">Research Notes</h3>
+          <p class="text-sm text-text-secondary">
+            Papers, articles, and external research relevant to lab work
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hardware & Infrastructure -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <h2 class="mb-8 text-3xl font-bold">Hardware & Infrastructure</h2>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <a
+          href={`${githubBase}/blob/main/docs/hardware/INVENTORY.md`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">
+            Hardware Inventory
+          </h3>
+          <p class="text-sm text-text-secondary">
+            Complete hardware specifications, serial numbers, and performance profiles
+          </p>
+        </a>
+
+        <a
+          href={`${githubBase}/tree/main/infrastructure`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">
+            Infrastructure Configs
+          </h3>
+          <p class="text-sm text-text-secondary">
+            System provisioning, configuration management, and orchestration code
+          </p>
+        </a>
+
+        <a
+          href={`${githubBase}/tree/main/docs/runbooks`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">
+            Operational Runbooks
+          </h3>
+          <p class="text-sm text-text-secondary">
+            Step-by-step procedures for common operations, troubleshooting, and maintenance
+          </p>
+        </a>
+
+        <a
+          href={`${githubBase}/tree/main/tooling`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">
+            Tooling & Utilities
+          </h3>
+          <p class="text-sm text-text-secondary">
+            Custom diagnostic tools, benchmarking suites, and automation scripts
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts & Automation -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <h2 class="mb-8 text-3xl font-bold">Scripts & Automation</h2>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <a
+          href={`${githubBase}/tree/main/scripts`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">
+            Automation Scripts
+          </h3>
+          <p class="text-sm text-text-secondary">
+            Deployment, maintenance, and lifecycle management scripts
+          </p>
+        </a>
+
+        <a
+          href={`${githubBase}/blob/main/CONTRIBUTING.md`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card-hover group"
+        >
+          <h3 class="mb-2 text-lg font-semibold group-hover:text-accent-blue">
+            Contributing Guide
+          </h3>
+          <p class="text-sm text-text-secondary">
+            Guidelines for contributing code, documentation, and experiments
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub Repository -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="mb-6 text-3xl font-bold">Full Repository</h2>
+        <p class="mb-8 text-text-secondary">
+          All documentation, code, and experiment data is maintained in the GitHub repository. This
+          includes active work, archived experiments, and historical decisions.
+        </p>
+        <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <a
+            href={githubBase}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            View GitHub Repository
+          </a>
+          <a
+            href={`${githubBase}/blob/main/docs/README.md`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary"
+          >
+            Documentation Index
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documentation Philosophy -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="mb-8 text-3xl font-bold">Documentation Standards</h2>
+
+        <div class="space-y-6 text-text-secondary">
+          <div class="card">
+            <p class="mb-2 font-semibold text-text-primary">Document as You Build</p>
+            <p class="text-sm">
+              Documentation is written alongside infrastructure work, not after the fact. Every
+              experiment, decision, and system change is documented when it happens.
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="mb-2 font-semibold text-text-primary">Capture Context</p>
+            <p class="text-sm">
+              Documentation includes the "why" behind decisions, not just the "what." Future
+              maintainers (including our future selves) need to understand the reasoning.
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="mb-2 font-semibold text-text-primary">Assume Technical Literacy</p>
+            <p class="text-sm">
+              Documentation is written for infrastructure engineers who understand GPU computing,
+              distributed systems, and storage architecture. No hand-holding.
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="mb-2 font-semibold text-text-primary">Keep It Current</p>
+            <p class="text-sm">
+              Outdated documentation is worse than no documentation. We maintain docs actively and
+              archive obsolete material with clear deprecation notices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
