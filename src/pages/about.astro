@@ -9,73 +9,139 @@ import Layout from '../layouts/Layout.astro';
   <!-- Hero -->
   <section class="section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
     <div class="container-custom">
-      <div class="mx-auto max-w-3xl text-center">
-        <h1 class="mb-6 text-4xl font-bold tracking-tight sm:text-5xl">About the Lab</h1>
-        <p class="text-lg text-text-secondary">
-          A research environment built on practical infrastructure principles, hands-on
-          experimentation, and honest documentation.
+      <div class="mx-auto max-w-4xl">
+        <h1 class="mb-8 text-center text-4xl font-bold tracking-tight sm:text-5xl">About</h1>
+        <div class="mb-8 border-l-4 border-accent-blue bg-dark-surface/50 p-6 text-lg leading-relaxed">
+          <p class="text-text-primary">
+            <strong>Cascadia AI Systems Lab is an independent research institution focused on building
+            computational systems that advance humanity's ability to model and understand complex reality.</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Statement -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl space-y-6 text-lg leading-relaxed text-text-secondary">
+        <p>
+          Computation, at sufficient scale and sophistication, functions as a scientific instrument—a
+          means of exploring phenomena too complex for closed-form analysis or direct observation.
+          This lab exists to design and operate such instruments.
+        </p>
+        <p>
+          Infrastructure is not incidental to this work. The computational systems required to study
+          emergence, intelligence, and large-scale complexity are themselves objects of inquiry. How
+          they are architected, measured, and operated determines what can be studied and understood.
+        </p>
+        <p>
+          The lab's research orientation is long-term and independent. There is no commercial mandate,
+          no obligation to deliver products, and no pressure to optimize for near-term outcomes. The
+          work proceeds at the pace of understanding, not market cycles.
+        </p>
+        <p>
+          This is deliberate institutional design: a structure built to sustain inquiry into questions
+          that resist quick answers.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Lab Philosophy -->
+  <!-- Research Character -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-3xl font-bold">Research Character</h2>
+
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            This lab operates at the intersection of two traditions that are often treated as
+            separate: the academic pursuit of understanding and the engineering discipline of
+            building functional systems. The resolution is methodological—infrastructure becomes the
+            instrument of inquiry, not separate from it.
+          </p>
+
+          <p>
+            Computation, treated seriously, is experimental physics. The systems built here are not
+            products to ship or papers to publish. They are instruments designed to probe questions
+            about emergence, intelligence, and complexity that cannot be answered through theory
+            alone. Engineering is the method of philosophy in this context.
+          </p>
+
+          <p>
+            This places the lab in a specific intellectual lineage: institutions like Bell Labs in
+            its research era, the Santa Fe Institute, and the tradition of theoretical physicists
+            who designed and operated their own experimental apparatus. These were hybrid
+            environments where deep inquiry and practical construction were inseparable.
+          </p>
+
+          <p>
+            Such work requires institutional structure that differs from both universities and
+            commercial organizations. Universities optimize for publication and credential. Companies
+            optimize for product and profit. Neither structure sustains the kind of long-term,
+            empirical systems research that prioritizes understanding over outputs.
+          </p>
+
+          <p>
+            What matters is not institutional credentials—peer review, tenure, venture funding—but
+            intellectual coherence. The questions are well-formed. The methodology is rigorous. The
+            systems are measured. The findings are documented. That coherence, maintained over time,
+            is what defines serious research.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Principles -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <h2 class="mb-8 text-3xl font-bold">Lab Philosophy</h2>
+        <h2 class="mb-8 text-3xl font-bold">Research Principles</h2>
 
-        <div class="prose-custom space-y-6 text-text-secondary">
+        <div class="space-y-6 text-text-secondary">
           <div class="card">
-            <h3 class="mb-3 text-xl font-semibold text-text-primary">
-              Build What You Can Run
+            <h3 class="mb-3 text-lg font-semibold text-text-primary">
+              Empirical Grounding
             </h3>
-            <p>
-              This lab prioritizes infrastructure that runs on real hardware. No hypothetical
-              systems, no purely theoretical architectures. Every design decision is validated
-              against actual workloads on physical machines.
+            <p class="leading-relaxed">
+              Research claims are backed by measurement. Systems are evaluated on physical hardware
+              under realistic conditions. Performance characteristics are documented with precision.
+              Hypotheses are tested, not assumed.
             </p>
           </div>
 
           <div class="card">
-            <h3 class="mb-3 text-xl font-semibold text-text-primary">
-              Document Failure as Thoroughly as Success
+            <h3 class="mb-3 text-lg font-semibold text-text-primary">
+              Documentation of Process
             </h3>
-            <p>
-              Failed experiments are documented with the same rigor as successful ones. A negative
-              result that prevents future wasted effort is as valuable as a positive breakthrough.
-              We maintain a living knowledge base of what doesn't work and why.
+            <p class="leading-relaxed">
+              Failed experiments are as valuable as successful ones when documented thoroughly.
+              Negative results prevent wasted effort. The lab maintains detailed records of what was
+              attempted, what was observed, and what was learned.
             </p>
           </div>
 
           <div class="card">
-            <h3 class="mb-3 text-xl font-semibold text-text-primary">
-              Infrastructure Before Abstraction
+            <h3 class="mb-3 text-lg font-semibold text-text-primary">
+              Infrastructure as Methodology
             </h3>
-            <p>
-              We don't build frameworks for hypothetical use cases. We solve real infrastructure
-              problems, extract patterns that emerge organically, and only then consider
-              generalizing. Premature abstraction is avoided.
+            <p class="leading-relaxed">
+              The design and operation of computational infrastructure is itself a form of research
+              methodology. How systems are built determines what questions can be asked. The lab
+              develops infrastructure not as utility, but as instrument.
             </p>
           </div>
 
           <div class="card">
-            <h3 class="mb-3 text-xl font-semibold text-text-primary">
-              Measure, Don't Assume
+            <h3 class="mb-3 text-lg font-semibold text-text-primary">
+              Long-Term Orientation
             </h3>
-            <p>
-              Performance characteristics are measured, not estimated. Benchmarks are run on actual
-              hardware. Architectural decisions are backed by empirical data from the lab
-              environment.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3 class="mb-3 text-xl font-semibold text-text-primary">Long-Term Thinking</h3>
-            <p>
-              This is a multi-year research initiative. We optimize for learning and understanding
-              over quick wins. Systems are built to evolve. Documentation is written for future
-              maintainers, including our future selves.
+            <p class="leading-relaxed">
+              Research is structured for sustained inquiry over years, not quarters. Systems are
+              designed to evolve as understanding deepens. The goal is cumulative knowledge, not
+              discrete deliverables.
             </p>
           </div>
         </div>
@@ -83,66 +149,34 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Core Principles -->
-  <section class="section bg-dark-surface">
+  <!-- Operating Methodology -->
+  <section class="section border-t border-dark-border">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <h2 class="mb-8 text-3xl font-bold">Operating Principles</h2>
+        <h2 class="mb-8 text-3xl font-bold">Operating Methodology</h2>
 
-        <div class="grid gap-6 sm:grid-cols-2">
-          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
-            <div class="mb-3 text-3xl">🎯</div>
-            <h3 class="mb-2 font-semibold text-accent-blue">Focus on Fundamentals</h3>
-            <p class="text-sm text-text-secondary">
-              Deep understanding of GPU compute, storage I/O, network topology, and system
-              architecture before adding complexity.
-            </p>
-          </div>
-
-          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
-            <div class="mb-3 text-3xl">🔄</div>
-            <h3 class="mb-2 font-semibold text-accent-cyan">Iterative Refinement</h3>
-            <p class="text-sm text-text-secondary">
-              Start simple, measure, learn, refine. Each iteration is documented. Systems evolve
-              based on real operational experience.
-            </p>
-          </div>
-
-          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
-            <div class="mb-3 text-3xl">📊</div>
-            <h3 class="mb-2 font-semibold text-accent-green">Data-Driven Decisions</h3>
-            <p class="text-sm text-text-secondary">
-              Infrastructure choices backed by benchmarks, profiling data, and measured performance
-              characteristics.
-            </p>
-          </div>
-
-          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
-            <div class="mb-3 text-3xl">📚</div>
-            <h3 class="mb-2 font-semibold text-accent-purple">Knowledge Preservation</h3>
-            <p class="text-sm text-text-secondary">
-              Comprehensive documentation of decisions, experiments, and operational insights.
-              Context is preserved for future reference.
-            </p>
-          </div>
-
-          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
-            <div class="mb-3 text-3xl">🔧</div>
-            <h3 class="mb-2 font-semibold text-accent-blue">Operational Excellence</h3>
-            <p class="text-sm text-text-secondary">
-              Systems are designed to be operated, monitored, debugged, and maintained—not just
-              built once and forgotten.
-            </p>
-          </div>
-
-          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
-            <div class="mb-3 text-3xl">🌱</div>
-            <h3 class="mb-2 font-semibold text-accent-cyan">Sustainable Complexity</h3>
-            <p class="text-sm text-text-secondary">
-              Only add complexity that can be understood, maintained, and justified by operational
-              requirements.
-            </p>
-          </div>
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            The lab operates according to engineering principles that prioritize understanding over
+            velocity. Work begins with fundamentals—GPU compute characteristics, storage I/O
+            patterns, network topology, system architecture—before introducing abstraction or
+            complexity.
+          </p>
+          <p>
+            Infrastructure decisions are backed by measurement. Systems are benchmarked under
+            realistic conditions. Performance characteristics are profiled and documented.
+            Operational experience informs iterative refinement.
+          </p>
+          <p>
+            Documentation serves as institutional memory. Design decisions, experimental results,
+            operational insights, and negative findings are preserved with full context. This
+            prevents redundant work and enables cumulative knowledge building.
+          </p>
+          <p>
+            Systems are designed for long-term operation, not one-time deployment. Monitoring,
+            debugging, maintenance, and evolution are first-order concerns. Complexity is only
+            introduced when it can be understood, operated, and justified by research requirements.
+          </p>
         </div>
       </div>
     </div>
@@ -151,66 +185,55 @@ import Layout from '../layouts/Layout.astro';
   <!-- What This Is Not -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
-      <div class="mx-auto max-w-3xl">
+      <div class="mx-auto max-w-4xl">
         <h2 class="mb-8 text-3xl font-bold">What This Is Not</h2>
 
-        <div class="space-y-4 text-text-secondary">
-          <div class="card">
-            <p class="mb-2 font-semibold text-text-primary">Not a Product</p>
-            <p class="text-sm">
-              This is a research laboratory, not a software product. There are no roadmaps,
-              releases, or customer commitments.
-            </p>
-          </div>
-
-          <div class="card">
-            <p class="mb-2 font-semibold text-text-primary">Not a Startup</p>
-            <p class="text-sm">
-              No business model, no monetization strategy, no growth metrics. This is independent
-              infrastructure research.
-            </p>
-          </div>
-
-          <div class="card">
-            <p class="mb-2 font-semibold text-text-primary">Not a Cloud Service</p>
-            <p class="text-sm">
-              Everything runs on self-hosted, physical infrastructure. We study systems we can
-              touch, measure, and control.
-            </p>
-          </div>
-
-          <div class="card">
-            <p class="mb-2 font-semibold text-text-primary">Not a Tutorial Site</p>
-            <p class="text-sm">
-              Documentation captures real work and decisions, not step-by-step guides for
-              beginners. We assume technical literacy.
-            </p>
-          </div>
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            <strong class="text-text-primary">This is not a startup.</strong> There is no business
+            model, no monetization strategy, no investor pitch, and no growth trajectory. The work
+            operates outside commercial constraints entirely.
+          </p>
+          <p>
+            <strong class="text-text-primary">This is not a consulting company.</strong> The lab
+            does not take on client work, offer services, or optimize for external requirements.
+            Research direction is determined by scientific interest, not market demand.
+          </p>
+          <p>
+            <strong class="text-text-primary">This is not a product marketing site.</strong> There
+            are no software releases, feature roadmaps, or customer commitments. Systems are built
+            as research instruments, not commercial offerings.
+          </p>
+          <p>
+            <strong class="text-text-primary">This is not a cloud service.</strong> All work runs
+            on self-hosted, physical infrastructure. The goal is to study systems that can be
+            directly measured, controlled, and understood at the hardware level.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Maintainer -->
+  <!-- Research Direction -->
   <section class="section bg-dark-surface">
     <div class="container-custom">
-      <div class="mx-auto max-w-3xl">
-        <h2 class="mb-8 text-3xl font-bold">Maintainer</h2>
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-3xl font-bold">Research Direction</h2>
 
-        <div class="card">
-          <p class="mb-4 text-text-secondary">
-            This lab is maintained by an independent infrastructure engineer focused on practical
-            AI systems research. The work emphasizes hands-on experimentation with GPU computing,
-            distributed systems, and storage architecture.
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            The lab is directed by an infrastructure engineer with focus on computational systems
+            for AI research. Work centers on empirical investigation of GPU compute, distributed
+            storage, network architecture, and system-level performance characterization.
           </p>
 
-          <p class="mb-4 text-text-secondary">
-            The lab operates as a long-term research environment—measuring, documenting, and
-            iterating on real infrastructure rather than building products or pursuing commercial
-            objectives.
+          <p>
+            Research proceeds through direct experimentation with physical infrastructure—building,
+            measuring, documenting, and refining systems over extended time horizons. The emphasis
+            is on operational understanding rather than theoretical modeling.
           </p>
 
-          <div class="mt-6 flex flex-wrap gap-3">
+          <div class="mt-8 flex flex-wrap gap-3">
             <a
               href="https://github.com/cascadia-ai-lab"
               target="_blank"
@@ -228,20 +251,25 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Contact & Collaboration -->
+  <!-- Open Research -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
-      <div class="mx-auto max-w-3xl text-center">
-        <h2 class="mb-6 text-3xl font-bold">Collaboration</h2>
-        <p class="mb-8 text-text-secondary">
-          This lab is focused on independent research. While collaboration is not actively sought,
-          the work is documented publicly to contribute to the broader infrastructure engineering
-          community.
-        </p>
-        <p class="text-sm text-text-muted">
-          All experiments, decisions, and findings are shared via the GitHub repository and this
-          documentation site.
-        </p>
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-3xl font-bold">Open Research</h2>
+
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            All research is documented publicly. Experimental designs, implementation details,
+            measurement data, and operational findings are shared openly through the lab's GitHub
+            repositories and this documentation site.
+          </p>
+
+          <p>
+            This serves two purposes: it creates institutional memory for the lab's own work, and
+            it contributes empirical data to the broader infrastructure research community. The
+            focus is on independent inquiry, not collaborative projects.
+          </p>
+        </div>
       </div>
     </div>
   </section>

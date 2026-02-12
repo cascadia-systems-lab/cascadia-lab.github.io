@@ -6,20 +6,26 @@ import Layout from '../layouts/Layout.astro';
   <!-- Hero Section -->
   <section class="section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
     <div class="container-custom">
-      <div class="mx-auto max-w-4xl text-center">
-        <h1 class="mb-6 text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-          <span class="text-gradient">Cascadia AI Systems Lab</span>
+      <div class="mx-auto max-w-5xl">
+        <h1 class="mb-8 text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          Computational Systems for Understanding Complex Reality
         </h1>
-        <p class="mb-8 text-xl text-text-secondary sm:text-2xl">
-          Independent AI Infrastructure Research & Development Environment
-        </p>
-        <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a href="/research" class="btn btn-primary">
-            View Research
-          </a>
-          <a href="/infrastructure" class="btn btn-secondary">
-            Explore Infrastructure
-          </a>
+        <div class="mb-8 border-l-4 border-accent-blue bg-dark-surface/50 p-6 text-lg leading-relaxed">
+          <p class="text-text-primary">
+            <strong>Cascadia AI Systems Lab is an independent research institution focused on building
+            computational systems that advance humanity's ability to model and understand complex reality.</strong>
+          </p>
+        </div>
+        <div class="mx-auto max-w-3xl space-y-4 text-center text-lg text-text-secondary">
+          <p>
+            We build AI and computational infrastructure as instruments for exploration—tools designed
+            to probe intelligence, emergence, and large-scale complexity.
+          </p>
+          <p>
+            This work is experimental and research-driven, oriented toward deeper understanding rather
+            than short-term commercialization. The systems we design serve as platforms for inquiry
+            into phenomena that resist conventional analysis.
+          </p>
         </div>
       </div>
     </div>
@@ -28,134 +34,160 @@ import Layout from '../layouts/Layout.astro';
   <!-- Mission Section -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
-      <div class="mx-auto max-w-3xl">
-        <h2 class="mb-6 text-center text-3xl font-bold sm:text-4xl">Mission</h2>
-        <p class="mb-4 text-center text-xl text-accent-blue">
-          Build practical, self-hosted AI infrastructure that works.
-        </p>
-        <p class="text-center text-lg text-text-secondary">
-          Cascadia AI Systems Lab is a long-term infrastructure laboratory focused on designing,
-          building, and operating practical AI systems at the intersection of GPU computing, data
-          engineering, and modern infrastructure.
-        </p>
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-center text-3xl font-bold sm:text-4xl">Mission</h2>
+        <div class="space-y-4 text-lg leading-relaxed text-text-secondary">
+          <p class="text-center">
+            We design and operate computational systems that serve as instruments for exploring
+            intelligence, emergence, and large-scale complexity.
+          </p>
+          <p class="text-center">
+            Our mission is to advance the computational methods and infrastructure required to model
+            systems that are too complex for purely analytical approaches—to build the tools necessary
+            for understanding reality at scale.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Core Focus Areas -->
+  <!-- Research Focus Areas -->
   <section class="section bg-dark-surface">
     <div class="container-custom">
-      <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">Core Focus Areas</h2>
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="card card-hover">
-          <div class="mb-4 text-4xl">🔧</div>
-          <h3 class="mb-2 text-xl font-semibold">Infrastructure Design</h3>
-          <p class="text-sm text-text-secondary">
-            AI infrastructure patterns for GPU workloads, model serving, and data processing
+      <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">Research Focus Areas</h2>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="card">
+          <h3 class="mb-3 text-lg font-semibold text-accent-blue">
+            AI Systems & Model Infrastructure
+          </h3>
+          <p class="text-sm leading-relaxed text-text-secondary">
+            Computational architectures for training and operating large-scale models. Infrastructure
+            as a substrate for studying intelligence and learning dynamics.
           </p>
         </div>
 
-        <div class="card card-hover">
-          <div class="mb-4 text-4xl">💾</div>
-          <h3 class="mb-2 text-xl font-semibold">Storage Architecture</h3>
-          <p class="text-sm text-text-secondary">
-            Optimized storage systems for AI/ML data patterns and distributed filesystems
+        <div class="card">
+          <h3 class="mb-3 text-lg font-semibold text-accent-cyan">
+            Distributed Compute & Storage
+          </h3>
+          <p class="text-sm leading-relaxed text-text-secondary">
+            Systems for managing computation and data across heterogeneous resources. Performance
+            characterization of storage architectures under AI workloads.
           </p>
         </div>
 
-        <div class="card card-hover">
-          <div class="mb-4 text-4xl">⚡</div>
-          <h3 class="mb-2 text-xl font-semibold">Performance</h3>
-          <p class="text-sm text-text-secondary">
-            Real-world performance characteristics of hardware and architectural decisions
+        <div class="card">
+          <h3 class="mb-3 text-lg font-semibold text-accent-green">
+            Emergent Systems & Simulation
+          </h3>
+          <p class="text-sm leading-relaxed text-text-secondary">
+            Computational platforms for studying emergence in complex adaptive systems. Simulation
+            environments for multi-agent and evolutionary dynamics.
           </p>
         </div>
 
-        <div class="card card-hover">
-          <div class="mb-4 text-4xl">🔬</div>
-          <h3 class="mb-2 text-xl font-semibold">Experimentation</h3>
-          <p class="text-sm text-text-secondary">
-            Hands-on research with GPU optimization, model serving, and cluster computing
+        <div class="card">
+          <h3 class="mb-3 text-lg font-semibold text-accent-purple">
+            Instrumentation & Observability
+          </h3>
+          <p class="text-sm leading-relaxed text-text-secondary">
+            Methods for measuring and characterizing system behavior at scale. Telemetry and analysis
+            infrastructure for understanding computational phenomena.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="mb-3 text-lg font-semibold text-accent-blue">
+            Performance Characterization
+          </h3>
+          <p class="text-sm leading-relaxed text-text-secondary">
+            Empirical study of hardware and software performance under research workloads. Benchmarking
+            methodologies for systems operating at infrastructure scale.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="mb-3 text-lg font-semibold text-accent-cyan">
+            Complex Systems Modeling
+          </h3>
+          <p class="text-sm leading-relaxed text-text-secondary">
+            Computational approaches to modeling systems exhibiting non-linear dynamics, feedback loops,
+            and multi-scale interactions.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- What We Build -->
+  <!-- Research Infrastructure -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
-      <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">What We Build</h2>
-      <div class="grid gap-8 lg:grid-cols-3">
-        <div>
-          <h3 class="mb-4 text-xl font-semibold text-accent-blue">Experiments</h3>
-          <ul class="space-y-2 text-text-secondary">
-            <li>• GPU acceleration and CUDA optimization</li>
-            <li>• Model serving architectures (vLLM, Triton)</li>
-            <li>• Data pipeline design and orchestration</li>
-            <li>• Storage systems and filesystem benchmarking</li>
-            <li>• Virtualization and containerization strategies</li>
-          </ul>
-        </div>
+      <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">Research Infrastructure</h2>
+      <div class="mx-auto max-w-4xl space-y-6 text-text-secondary">
+        <p class="text-center text-lg leading-relaxed">
+          The lab operates physical computational infrastructure designed to support sustained inquiry
+          into complex systems. This infrastructure serves as both subject and instrument—a platform
+          for research that is itself an object of study.
+        </p>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="card">
+            <h3 class="mb-3 text-lg font-semibold text-accent-blue">Computational Systems</h3>
+            <p class="text-sm leading-relaxed">
+              GPU clusters for large-scale model training and inference. Distributed systems for
+              studying parallelism, coordination, and fault tolerance at scale.
+            </p>
+          </div>
 
-        <div>
-          <h3 class="mb-4 text-xl font-semibold text-accent-cyan">Infrastructure</h3>
-          <ul class="space-y-2 text-text-secondary">
-            <li>• System provisioning and configuration management</li>
-            <li>• Monitoring, observability, and alerting</li>
-            <li>• Cluster orchestration and resource scheduling</li>
-            <li>• Network topology and performance tuning</li>
-          </ul>
-        </div>
+          <div class="card">
+            <h3 class="mb-3 text-lg font-semibold text-accent-cyan">Storage & Data Systems</h3>
+            <p class="text-sm leading-relaxed">
+              Heterogeneous storage architectures spanning multiple tiers. Infrastructure for handling
+              large datasets, model checkpoints, and experimental artifacts.
+            </p>
+          </div>
 
-        <div>
-          <h3 class="mb-4 text-xl font-semibold text-accent-green">Tooling</h3>
-          <ul class="space-y-2 text-text-secondary">
-            <li>• Diagnostic and debugging tools</li>
-            <li>• Performance benchmarking suites</li>
-            <li>• Deployment and lifecycle management scripts</li>
-            <li>• Custom utilities for lab operations</li>
-          </ul>
+          <div class="card">
+            <h3 class="mb-3 text-lg font-semibold text-accent-green">Measurement & Telemetry</h3>
+            <p class="text-sm leading-relaxed">
+              Instrumentation systems for characterizing performance, resource utilization, and system
+              behavior. Tooling for observability across distributed components.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="mb-3 text-lg font-semibold text-accent-purple">Experimental Platforms</h3>
+            <p class="text-sm leading-relaxed">
+              Configurable environments for testing hypotheses about system behavior. Frameworks for
+              reproducible experimentation and methodical exploration.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Philosophy -->
+  <!-- Institutional Character -->
   <section class="section bg-dark-surface">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
         <h2 class="mb-8 text-center text-3xl font-bold sm:text-4xl">
-          How This Differs from a Software Project
+          Institutional Character
         </h2>
-        <div class="grid gap-6 sm:grid-cols-2">
-          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
-            <h3 class="mb-3 font-semibold text-accent-blue">Infrastructure-First</h3>
-            <p class="text-sm text-text-secondary">
-              The primary artifact is not code, but running systems and operational knowledge
-            </p>
-          </div>
-
-          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
-            <h3 class="mb-3 font-semibold text-accent-cyan">Experiment-Driven</h3>
-            <p class="text-sm text-text-secondary">
-              Many experiments may fail or be abandoned—that's expected and valuable
-            </p>
-          </div>
-
-          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
-            <h3 class="mb-3 font-semibold text-accent-green">Hardware-Aware</h3>
-            <p class="text-sm text-text-secondary">
-              Decisions are made in the context of specific physical infrastructure
-            </p>
-          </div>
-
-          <div class="rounded-lg border border-dark-border bg-dark-bg p-6">
-            <h3 class="mb-3 font-semibold text-accent-purple">Documentation-Heavy</h3>
-            <p class="text-sm text-text-secondary">
-              Writing down what was learned is as important as building the system
-            </p>
-          </div>
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            This is not a startup seeking market fit, nor a consulting organization delivering
+            services. It is an independent research institution oriented toward long-term inquiry.
+          </p>
+          <p>
+            The lab's work is grounded in the belief that computation—when designed thoughtfully—can
+            serve as a scientific instrument comparable to the telescope or particle accelerator.
+            Infrastructure is not merely utility; it is methodology.
+          </p>
+          <p>
+            Research proceeds through the design, construction, and operation of systems large enough
+            to exhibit non-trivial behavior. The goal is understanding, formalized through measured
+            observation and reproducible experimentation.
+          </p>
         </div>
       </div>
     </div>

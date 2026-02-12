@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkedIn Banner Maker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #1a2332;
+            font-family: Arial, sans-serif;
+            color: white;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #5a7a94;
+        }
+        .upload-section {
+            background: #2a3a4a;
+            border: 2px dashed #5a7a94;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .upload-section:hover {
+            border-color: #7a9ab4;
+            background: #3a4a5a;
+        }
+        .upload-section.active {
+            border-color: #10b981;
+            border-style: solid;
+        }
+        #fileInput {
+            display: none;
+        }
+        .upload-text {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .upload-hint {
+            font-size: 14px;
+            color: #7a9ab4;
+        }
+        #canvas {
+            border: 2px solid #5a7a94;
+            display: none;
+            margin: 20px auto;
+            background: #1a2332;
+            border-radius: 8px;
+        }
+        #canvas.visible {
+            display: block;
+        }
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        button {
+            background: #5a7a94;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 6px;
+            margin: 5px;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: #7a9ab4;
+            transform: translateY(-2px);
+        }
+        button:disabled {
+            background: #3a4a5a;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .success {
+            background: #10b981;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            margin: 20px 0;
+            display: none;
+        }
+        .success.show {
+            display: block;
+        }
+        .info {
+            text-align: center;
+            color: #7a9ab4;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        .preview-label {
+            text-align: center;
+            color: #7a9ab4;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 LinkedIn Banner Creator</h1>
+
+        <div class="upload-section" id="uploadSection" onclick="document.getElementById('fileInput').click()">
+            <div class="upload-text">📁 Click to upload your logo (image1.png)</div>
+            <div class="upload-hint">Or drag and drop your image here</div>
+        </div>
+
+        <input type="file" id="fileInput" accept="image/*">
+
+        <div class="preview-label" id="previewLabel" style="display:none;">
+            Preview (1128 x 191 px - Perfect for LinkedIn):
+        </div>
+
+        <canvas id="canvas" width="1128" height="191"></canvas>
+
+        <div class="controls">
+            <button id="downloadBtn" onclick="downloadBanner()" disabled>⬇️ Download Banner</button>
+        </div>
+
+        <div class="success" id="successMsg">
+            ✅ Banner ready! Click the download button above.
+        </div>
+
+        <div class="info">
+            <p><strong>LinkedIn Banner Size:</strong> 1128 x 191 pixels</p>
+            <p>Your logo will be automatically sized and positioned</p>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const fileInput = document.getElementById('fileInput');
+        const uploadSection = document.getElementById('uploadSection');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const successMsg = document.getElementById('successMsg');
+        const previewLabel = document.getElementById('previewLabel');
+        let imageLoaded = false;
+
+        // Handle file selection
+        fileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                loadImage(file);
+            }
+        });
+
+        // Handle drag and drop
+        uploadSection.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            uploadSection.classList.add('active');
+        });
+
+        uploadSection.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            uploadSection.classList.remove('active');
+        });
+
+        uploadSection.addEventListener('drop', function(e) {
+            e.preventDefault();
+            uploadSection.classList.remove('active');
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                loadImage(file);
+            }
+        });
+
+        function loadImage(file) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const img = new Image();
+                img.onload = function() {
+                    createBanner(img);
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function createBanner(img) {
+            // Clear canvas
+            ctx.fillStyle = '#1a2332';
+            ctx.fillRect(0, 0, 1128, 191);
+
+            // Calculate scaling to fit the logo nicely
+            const maxHeight = 150;
+            const maxWidth = 600;
+            let scale = Math.min(maxHeight / img.height, maxWidth / img.width);
+
+            const scaledWidth = img.width * scale;
+            const scaledHeight = img.height * scale;
+
+            // Position logo on the left
+            const x = 40;
+            const y = (191 - scaledHeight) / 2;
+
+            // Draw the logo
+            ctx.drawImage(img, x, y, scaledWidth, scaledHeight);
+
+            // Add tagline
+            ctx.fillStyle = '#7a9ab4';
+            ctx.font = '14px Arial, sans-serif';
+            const tagline = 'Building practical, self-hosted AI infrastructure that works';
+            const taglineX = scaledWidth + 80;
+            const taglineY = 165;
+            ctx.fillText(tagline, taglineX, taglineY);
+
+            // Show canvas and enable download
+            canvas.classList.add('visible');
+            downloadBtn.disabled = false;
+            successMsg.classList.add('show');
+            previewLabel.style.display = 'block';
+            uploadSection.style.display = 'none';
+            imageLoaded = true;
+        }
+
+        function downloadBanner() {
+            if (!imageLoaded) {
+                alert('Please upload an image first!');
+                return;
+            }
+
+            try {
+                // Create download link
+                const link = document.createElement('a');
+                link.download = 'cascadia-linkedin-banner.png';
+                link.href = canvas.toDataURL('image/png');
+
+                // Trigger download
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                // Show success
+                successMsg.textContent = '✅ Downloaded! Now upload to LinkedIn.';
+                setTimeout(() => {
+                    successMsg.textContent = '✅ Banner ready! Click the download button above.';
+                }, 3000);
+            } catch (error) {
+                alert('Download failed. Please try right-clicking the image and saving it.');
+                console.error('Download error:', error);
+            }
+        }
+    </script>
+</body>
+</html>

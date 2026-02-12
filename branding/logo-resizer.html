@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkedIn Logo Creator - 300x300</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #0a0a0a;
+            font-family: Arial, sans-serif;
+            color: white;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #3b82f6;
+        }
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+        .upload-section {
+            background: #111111;
+            border: 2px dashed #3b82f6;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .upload-section:hover {
+            border-color: #60a5fa;
+            background: #1a1a1a;
+        }
+        #fileInput {
+            display: none;
+        }
+        .canvases {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .canvas-container {
+            text-align: center;
+        }
+        .canvas-label {
+            color: #9ca3af;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        canvas {
+            border: 2px solid #1a1a1a;
+            border-radius: 8px;
+            background: #0a0a0a;
+            display: none;
+        }
+        canvas.visible {
+            display: block;
+        }
+        .circle-preview {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #3b82f6;
+            display: none;
+            margin: 0 auto;
+        }
+        .circle-preview.visible {
+            display: block;
+        }
+        .circle-preview canvas {
+            border: none;
+            border-radius: 0;
+        }
+        button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 6px;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+        button:disabled {
+            background: #374151;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .success {
+            background: #10b981;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            margin: 20px 0;
+            display: none;
+        }
+        .success.show {
+            display: block;
+        }
+        .info {
+            background: #1a1a1a;
+            border-left: 4px solid #3b82f6;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .info h3 {
+            color: #3b82f6;
+            margin-bottom: 10px;
+        }
+        .info ul {
+            margin-left: 20px;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 LinkedIn Logo Creator</h1>
+        <div class="subtitle">Create perfect 300x300px logo for LinkedIn</div>
+
+        <div class="upload-section" onclick="document.getElementById('fileInput').click()">
+            <div style="font-size: 48px; margin-bottom: 10px;">📤</div>
+            <div style="font-size: 18px; margin-bottom: 10px;">Click to Upload image1.png</div>
+            <div style="font-size: 14px; color: #6b7280;">Or drag and drop</div>
+        </div>
+
+        <input type="file" id="fileInput" accept="image/*">
+
+        <div class="canvases">
+            <div class="canvas-container">
+                <div class="canvas-label">Square Preview (300x300)</div>
+                <canvas id="squareCanvas" width="300" height="300"></canvas>
+            </div>
+            <div class="canvas-container">
+                <div class="canvas-label">How it looks on LinkedIn (circular)</div>
+                <div class="circle-preview" id="circlePreview">
+                    <canvas id="circleCanvas" width="300" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="downloadBtn" onclick="downloadLogo()" disabled>
+                ⬇️ Download Logo (300x300.png)
+            </button>
+        </div>
+
+        <div class="success" id="successMsg">
+            ✅ Logo created! Download and upload to LinkedIn.
+        </div>
+
+        <div class="info">
+            <h3>📌 What This Does:</h3>
+            <ul>
+                <li>Crops your logo to focus on the icon/design</li>
+                <li>Resizes to exactly 300 x 300 pixels</li>
+                <li>Shows how it will look as LinkedIn's circular logo</li>
+                <li>Ready to upload to LinkedIn company page</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const squareCanvas = document.getElementById('squareCanvas');
+        const circleCanvas = document.getElementById('circleCanvas');
+        const circlePreview = document.getElementById('circlePreview');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const successMsg = document.getElementById('successMsg');
+
+        const sqCtx = squareCanvas.getContext('2d');
+        const ciCtx = circleCanvas.getContext('2d');
+
+        let finalImage = null;
+
+        fileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) loadImage(file);
+        });
+
+        // Drag and drop
+        const uploadSection = document.querySelector('.upload-section');
+        uploadSection.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadSection.style.borderColor = '#10b981';
+        });
+
+        uploadSection.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            uploadSection.style.borderColor = '#3b82f6';
+        });
+
+        uploadSection.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadSection.style.borderColor = '#3b82f6';
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                loadImage(file);
+            }
+        });
+
+        function loadImage(file) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const img = new Image();
+                img.onload = function() {
+                    createLogo(img);
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function createLogo(img) {
+            // Your image is 2812 x 1205 (wide)
+            // We want to isolate ONLY the geometric icon, no text at all
+
+            // The icon is roughly 40% of the total width
+            // We'll take a square crop from the left focusing on just the icon
+            const sourceSize = Math.min(img.width * 0.35, img.height); // Narrow crop - just icon
+            const sourceX = img.width * 0.02; // Small offset from left edge
+            const sourceY = (img.height - sourceSize) / 2; // Center vertically
+
+            // Clear canvases
+            sqCtx.fillStyle = '#1a2332';
+            sqCtx.fillRect(0, 0, 300, 300);
+            ciCtx.fillStyle = '#1a2332';
+            ciCtx.fillRect(0, 0, 300, 300);
+
+            // Draw to square canvas
+            sqCtx.drawImage(
+                img,
+                sourceX, sourceY, sourceSize, sourceSize,  // Source
+                0, 0, 300, 300  // Destination
+            );
+
+            // Draw to circle canvas (same as square)
+            ciCtx.drawImage(
+                img,
+                sourceX, sourceY, sourceSize, sourceSize,
+                0, 0, 300, 300
+            );
+
+            // Show canvases
+            squareCanvas.classList.add('visible');
+            circleCanvas.classList.add('visible');
+            circlePreview.classList.add('visible');
+            downloadBtn.disabled = false;
+            successMsg.classList.add('show');
+
+            finalImage = squareCanvas;
+        }
+
+        function downloadLogo() {
+            if (!finalImage) {
+                alert('Please upload an image first!');
+                return;
+            }
+
+            const link = document.createElement('a');
+            link.download = 'cascadia-linkedin-logo-300x300.png';
+            link.href = squareCanvas.toDataURL('image/png');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            successMsg.textContent = '✅ Downloaded! Now upload to LinkedIn company page.';
+            setTimeout(() => {
+                successMsg.textContent = '✅ Logo created! Download and upload to LinkedIn.';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

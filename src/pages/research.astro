@@ -203,9 +203,8 @@ import Layout from '../layouts/Layout.astro';
       <h2 class="mb-8 text-3xl font-bold">Publications & Findings</h2>
 
       <div class="rounded-lg border border-dark-border bg-dark-bg p-8 text-center">
-        <div class="mb-4 text-4xl">📋</div>
-        <h3 class="mb-2 text-lg font-semibold text-text-primary">Experiments in Progress</h3>
-        <p class="mb-6 text-sm text-text-secondary">
+        <h3 class="mb-4 text-lg font-semibold text-text-primary">Experiments in Progress</h3>
+        <p class="mb-6 text-text-secondary">
           Research findings and experiment reports will be published here as work progresses.
           Initial experiments are currently in the baseline measurement phase.
         </p>
@@ -221,44 +220,34 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Research Philosophy -->
+  <!-- Experimental Standards -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
-      <div class="mx-auto max-w-3xl">
-        <h2 class="mb-8 text-3xl font-bold">Research Philosophy</h2>
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-3xl font-bold">Experimental Standards</h2>
 
-        <div class="space-y-6 text-text-secondary">
-          <div class="card">
-            <p class="mb-2 font-semibold text-text-primary">Negative Results Matter</p>
-            <p class="text-sm">
-              Failed experiments are documented with the same rigor as successful ones. Knowing what
-              doesn't work is as valuable as knowing what does.
-            </p>
-          </div>
-
-          <div class="card">
-            <p class="mb-2 font-semibold text-text-primary">Measure, Don't Assume</p>
-            <p class="text-sm">
-              All performance claims are backed by empirical measurements on real hardware. No
-              theoretical estimates or vendor benchmarks without validation.
-            </p>
-          </div>
-
-          <div class="card">
-            <p class="mb-2 font-semibold text-text-primary">Reproducibility First</p>
-            <p class="text-sm">
-              Experiments include complete methodology, hardware specifications, and benchmark
-              scripts to enable reproduction of results.
-            </p>
-          </div>
-
-          <div class="card">
-            <p class="mb-2 font-semibold text-text-primary">Share Findings Publicly</p>
-            <p class="text-sm">
-              All research is documented and shared via GitHub. The goal is to contribute to the
-              broader infrastructure engineering community.
-            </p>
-          </div>
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            All performance claims are backed by empirical measurements on physical hardware under
+            realistic operating conditions. Theoretical estimates and vendor benchmarks are treated
+            as hypotheses requiring validation, not as established facts.
+          </p>
+          <p>
+            Failed experiments receive the same documentation rigor as successful ones. Negative
+            results prevent redundant work and contribute meaningfully to the field's understanding
+            of what approaches do not yield improvements under which conditions.
+          </p>
+          <p>
+            Experimental reports include complete methodology, environmental specifications, hardware
+            configurations, software versions, and reproducible benchmark code. This enables
+            independent verification and builds on the scientific principle that claims require
+            evidence that others can examine.
+          </p>
+          <p>
+            All findings, datasets, and analysis code are published openly via the lab's GitHub
+            repositories. This serves both institutional memory and the broader infrastructure
+            research community's need for empirical data from real-world systems.
+          </p>
         </div>
       </div>
     </div>

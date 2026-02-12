@@ -1,0 +1,78 @@
+<svg width="1128" height="191" viewBox="0 0 1128 191" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background - dark theme matching your branding -->
+  <rect width="1128" height="191" fill="#1a2332"/>
+
+  <!-- Subtle gradient overlay -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#5a7a94;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#5a7a94;stop-opacity:0.05" />
+    </linearGradient>
+  </defs>
+  <rect width="1128" height="191" fill="url(#bgGradient)"/>
+
+  <!-- Network icon (simplified from your logo) -->
+  <g transform="translate(60, 95.5)">
+    <!-- Scale down to fit banner height -->
+    <g transform="scale(0.5)">
+      <!-- Mountain/Network shape -->
+      <g fill="none" stroke="#5a7a94" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Nodes -->
+        <circle cx="0" cy="-40" r="8" fill="#5a7a94"/>
+        <circle cx="-40" cy="0" r="8" fill="#5a7a94"/>
+        <circle cx="40" cy="0" r="8" fill="#5a7a94"/>
+        <circle cx="-60" cy="-60" r="8" fill="#5a7a94"/>
+        <circle cx="60" cy="-60" r="8" fill="#5a7a94"/>
+        <circle cx="-30" cy="-80" r="8" fill="#5a7a94"/>
+        <circle cx="30" cy="-80" r="8" fill="#5a7a94"/>
+
+        <!-- Connections -->
+        <line x1="0" y1="-40" x2="-40" y2="0"/>
+        <line x1="0" y1="-40" x2="40" y2="0"/>
+        <line x1="-40" y1="0" x2="-60" y2="-60"/>
+        <line x1="40" y1="0" x2="60" y2="-60"/>
+        <line x1="-60" y1="-60" x2="-30" y2="-80"/>
+        <line x1="60" y1="-60" x2="30" y2="-80"/>
+        <line x1="-30" y1="-80" x2="30" y2="-80"/>
+
+        <!-- Mountain peaks inside -->
+        <path d="M -25,-20 L 0,-50 L 25,-20 Z" fill="none" stroke="#5a7a94" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Text: CASCADIA -->
+  <text
+    x="150"
+    y="75"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-size="32"
+    font-weight="900"
+    letter-spacing="4"
+    fill="#5a7a94"
+  >CASCADIA</text>
+
+  <!-- Text: AI SYSTEMS LAB -->
+  <text
+    x="150"
+    y="110"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-size="26"
+    font-weight="900"
+    letter-spacing="3"
+    fill="#5a7a94"
+  >AI SYSTEMS LAB</text>
+
+  <!-- Tagline -->
+  <text
+    x="150"
+    y="140"
+    font-family="Arial, sans-serif"
+    font-size="14"
+    font-weight="normal"
+    fill="#7a9ab4"
+  >Building practical, self-hosted AI infrastructure that works</text>
+
+  <!-- Bottom accent line -->
+  <rect y="185" width="1128" height="6" fill="#5a7a94" opacity="0.3"/>
+</svg>

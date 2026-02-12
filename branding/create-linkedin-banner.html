@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkedIn Banner Creator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #1a2332;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        #canvas {
+            border: 2px solid #5a7a94;
+            display: block;
+            margin: 20px auto;
+            background: #1a2332;
+        }
+        .controls {
+            text-align: center;
+            margin: 20px;
+        }
+        button {
+            background: #5a7a94;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin: 5px;
+        }
+        button:hover {
+            background: #7a9ab4;
+        }
+        .info {
+            text-align: center;
+            color: #7a9ab4;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">LinkedIn Banner Creator</h1>
+    <p class="info">This will create a 1128 x 191 px banner using your logo</p>
+
+    <canvas id="canvas" width="1128" height="191"></canvas>
+
+    <div class="controls">
+        <button onclick="downloadBanner()">Download Banner (PNG)</button>
+    </div>
+
+    <p class="info">Click the button to download your LinkedIn banner!</p>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw background
+        ctx.fillStyle = '#1a2332';
+        ctx.fillRect(0, 0, 1128, 191);
+
+        // Load and draw the logo
+        const img = new Image();
+        img.onload = function() {
+            // Calculate scaling to fit height while maintaining aspect ratio
+            const targetHeight = 120;
+            const scale = targetHeight / img.height;
+            const scaledWidth = img.width * scale;
+
+            // Draw logo on left side
+            const x = 40;
+            const y = (191 - targetHeight) / 2;
+            ctx.drawImage(img, x, y, scaledWidth, targetHeight);
+
+            // Add tagline on the right
+            ctx.fillStyle = '#7a9ab4';
+            ctx.font = '16px Arial';
+            ctx.fillText('Building practical, self-hosted AI infrastructure that works', scaledWidth + 80, 160);
+        };
+
+        img.src = 'image1.png';
+
+        function downloadBanner() {
+            const link = document.createElement('a');
+            link.download = 'cascadia-linkedin-banner.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logo Compressor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0a0a;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container { max-width: 800px; width: 100%; }
+        h1 { text-align: center; color: #3b82f6; margin-bottom: 30px; }
+        .upload-area {
+            background: #111;
+            border: 2px dashed #3b82f6;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+        .upload-area:hover { background: #1a1a1a; border-color: #60a5fa; }
+        input[type="file"] { display: none; }
+        .slider-container {
+            background: #111;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: none;
+        }
+        .slider-container.show { display: block; }
+        input[type="range"] {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: #333;
+            outline: none;
+            margin: 15px 0;
+        }
+        .info {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+        .file-size {
+            font-size: 18px;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+        .file-size.warning { color: #f59e0b; }
+        .file-size.good { color: #10b981; }
+        canvas {
+            border: 2px solid #333;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: none;
+        }
+        canvas.show { display: block; }
+        button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        button:hover { background: #2563eb; }
+        button:disabled { background: #374151; cursor: not-allowed; }
+        .controls { text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗜️ Logo Compressor</h1>
+        <p style="text-align: center; color: #6b7280; margin-bottom: 30px;">
+            Reduce file size for LinkedIn upload
+        </p>
+
+        <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+            <div style="font-size: 48px; margin-bottom: 10px;">📤</div>
+            <div style="font-size: 18px;">Upload your 300x300 logo</div>
+            <div style="font-size: 14px; color: #6b7280; margin-top: 10px;">
+                Click or drag and drop
+            </div>
+        </div>
+
+        <input type="file" id="fileInput" accept="image/*">
+
+        <div class="slider-container" id="sliderContainer">
+            <div class="info">
+                <span>Quality: <span id="qualityValue">85</span>%</span>
+                <span class="file-size" id="fileSize">-- KB</span>
+            </div>
+            <input type="range" id="qualitySlider" min="10" max="100" value="85">
+            <div style="font-size: 12px; color: #6b7280; margin-top: 10px;">
+                ← Lower quality (smaller file) | Higher quality (larger file) →
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <canvas id="canvas" width="300" height="300"></canvas>
+        </div>
+
+        <div class="controls">
+            <button id="downloadBtn" onclick="downloadCompressed()" disabled>
+                ⬇️ Download Compressed Logo
+            </button>
+        </div>
+
+        <div style="background: #111; padding: 20px; border-radius: 8px; margin-top: 30px; border-left: 4px solid #3b82f6;">
+            <h3 style="color: #3b82f6; margin-bottom: 10px;">💡 Tip:</h3>
+            <p style="color: #9ca3af; font-size: 14px;">
+                LinkedIn typically limits logos to <strong>2-8 MB</strong>. Aim for under <strong style="color: #10b981;">500 KB</strong> for best results.
+                A quality setting of 80-90% usually gives great results with smaller file size.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const qualitySlider = document.getElementById('qualitySlider');
+        const qualityValue = document.getElementById('qualityValue');
+        const fileSize = document.getElementById('fileSize');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const sliderContainer = document.getElementById('sliderContainer');
+
+        let currentImage = null;
+
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) loadImage(file);
+        });
+
+        // Drag and drop
+        const uploadArea = document.querySelector('.upload-area');
+        uploadArea.addEventListener('dragover', (e) => e.preventDefault());
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) loadImage(file);
+        });
+
+        function loadImage(file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const img = new Image();
+                img.onload = () => {
+                    currentImage = img;
+                    updateCanvas();
+                    canvas.classList.add('show');
+                    sliderContainer.classList.add('show');
+                    downloadBtn.disabled = false;
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        qualitySlider.addEventListener('input', () => {
+            qualityValue.textContent = qualitySlider.value;
+            if (currentImage) updateCanvas();
+        });
+
+        function updateCanvas() {
+            ctx.drawImage(currentImage, 0, 0, 300, 300);
+
+            // Calculate file size
+            const quality = qualitySlider.value / 100;
+            const dataUrl = canvas.toDataURL('image/jpeg', quality);
+            const sizeInBytes = Math.round((dataUrl.length - 22) * 3 / 4);
+            const sizeInKB = (sizeInBytes / 1024).toFixed(1);
+
+            fileSize.textContent = sizeInKB + ' KB';
+
+            // Color code based on size
+            fileSize.className = 'file-size';
+            if (sizeInKB > 2000) fileSize.classList.add('warning');
+            else if (sizeInKB < 500) fileSize.classList.add('good');
+        }
+
+        function downloadCompressed() {
+            const quality = qualitySlider.value / 100;
+            const link = document.createElement('a');
+            link.download = 'cascadia-logo-compressed.jpg';
+            link.href = canvas.toDataURL('image/jpeg', quality);
+            link.click();
+        }
+    </script>
+</body>
+</html>
