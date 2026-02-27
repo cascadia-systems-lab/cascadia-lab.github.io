@@ -7,7 +7,7 @@ This guide provides complete deployment instructions for the Cascadia Mobile Sys
 
 ## ✅ Configuration Summary
 
-- **Repository**: `cascadia-ai-lab/cascadia-ai-lab.github.io`
+- **Repository**: `cascadia-systems-lab/cascadia-systems-lab.github.io`
 - **Custom Domain**: `cascadiasystems.org`
 - **Site URL**: `https://cascadiasystems.org`
 - **Framework**: Astro 4 (static output)
@@ -19,7 +19,7 @@ This guide provides complete deployment instructions for the Cascadia Mobile Sys
 ## Prerequisites
 
 - Node.js 18+ installed locally
-- GitHub organization: `cascadia-ai-lab` (must be created first)
+- GitHub organization: `cascadia-systems-lab` (must be created first)
 - Domain: `cascadiasystems.org` (must be owned/controlled)
 - Git configured locally
 
@@ -59,15 +59,15 @@ This builds the site and previews the production output locally.
 If not already created:
 
 1. Go to: https://github.com/account/organizations/new
-2. Organization name: `cascadia-ai-lab`
+2. Organization name: `cascadia-systems-lab`
 3. Contact email: [your email]
 4. Plan: **Free** (perfect for public repositories)
 5. Click **Create organization**
 
 ### Step 2: Create Repository
 
-1. Go to: https://github.com/organizations/cascadia-ai-lab/repositories/new
-2. Repository name: **`cascadia-ai-lab.github.io`**
+1. Go to: https://github.com/organizations/cascadia-systems-lab/repositories/new
+2. Repository name: **`cascadia-systems-lab.github.io`**
 3. Description: "Cascadia Mobile Systems Lab - Infrastructure Research Website"
 4. Visibility: **Public**
 5. **Do NOT initialize** with README (you already have code)
@@ -88,7 +88,7 @@ git add .
 git commit -m "Initial commit: Production-ready Astro site with GitHub Pages deployment"
 
 # Add remote
-git remote add origin https://github.com/cascadia-ai-lab/cascadia-ai-lab.github.io.git
+git remote add origin https://github.com/cascadia-systems-lab/cascadia-systems-lab.github.io.git
 
 # Push to main
 git branch -M main
@@ -97,7 +97,7 @@ git push -u origin main
 
 ### Step 4: Enable GitHub Pages
 
-1. Go to repository: https://github.com/cascadia-ai-lab/cascadia-ai-lab.github.io
+1. Go to repository: https://github.com/cascadia-systems-lab/cascadia-systems-lab.github.io
 2. Click **Settings** (top navigation)
 3. Click **Pages** (left sidebar, under "Code and automation")
 4. Under **Source**, select:
@@ -107,10 +107,10 @@ git push -u origin main
 
 ### Step 5: Verify First Deployment
 
-1. Go to **Actions** tab: https://github.com/cascadia-ai-lab/cascadia-ai-lab.github.io/actions
+1. Go to **Actions** tab: https://github.com/cascadia-systems-lab/cascadia-systems-lab.github.io/actions
 2. You should see "Deploy to GitHub Pages" workflow running
 3. Wait for the workflow to complete (~1-2 minutes)
-4. Site will be live at: `https://cascadia-ai-lab.github.io`
+4. Site will be live at: `https://cascadia-systems-lab.github.io`
 
 ✅ **Checkpoint**: Verify the site loads at the GitHub Pages URL before configuring the custom domain.
 
@@ -147,7 +147,7 @@ Value: 185.199.111.153
 ```
 Type: CNAME
 Name: www
-Value: cascadia-ai-lab.github.io
+Value: cascadia-systems-lab.github.io
 ```
 
 ### Step 2: Verify CNAME File
@@ -162,7 +162,7 @@ cascadiasystems.org
 
 ### Step 3: Configure Custom Domain in GitHub
 
-1. Go to: https://github.com/cascadia-ai-lab/cascadia-ai-lab.github.io/settings/pages
+1. Go to: https://github.com/cascadia-systems-lab/cascadia-systems-lab.github.io/settings/pages
 2. Under **Custom domain**, enter: `cascadiasystems.org`
 3. Click **Save**
 4. GitHub will perform DNS check (this can take 1-24 hours, usually minutes)
@@ -209,14 +209,14 @@ git push
 
 To manually trigger deployment:
 
-1. Go to: https://github.com/cascadia-ai-lab/cascadia-ai-lab.github.io/actions
+1. Go to: https://github.com/cascadia-systems-lab/cascadia-systems-lab.github.io/actions
 2. Click **Deploy to GitHub Pages** workflow
 3. Click **Run workflow** → **Run workflow**
 
 ### View Deployment Status
 
 Monitor deployments at:
-- https://github.com/cascadia-ai-lab/cascadia-ai-lab.github.io/actions
+- https://github.com/cascadia-systems-lab/cascadia-systems-lab.github.io/actions
 
 Each deployment shows:
 - Build logs
@@ -360,7 +360,7 @@ Set TTL (Time To Live) based on stability:
 To redirect `www.cascadiasystems.org` to `cascadiasystems.org`:
 
 GitHub Pages automatically handles this when:
-1. You set `www` CNAME to `cascadia-ai-lab.github.io`
+1. You set `www` CNAME to `cascadia-systems-lab.github.io`
 2. Your `public/CNAME` contains `cascadiasystems.org` (no www)
 
 Users visiting `www.cascadiasystems.org` will be redirected to `https://cascadiasystems.org`
@@ -555,7 +555,7 @@ After successful deployment:
 ## File Structure
 
 ```
-cascadia-ai-lab.github.io/
+cascadia-systems-lab.github.io/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml              # GitHub Actions workflow
