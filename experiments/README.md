@@ -1,6 +1,6 @@
 # Experiments
 
-This directory contains all experimental work conducted in Cascadia AI Systems Lab.
+This directory contains all experimental work conducted in Cascadia Mobile Systems Lab.
 
 ## Purpose
 

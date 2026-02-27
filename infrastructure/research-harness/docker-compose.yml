@@ -1,0 +1,172 @@
+# Cascadia Mobile Systems Lab — Research Harness Docker Compose
+# Version: 1.0
+#
+# Deploys the full worker-side stack:
+#   - Ollama (inference backend)
+#   - Research Harness (Celery worker)
+#   - node_exporter (host metrics)
+#   - Promtail (log shipping)
+#   - OTEL Agent (trace forwarding)
+#
+# Usage (on each worker node):
+#   cp config/node_profile.yaml.example config/node_profile.yaml
+#   # Fill in node_profile.yaml with actual hardware specs
+#   NODE_ID=cascadia-worker-02 docker compose up -d
+#
+# Environment variables required:
+#   NODE_ID          - Node identifier (e.g. cascadia-worker-02)
+#   CONTROLLER_HOST  - Controller hostname or IP
+#   DB_PASSWORD      - PostgreSQL password
+#   REDIS_URL        - Redis connection URL
+
+services:
+
+  # -----------------------------------------------------------------
+  # Ollama — local LLM inference backend
+  # -----------------------------------------------------------------
+  ollama:
+    image: ollama/ollama:0.5.1
+    container_name: ollama
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    environment:
+      - OLLAMA_NUM_PARALLEL=1       # One inference at a time for clean telemetry
+      - OLLAMA_MAX_LOADED_MODELS=1  # Unload between tasks to free RAM
+      - OLLAMA_KEEP_ALIVE=300       # Keep model loaded for 5 min after use
+    # GPU passthrough (uncomment if GPU is available)
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # -----------------------------------------------------------------
+  # Research Harness — Celery worker
+  # -----------------------------------------------------------------
+  harness:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        GIT_COMMIT: ${GIT_COMMIT:-unknown}
+        BUILD_DATE: ${BUILD_DATE:-unknown}
+    container_name: research-harness
+    restart: unless-stopped
+    depends_on:
+      ollama:
+        condition: service_healthy
+    ports:
+      - "9091:9091"   # Prometheus metrics
+    volumes:
+      - ./config:/app/config:ro
+      - ./prompts:/app/prompts:ro
+      - ./schemas:/app/schemas:ro
+      - harness_logs:/var/log/cascadia/harness
+      - harness_cache:/var/cache/cascadia/records
+    environment:
+      - NODE_ID=${NODE_ID}
+      - CONTROLLER_HOST=${CONTROLLER_HOST:-cascadia-controller}
+      - REDIS_URL=${REDIS_URL:-redis://cascadia-controller:6379/0}
+      - DB_HOST=${CONTROLLER_HOST:-cascadia-controller}
+      - DB_PORT=5432
+      - DB_NAME=cascadia_lab
+      - DB_USER=cascadia
+      - DB_PASSWORD=${DB_PASSWORD}
+      - OLLAMA_HOST=ollama
+      - OLLAMA_PORT=11434
+      - HARNESS_CONFIG=/app/config/default.yaml
+      - NODE_PROFILE=/app/config/node_profile.yaml
+      - LOG_LEVEL=INFO
+    command: >
+      celery -A worker worker
+        --loglevel=info
+        --queues=research-${NODE_TIER:-small},research-micro,research-any
+        --concurrency=1
+        --max-tasks-per-child=100
+    healthcheck:
+      test: ["CMD", "celery", "-A", "worker", "inspect", "ping"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+
+  # -----------------------------------------------------------------
+  # node_exporter — host metrics (runs with host network access)
+  # -----------------------------------------------------------------
+  node_exporter:
+    image: prom/node-exporter:v1.8.2
+    container_name: node_exporter
+    restart: unless-stopped
+    network_mode: host    # Must be host to access /proc, /sys
+    pid: host
+    ports:
+      - "9100:9100"
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--path.rootfs=/rootfs'
+      - '--collector.cpu'
+      - '--collector.cpufreq'
+      - '--collector.meminfo'
+      - '--collector.diskstats'
+      - '--collector.filesystem'
+      - '--collector.netdev'
+      - '--collector.thermal_zone'
+      - '--collector.hwmon'
+      - '--collector.pressure'
+      - '--no-collector.arp'
+      - '--no-collector.bonding'
+
+  # -----------------------------------------------------------------
+  # Promtail — log shipping to Loki
+  # -----------------------------------------------------------------
+  promtail:
+    image: grafana/promtail:3.3.0
+    container_name: promtail
+    restart: unless-stopped
+    volumes:
+      - ./promtail-config.yaml:/etc/promtail/config.yaml:ro
+      - harness_logs:/var/log/cascadia/harness:ro
+      - /var/log:/var/log:ro
+      - /run/log/journal:/run/log/journal:ro
+      - /etc/machine-id:/etc/machine-id:ro
+    environment:
+      - NODE_ID=${NODE_ID}
+    command: -config.file=/etc/promtail/config.yaml -config.expand-env=true
+
+  # -----------------------------------------------------------------
+  # OTEL Agent — trace forwarding to controller
+  # -----------------------------------------------------------------
+  otel_agent:
+    image: otel/opentelemetry-collector-contrib:0.116.0
+    container_name: otel_agent
+    restart: unless-stopped
+    ports:
+      - "4317:4317"   # gRPC receiver
+      - "4318:4318"   # HTTP receiver
+    volumes:
+      - ./otel-agent-config.yaml:/etc/otelcol/config.yaml:ro
+    environment:
+      - CONTROLLER_HOST=${CONTROLLER_HOST:-cascadia-controller}
+      - NODE_ID=${NODE_ID}
+
+volumes:
+  ollama_models:
+    name: ollama_models_${NODE_ID}
+  harness_logs:
+    name: harness_logs_${NODE_ID}
+  harness_cache:
+    name: harness_cache_${NODE_ID}

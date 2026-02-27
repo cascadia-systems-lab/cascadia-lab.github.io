@@ -1,6 +1,6 @@
 # Lab Philosophy
 
-**Operating Principles for Cascadia AI Systems Lab**
+**Operating Principles for Cascadia Mobile Systems Lab**
 
 ---
 
@@ -8,7 +8,7 @@
 
 ### 1. Infrastructure First, Applications Second
 
-AI systems are built on infrastructure. Before optimizing model performance, we optimize the systems that run those models. This lab prioritizes understanding storage I/O, network throughput, GPU utilization, and resource scheduling over chasing leaderboard metrics.
+compute systems are built on infrastructure. Before optimizing model performance, we optimize the systems that run those models. This lab prioritizes understanding storage I/O, network throughput, GPU utilization, and resource scheduling over chasing leaderboard metrics.
 
 **Implication**: We measure infrastructure metrics (latency, throughput, utilization) before model metrics (accuracy, perplexity). A model that performs well in a vacuum but breaks infrastructure assumptions is a failed experiment.
 
@@ -144,4 +144,4 @@ This philosophy will evolve as the lab grows. Principles that prove impractical 
 
 ---
 
-*This document reflects the values and operating principles of Cascadia AI Systems Lab. It is a living document and will be updated as the lab matures.*
+*This document reflects the values and operating principles of Cascadia Mobile Systems Lab. It is a living document and will be updated as the lab matures.*

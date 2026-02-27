@@ -515,4 +515,4 @@ logging:
 
 ---
 
-*This runbook ensures consistent, reliable operation of [Component Name] in Cascadia AI Systems Lab.*
+*This runbook ensures consistent, reliable operation of [Component Name] in Cascadia Mobile Systems Lab.*

@@ -1,8 +1,8 @@
 {
-  "name": "cascadia-ai-systems-lab",
+  "name": "cascadia-mobile-systems-lab",
   "version": "1.0.0",
   "type": "module",
-  "description": "Independent AI Infrastructure Research & Development Environment",
+  "description": "Independent Infrastructure Research & Development Environment",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

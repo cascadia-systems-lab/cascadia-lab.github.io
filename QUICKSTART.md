@@ -1,12 +1,12 @@
 # Quick Start Guide
 
-**Getting oriented in Cascadia AI Systems Lab**
+**Getting oriented in Cascadia Mobile Systems Lab**
 
 ---
 
 ## Welcome
 
-This guide helps you navigate and start working in Cascadia AI Systems Lab—an infrastructure research environment for AI systems, GPU computing, and data infrastructure.
+This guide helps you navigate and start working in Cascadia Mobile Systems Lab—an infrastructure research environment for compute systems, GPU computing, and data infrastructure.
 
 ---
 
@@ -14,15 +14,15 @@ This guide helps you navigate and start working in Cascadia AI Systems Lab—an 
 
 ### 1. Understand What This Is
 
-Cascadia AI Systems Lab is NOT:
+Cascadia Mobile Systems Lab is NOT:
 - ❌ A single application or product
 - ❌ A tutorial or course project
 - ❌ A collection of scripts
 
-Cascadia AI Systems Lab IS:
+Cascadia Mobile Systems Lab IS:
 - ✅ An infrastructure research laboratory
 - ✅ A long-term experimental environment
-- ✅ A knowledge base of AI systems engineering
+- ✅ A knowledge base of compute systems engineering
 - ✅ A collection of documented experiments and infrastructure
 
 ### 2. Read Core Documentation
@@ -42,7 +42,7 @@ Cascadia AI Systems Lab IS:
 ## Directory Overview
 
 ```
-cascadia-ai-systems-lab/
+cascadia-mobile-systems-lab/
 ├── experiments/          # Structured experiments (read/write)
 ├── infrastructure/       # Production infrastructure code (read/write)
 ├── tooling/             # Lab utilities and tools (read/write)
@@ -293,7 +293,7 @@ See [README.md](README.md) for current focus areas and status.
 
 ## Summary
 
-Cascadia AI Systems Lab is an infrastructure research environment focused on AI systems engineering. It values:
+Cascadia Mobile Systems Lab is an infrastructure research environment focused on compute systems engineering. It values:
 
 - 📝 **Documentation** - Write everything down
 - 🔬 **Experimentation** - Test hypotheses with real workloads

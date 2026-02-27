@@ -1,0 +1,37 @@
+{
+  "_comment": "Cascadia Mobile Systems Lab — Prompt Version Manifest. Hashes are SHA-256 of the prompt file contents. Never modify existing versioned prompts; create a new version directory instead.",
+  "current_version": "v1",
+  "versions": {
+    "v1": {
+      "released": "2026-02-17",
+      "status": "active",
+      "files": {
+        "system_decompose": {
+          "path": "v1/system_decompose.txt",
+          "sha256": "FILL_IN_AFTER_CREATION",
+          "description": "Decomposes a research question into a structured plan with hypotheses and steps"
+        },
+        "system_retrieve": {
+          "path": "v1/system_retrieve.txt",
+          "sha256": "FILL_IN_AFTER_CREATION",
+          "description": "Generates search queries and evaluates source relevance"
+        },
+        "system_analyze": {
+          "path": "v1/system_analyze.txt",
+          "sha256": "FILL_IN_AFTER_CREATION",
+          "description": "Extracts structured evidence from retrieved source content"
+        },
+        "system_synthesize": {
+          "path": "v1/system_synthesize.txt",
+          "sha256": "FILL_IN_AFTER_CREATION",
+          "description": "Synthesizes evidence into a structured analytical response with limitations"
+        },
+        "system_critique": {
+          "path": "v1/system_critique.txt",
+          "sha256": "FILL_IN_AFTER_CREATION",
+          "description": "Performs self-evaluation of the synthesis, identifying gaps and assigning confidence"
+        }
+      }
+    }
+  }
+}

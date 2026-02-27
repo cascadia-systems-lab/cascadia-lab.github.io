@@ -1,6 +1,6 @@
 # Project Structure
 
-**Complete directory layout for Cascadia AI Systems Lab**
+**Complete directory layout for Cascadia Mobile Systems Lab**
 
 ---
 
@@ -13,7 +13,7 @@ This document provides a visual reference for the complete project structure. Us
 ## Complete Directory Tree
 
 ```
-cascadia-ai-systems-lab/
+cascadia-mobile-systems-lab/
 │
 ├── .lab/                           # Lab metadata and runtime state (gitignored)
 │
@@ -314,4 +314,4 @@ This structure provides:
 **Last Updated**: 2026-02-11
 **Version**: 1.0
 
-*This structure reflects the current organization of Cascadia AI Systems Lab and will evolve as the lab matures.*
+*This structure reflects the current organization of Cascadia Mobile Systems Lab and will evolve as the lab matures.*

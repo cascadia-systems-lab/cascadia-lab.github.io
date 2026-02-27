@@ -1,0 +1,100 @@
+# Cascadia Mobile Systems Lab — Node Hardware Profile
+#
+# This file declares the hardware identity of THIS worker node.
+# It is filled in during node provisioning (see scripts/setup/provision-worker.sh)
+# and should NOT be committed with real values — use the template below.
+#
+# The provisioning script populates this from detected hardware at setup time.
+# After provisioning, values should be verified and adjusted if auto-detection
+# was inaccurate (especially disk_type, which may require manual inspection).
+#
+# This file is NOT a secret. Hardware identity is not sensitive.
+
+# -----------------------------------------------------------------
+# Identity
+# -----------------------------------------------------------------
+node_id: "FILL_IN"           # e.g. cascadia-worker-01
+hostname: "FILL_IN"          # system hostname
+tier: "FILL_IN"              # micro | small | medium | large | gpu
+
+# -----------------------------------------------------------------
+# Compute
+# -----------------------------------------------------------------
+cpu_model: "FILL_IN"         # e.g. Intel Core i5-8400
+cpu_generation: "FILL_IN"    # e.g. Coffee Lake, Ryzen 3000
+cpu_cores_physical: 0
+cpu_cores_logical: 0
+cpu_base_clock_mhz: 0
+cpu_boost_clock_mhz: 0
+
+ram_gb: 0
+ram_type: "FILL_IN"          # DDR3 | DDR4 | DDR5
+ram_speed_mhz: 0
+ram_channels: 0
+
+# -----------------------------------------------------------------
+# Storage
+# -----------------------------------------------------------------
+disk_type: "FILL_IN"         # HDD | SSD | NVMe
+disk_model: "FILL_IN"
+disk_capacity_gb: 0
+
+# -----------------------------------------------------------------
+# GPU (leave null if not present)
+# -----------------------------------------------------------------
+gpu: null
+# gpu:
+#   model: "FILL_IN"
+#   vram_gb: 0
+#   driver_version: "FILL_IN"
+#   cuda_version: "FILL_IN"
+#   compute_cap: "FILL_IN"
+
+# -----------------------------------------------------------------
+# Network
+# -----------------------------------------------------------------
+network_interface: "eth0"
+network_speed_gbps: 1.0
+
+# -----------------------------------------------------------------
+# Operating system
+# -----------------------------------------------------------------
+os: "FILL_IN"                # e.g. Ubuntu Server 24.04 LTS
+kernel: "FILL_IN"            # uname -r output
+architecture: "x86_64"
+
+# -----------------------------------------------------------------
+# Capabilities (determines Celery queue subscription)
+# -----------------------------------------------------------------
+# List the model size classes this node can serve.
+# Based on available RAM: <4GB=1b, <8GB=3b, <16GB=7b, <32GB=13b, 32+GB=70b
+capable_model_sizes:
+  - "FILL_IN"               # e.g. 1b, 3b, 7b, 13b, 70b
+
+# Models that have been pulled and are available for inference
+# (must be downloaded before node accepts tasks for that model)
+downloaded_models: []
+# Example:
+# downloaded_models:
+#   - "mistral:7b-instruct-q4_K_M"
+#   - "llama3.2:3b-instruct-q8_0"
+
+# -----------------------------------------------------------------
+# Energy measurement capability
+# -----------------------------------------------------------------
+energy_measurement:
+  method: "proxy"            # rapl | ipmi | proxy | unavailable
+  # RAPL available on most Intel/AMD CPUs since ~2012 via /sys/class/powercap/
+  # Set to "rapl" if RAPL sysfs entries are present and readable
+  rapl_available: false
+  ipmi_available: false
+  cpu_tdp_w: 0               # Used for proxy calculation if method=proxy
+
+# -----------------------------------------------------------------
+# Temperature monitoring
+# -----------------------------------------------------------------
+thermal:
+  # Available via psutil.sensors_temperatures() and hwmon sysfs
+  sensors_available: true
+  sensor_name: "coretemp"   # coretemp (Intel) | k10temp (AMD)
+  throttle_temp_c: 80.0     # Temperature at which throttling occurs on this hardware

@@ -182,4 +182,4 @@ Define success metrics:
 
 **Decision Log File Naming Convention**: `YYYY-MM-DD-short-decision-name.md`
 
-*This template ensures consistent, well-reasoned infrastructure decisions in Cascadia AI Systems Lab.*
+*This template ensures consistent, well-reasoned infrastructure decisions in Cascadia Mobile Systems Lab.*

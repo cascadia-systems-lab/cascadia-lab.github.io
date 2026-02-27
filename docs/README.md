@@ -1,6 +1,6 @@
 # Documentation
 
-Technical documentation, architectural decisions, and operational knowledge for Cascadia AI Systems Lab.
+Technical documentation, architectural decisions, and operational knowledge for Cascadia Mobile Systems Lab.
 
 ## Purpose
 

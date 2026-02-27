@@ -1,4 +1,4 @@
-# LinkedIn Images for Cascadia AI Systems Lab
+# LinkedIn Images for Cascadia Mobile Systems Lab
 
 ## Files Created
 

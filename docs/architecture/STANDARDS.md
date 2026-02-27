@@ -1,6 +1,6 @@
 # Standards & Conventions
 
-**Operational standards for Cascadia AI Systems Lab**
+**Operational standards for Cascadia Mobile Systems Lab**
 
 ---
 
@@ -15,7 +15,7 @@ This document defines naming conventions, documentation standards, and organizat
 ### Top-Level Organization
 
 ```
-cascadia-ai-systems-lab/
+cascadia-mobile-systems-lab/
 ├── experiments/          # All experimental work
 ├── infrastructure/       # Production-grade infrastructure code
 ├── tooling/             # Utilities and automation
@@ -332,4 +332,4 @@ These standards will evolve. Propose changes via:
 
 ---
 
-*These standards ensure Cascadia AI Systems Lab remains organized, maintainable, and valuable over time.*
+*These standards ensure Cascadia Mobile Systems Lab remains organized, maintainable, and valuable over time.*

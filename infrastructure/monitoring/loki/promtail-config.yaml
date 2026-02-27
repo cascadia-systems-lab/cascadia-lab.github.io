@@ -1,0 +1,82 @@
+# Cascadia Mobile Systems Lab — Promtail Configuration (per worker node)
+# Version: 1.0
+#
+# Deploy this on every worker node. Set NODE_ID environment variable
+# to the node's identifier before starting promtail.
+#
+# Usage:
+#   NODE_ID=cascadia-worker-02 promtail --config.file=promtail-config.yaml
+
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+
+positions:
+  filename: /tmp/promtail-positions.yaml
+
+# Forward to Loki on controller
+clients:
+  - url: http://cascadia-controller:3100/loki/api/v1/push
+    tenant_id: cascadia-mobile-lab
+    batchwait: 1s
+    batchsize: 1048576    # 1 MB
+
+scrape_configs:
+
+  # Research harness application logs
+  - job_name: research_harness
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: research-harness
+          node_id: "${NODE_ID}"
+          __path__: /var/log/cascadia/harness/*.log
+
+    pipeline_stages:
+      # Parse JSON log format
+      - json:
+          expressions:
+            run_id: run_id
+            level: level
+            phase: phase
+            model: model
+            message: message
+
+      # Promote fields to Loki labels (enables label-based filtering)
+      - labels:
+          run_id:
+          level:
+          phase:
+
+      # Drop debug logs in production to reduce volume
+      - drop:
+          expression: '.*level.*DEBUG.*'
+          drop_counter_reason: debug_log_drop
+
+  # System journal logs
+  - job_name: systemd
+    journal:
+      json: false
+      max_age: 12h
+      labels:
+        job: systemd
+        node_id: "${NODE_ID}"
+    relabel_configs:
+      - source_labels: ['__journal__systemd_unit']
+        target_label: 'unit'
+
+  # Ollama logs (if running as a service)
+  - job_name: ollama
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: ollama
+          node_id: "${NODE_ID}"
+          __path__: /var/log/ollama/*.log
+    pipeline_stages:
+      - regex:
+          expression: '^(?P<timestamp>\S+)\s+(?P<level>\w+)\s+(?P<message>.*)$'
+      - labels:
+          level:

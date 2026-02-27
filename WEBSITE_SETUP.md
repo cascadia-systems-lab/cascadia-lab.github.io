@@ -1,6 +1,6 @@
 # Website Setup - Quick Start
 
-This file provides a quick overview of the Astro website setup for the Cascadia AI Systems Lab.
+This file provides a quick overview of the Astro website setup for the Cascadia Mobile Systems Lab.
 
 ## What Was Configured
 
@@ -62,7 +62,7 @@ Edit [src/pages/index.astro](src/pages/index.astro) to update:
 **Important**: Replace placeholder URLs:
 ```astro
 <!-- Update these in src/pages/index.astro -->
-<a href="https://github.com/yourusername/cascadia-ai-systems-lab">
+<a href="https://github.com/yourusername/cascadia-mobile-systems-lab">
 ```
 
 ### 4. Deploy to GitHub Pages
@@ -134,10 +134,10 @@ When ready to deploy:
 
 ## Project Structure
 
-This is still your AI Systems Lab repository, now with a website:
+This is still your Compute Systems Lab repository, now with a website:
 
 ```
-cascadia-ai-systems-lab/
+cascadia-mobile-systems-lab/
 ├── docs/                    # Your existing documentation
 ├── experiments/             # Your existing experiments
 ├── infrastructure/          # Your existing infrastructure

@@ -6,7 +6,7 @@ export default defineConfig({
   // Static site generation mode (no SSR)
   output: 'static',
 
-  // Site URL - Custom domain for Cascadia AI Systems Lab
+  // Site URL - Custom domain for Cascadia Mobile Systems Lab
   site: 'https://cascadiasystems.org',
 
   // Base path - Root domain, no subdirectory

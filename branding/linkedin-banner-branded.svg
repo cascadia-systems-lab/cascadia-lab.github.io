@@ -52,7 +52,7 @@
     fill="#5a7a94"
   >CASCADIA</text>
 
-  <!-- Text: AI SYSTEMS LAB -->
+  <!-- Text: MOBILE SYSTEMS LAB -->
   <text
     x="150"
     y="110"
@@ -61,7 +61,7 @@
     font-weight="900"
     letter-spacing="3"
     fill="#5a7a94"
-  >AI SYSTEMS LAB</text>
+  >MOBILE SYSTEMS LAB</text>
 
   <!-- Tagline -->
   <text
@@ -71,7 +71,7 @@
     font-size="14"
     font-weight="normal"
     fill="#7a9ab4"
-  >Building practical, self-hosted AI infrastructure that works</text>
+  >Building practical, self-hosted infrastructure that works</text>
 
   <!-- Bottom accent line -->
   <rect y="185" width="1128" height="6" fill="#5a7a94" opacity="0.3"/>

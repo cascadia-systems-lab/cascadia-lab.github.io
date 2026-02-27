@@ -1,6 +1,6 @@
 # Hardware Inventory
 
-**Physical infrastructure for Cascadia AI Systems Lab**
+**Physical infrastructure for Cascadia Mobile Systems Lab**
 
 ---
 

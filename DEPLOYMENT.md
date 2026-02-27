@@ -1,9 +1,9 @@
 ---
 # DEPLOYMENT GUIDE
-## Cascadia AI Systems Lab Website
+## Cascadia Mobile Systems Lab Website
 ---
 
-This guide provides complete deployment instructions for the Cascadia AI Systems Lab website to GitHub Pages with a custom domain.
+This guide provides complete deployment instructions for the Cascadia Mobile Systems Lab website to GitHub Pages with a custom domain.
 
 ## ✅ Configuration Summary
 
@@ -68,7 +68,7 @@ If not already created:
 
 1. Go to: https://github.com/organizations/cascadia-ai-lab/repositories/new
 2. Repository name: **`cascadia-ai-lab.github.io`**
-3. Description: "Cascadia AI Systems Lab - Infrastructure Research Website"
+3. Description: "Cascadia Mobile Systems Lab - Infrastructure Research Website"
 4. Visibility: **Public**
 5. **Do NOT initialize** with README (you already have code)
 6. Click **Create repository**

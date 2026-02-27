@@ -1,0 +1,164 @@
+# Cascadia Mobile Systems Lab — Research Harness Default Configuration
+# Version: 1.0
+#
+# Override values by creating a local config file and pointing
+# to it with: HARNESS_CONFIG=/path/to/local.yaml
+#
+# Node-specific hardware identity is declared in node_profile.yaml
+
+# -----------------------------------------------------------------
+# Controller connectivity
+# -----------------------------------------------------------------
+controller:
+  host: "cascadia-controller"
+  api_port: 8000
+  pg_port: 5432
+  redis_port: 6379
+  otel_port: 4317
+  loki_port: 3100
+
+  # Retry config for controller unreachability
+  retry_attempts: 5
+  retry_backoff_seconds: 2
+
+# -----------------------------------------------------------------
+# LLM / Inference backend
+# -----------------------------------------------------------------
+llm:
+  backend: "ollama"
+  host: "localhost"
+  port: 11434
+  request_timeout_seconds: 300
+
+  # Default model — override per task
+  default_model: "mistral:7b-instruct-q4_K_M"
+
+  # Determinism controls — do not change without versioning prompts
+  temperature: 0.0
+  seed: 42
+  top_p: 0.9
+  top_k: 40
+  repeat_penalty: 1.1
+  num_ctx: 4096
+  max_tokens: 4096
+
+# -----------------------------------------------------------------
+# Research pipeline
+# -----------------------------------------------------------------
+pipeline:
+  # Which phases to execute (all enabled by default)
+  phases:
+    - decompose
+    - retrieve
+    - analyze
+    - synthesize
+    - critique
+
+  # Prompt template version to use
+  prompt_version: "v1"
+
+  # Decompose phase
+  decompose:
+    max_hypotheses: 5
+    max_plan_steps: 8
+
+  # Retrieval phase
+  retrieve:
+    strategy: "web_search"    # web_search | local_corpus | web_search_plus_local_corpus
+    max_sources: 5
+    min_relevance_score: 0.5
+    source_timeout_seconds: 10
+
+    # Web search backend (self-hosted SearXNG recommended)
+    web_search:
+      backend: "searxng"
+      host: "localhost"
+      port: 8888
+      max_results_per_query: 5
+
+    # Local corpus (if enabled)
+    local_corpus:
+      path: "/data/research-corpus"
+      index_type: "bm25"      # bm25 | semantic
+
+  # Analyze phase
+  analyze:
+    max_evidence_items: 10
+    confidence_threshold: 0.5
+
+  # Synthesize phase
+  synthesize:
+    max_synthesis_tokens: 2048
+
+  # Critique phase
+  critique:
+    confidence_scale: 1.0    # Multiply raw confidence by this factor
+
+# -----------------------------------------------------------------
+# Telemetry collection
+# -----------------------------------------------------------------
+telemetry:
+  # Sampling rate for CPU/memory during active runs
+  sample_interval_seconds: 1.0
+
+  # Temperature throttling detection threshold
+  throttle_temp_c: 80.0
+
+  # Prometheus metrics export port (per worker)
+  prometheus_port: 9091
+
+  # Whether to emit OpenTelemetry spans
+  otel_enabled: true
+
+  # Whether to push logs to Loki
+  loki_enabled: true
+
+  # Local cache for records when controller unreachable
+  local_cache:
+    enabled: true
+    path: "/var/cache/cascadia/records"
+    max_size_mb: 500
+
+# -----------------------------------------------------------------
+# Task queue
+# -----------------------------------------------------------------
+queue:
+  # Default task priority (higher = sooner)
+  default_priority: 0
+
+  # Max concurrent tasks per worker (1 enforces isolation for telemetry)
+  max_concurrent: 1
+
+  # Task timeout (hard limit)
+  task_timeout_seconds: 3600
+
+  # Retry config
+  max_retries: 2
+  retry_delay_seconds: 30
+
+# -----------------------------------------------------------------
+# Storage
+# -----------------------------------------------------------------
+storage:
+  # PostgreSQL connection (credentials via environment variables)
+  # DB_HOST, DB_PORT, DB_NAME, DB_USER, DB_PASSWORD
+  database: "cascadia_lab"
+
+  # JSON Schema for validation before insert
+  schema_path: "/app/schemas/research_record_v1.json"
+
+  # Validate all records before inserting (disable for debugging only)
+  validate_before_insert: true
+
+# -----------------------------------------------------------------
+# Logging
+# -----------------------------------------------------------------
+logging:
+  level: "INFO"              # DEBUG | INFO | WARN | ERROR
+  format: "json"             # json | text
+  file: "/var/log/cascadia/harness/harness.log"
+  max_file_mb: 100
+  backup_count: 5
+
+  # Include run_id in every log line (required for Loki label filtering)
+  include_run_id: true

@@ -1,6 +1,6 @@
 # Infrastructure
 
-Core infrastructure configurations, provisioning code, and operational tooling for Cascadia AI Systems Lab.
+Core infrastructure configurations, provisioning code, and operational tooling for Cascadia Mobile Systems Lab.
 
 ## Purpose
 

@@ -10,10 +10,10 @@ interface Props {
 
 const {
   title,
-  description = 'Independent AI Infrastructure Research & Development Environment',
+  description = 'Independent Infrastructure Research & Development Environment',
 } = Astro.props;
 
-const fullTitle = title === 'Cascadia AI Systems Lab' ? title : `${title} | Cascadia AI Systems Lab`;
+const fullTitle = title === 'Cascadia Mobile Systems Lab' ? title : `${title} | Cascadia Mobile Systems Lab`;
 ---
 
 <!doctype html>
@@ -27,7 +27,7 @@ const fullTitle = title === 'Cascadia AI Systems Lab' ? title : `${title} | Casc
 
     <!-- SEO Meta Tags -->
     <meta name="robots" content="index, follow" />
-    <meta name="author" content="Cascadia AI Systems Lab" />
+    <meta name="author" content="Cascadia Mobile Systems Lab" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />

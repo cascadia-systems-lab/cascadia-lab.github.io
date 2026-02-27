@@ -1,12 +1,12 @@
-# Cascadia AI Systems Lab
+# Cascadia Mobile Systems Lab
 
-**Independent AI Infrastructure Research & Development Environment**
+**Independent Infrastructure Research & Development Environment**
 
 ---
 
 ## Overview
 
-Cascadia AI Systems Lab is a long-term infrastructure laboratory focused on designing, building, and operating practical AI systems at the intersection of GPU computing, data engineering, and modern infrastructure. This is not a single application or product—it is an evolving research environment for exploring real-world challenges in AI operations, self-hosted model serving, data pipeline architecture, and distributed systems.
+Cascadia Mobile Systems Lab is a long-term infrastructure laboratory focused on designing, building, and operating practical compute systems at the intersection of GPU computing, data engineering, and modern infrastructure. This is not a single application or product—it is an evolving research environment for exploring real-world challenges in systems operations, self-hosted model serving, data pipeline architecture, and distributed systems.
 
 This lab emphasizes hands-on infrastructure work: building systems that run on real hardware, optimizing for actual workloads, and documenting what works (and what doesn't) in production-like conditions.
 
@@ -14,15 +14,15 @@ This lab emphasizes hands-on infrastructure work: building systems that run on r
 
 ## Mission
 
-**Build practical, self-hosted AI infrastructure that works.**
+**Build practical, self-hosted infrastructure that works.**
 
-Cascadia AI Systems Lab exists to:
+Cascadia Mobile Systems Lab exists to:
 
-- **Design and test AI infrastructure patterns** for GPU workloads, model serving, and data processing
-- **Explore storage architectures** optimized for AI/ML data patterns (hot/warm/cold tiers, object storage, distributed filesystems)
-- **Develop tooling and automation** for managing AI infrastructure at scale
+- **Design and test compute infrastructure patterns** for GPU workloads, model serving, and data processing
+- **Explore storage architectures** optimized for computational data patterns (hot/warm/cold tiers, object storage, distributed filesystems)
+- **Develop tooling and automation** for managing compute infrastructure at scale
 - **Document real-world performance characteristics** of hardware, software, and architectural decisions
-- **Prototype distributed systems** for multi-node AI workloads and cluster computing
+- **Prototype distributed systems** for multi-node compute workloads and cluster computing
 - **Experiment with virtualization strategies** for GPU passthrough, resource isolation, and multi-tenancy
 - **Maintain a living knowledge base** of infrastructure decisions, experiments, and operational insights
 
@@ -64,7 +64,7 @@ Technical documentation capturing:
 
 ## How This Differs from a Software Project
 
-Unlike a traditional software repository, Cascadia AI Systems Lab is:
+Unlike a traditional software repository, Cascadia Mobile Systems Lab is:
 
 - **Infrastructure-first**: The primary artifact is not code, but running systems and operational knowledge
 - **Experiment-driven**: Many experiments may fail or be abandoned—that's expected and valuable
@@ -103,7 +103,7 @@ If you're working in this lab:
 ## Structure
 
 ```
-cascadia-ai-systems-lab/
+cascadia-mobile-systems-lab/
 ├── experiments/          # Active and archived experiments
 ├── infrastructure/       # Core infrastructure code and configs
 ├── tooling/             # Custom tools and utilities

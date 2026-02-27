@@ -1,6 +1,6 @@
 # Scripts
 
-Operational scripts for setup, maintenance, and deployment of Cascadia AI Systems Lab infrastructure.
+Operational scripts for setup, maintenance, and deployment of Cascadia Mobile Systems Lab infrastructure.
 
 ## Purpose
 

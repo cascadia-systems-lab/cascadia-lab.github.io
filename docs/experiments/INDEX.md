@@ -1,6 +1,6 @@
 # Experiments Index
 
-**Active and completed experiments in Cascadia AI Systems Lab**
+**Active and completed experiments in Cascadia Mobile Systems Lab**
 
 ---
 

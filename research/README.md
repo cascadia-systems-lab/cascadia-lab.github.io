@@ -1,6 +1,6 @@
 # Research
 
-External research, academic papers, vendor documentation, and theoretical explorations relevant to Cascadia AI Systems Lab work.
+External research, academic papers, vendor documentation, and theoretical explorations relevant to Cascadia Mobile Systems Lab work.
 
 ## Purpose
 
@@ -15,7 +15,7 @@ This directory stores research materials that inform lab experiments and infrast
 ## What Goes Here
 
 ### Papers
-- Academic research on AI systems, distributed computing, storage architectures
+- Academic research on compute systems, distributed computing, storage architectures
 - Vendor white papers on hardware capabilities and optimizations
 - Technical reports from industry labs and research groups
 - Conference proceedings and workshop papers
@@ -108,17 +108,17 @@ In experiment documentation or decision logs, reference research materials:
 ### Infrastructure
 - What are the performance characteristics of different GPU memory allocation strategies?
 - How does network topology affect distributed training efficiency?
-- What storage architectures minimize I/O bottlenecks for AI workloads?
+- What storage architectures minimize I/O bottlenecks for compute workloads?
 
-### AI Systems
+### Compute Systems
 - What are the trade-offs between different model serving frameworks?
 - How do quantization techniques affect inference latency and accuracy?
 - What are best practices for multi-tenant GPU sharing?
 
 ### Operations
-- How should AI infrastructure be monitored differently from traditional infrastructure?
+- How should compute infrastructure be monitored differently from traditional infrastructure?
 - What are failure modes specific to GPU workloads?
-- How can we optimize power efficiency in AI compute clusters?
+- How can we optimize power efficiency in distributed compute clusters?
 
 ---
 
@@ -184,7 +184,7 @@ Don't store every paper you find. Focus on:
 ## Tools for Research
 
 ### Searching
-- **arXiv**: AI/ML preprints and papers
+- **arXiv**: computational preprints and papers
 - **Google Scholar**: Academic search
 - **Papers With Code**: ML papers with implementations
 - **Vendor Sites**: NVIDIA, AMD, Intel technical docs

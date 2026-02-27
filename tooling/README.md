@@ -1,6 +1,6 @@
 # Tooling
 
-Custom utilities, diagnostic tools, and automation scripts developed for Cascadia AI Systems Lab operations.
+Custom utilities, diagnostic tools, and automation scripts developed for Cascadia Mobile Systems Lab operations.
 
 ## Purpose
 

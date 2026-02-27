@@ -1,12 +1,12 @@
-# Contributing to Cascadia AI Systems Lab
+# Contributing to Cascadia Mobile Systems Lab
 
-Thank you for your interest in contributing to Cascadia AI Systems Lab. This document outlines how to contribute effectively to this infrastructure research environment.
+Thank you for your interest in contributing to Cascadia Mobile Systems Lab. This document outlines how to contribute effectively to this infrastructure research environment.
 
 ---
 
 ## Understanding the Lab
 
-Cascadia AI Systems Lab is not a traditional software project—it's an infrastructure laboratory focused on building, testing, and documenting AI systems. Contributions here may include:
+Cascadia Mobile Systems Lab is not a traditional software project—it's an infrastructure laboratory focused on building, testing, and documenting compute systems. Contributions here may include:
 
 - Infrastructure experiments and findings
 - Tooling and automation
@@ -294,4 +294,4 @@ This contribution guide will evolve as the lab grows. Suggestions for improving 
 
 ---
 
-*Thank you for contributing to Cascadia AI Systems Lab. Your work helps advance practical AI infrastructure knowledge.*
+*Thank you for contributing to Cascadia Mobile Systems Lab. Your work helps advance practical compute infrastructure knowledge.*

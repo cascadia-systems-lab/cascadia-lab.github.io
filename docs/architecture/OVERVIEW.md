@@ -1,6 +1,6 @@
 # Architecture Overview
 
-**Cascadia AI Systems Lab - System Architecture**
+**Cascadia Mobile Systems Lab - System Architecture**
 
 ---
 
@@ -53,7 +53,7 @@ The lab is in its foundational phase. This document will evolve significantly as
 
 *Status*: Architecture to be determined based on workload requirements
 
-### Layer 5: AI/ML Runtime
+### Layer 5: computational Runtime
 - **Inference Engines**: vLLM, Triton, TensorRT-LLM, HuggingFace TGI
 - **Training Frameworks**: PyTorch, JAX, DeepSpeed
 - **Serving APIs**: OpenAI-compatible endpoints, gRPC services
@@ -271,4 +271,4 @@ Major technology choices are documented in [Decision Logs](../decisions/). Key d
 
 **Status**: Living document - updated continuously as architecture evolves.
 
-*This overview provides strategic context for infrastructure decisions in Cascadia AI Systems Lab.*
+*This overview provides strategic context for infrastructure decisions in Cascadia Mobile Systems Lab.*

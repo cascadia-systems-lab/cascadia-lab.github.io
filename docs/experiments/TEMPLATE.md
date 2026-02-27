@@ -235,4 +235,4 @@ Define:
 
 ---
 
-*This template ensures consistent, reproducible, and well-documented experiments across Cascadia AI Systems Lab.*
+*This template ensures consistent, reproducible, and well-documented experiments across Cascadia Mobile Systems Lab.*
