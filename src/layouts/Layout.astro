@@ -13,8 +13,12 @@ const {
   description = 'Drone-based field data collection and self-hosted spatial data processing — Portland, Oregon',
 } = Astro.props;
 
-const fullTitle = title === 'Cascadia Mobile Research' ? title : `${title} | Cascadia Mobile Research`;
+const fullTitle =
+  title === 'Cascadia Mobile Research'
+    ? 'Cascadia Mobile Research — Drone Mapping, LiDAR & Spatial Data | Portland, Oregon'
+    : `${title} | Cascadia Mobile Research`;
 const ogImage = new URL('/og-image.png', Astro.site);
+const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -28,6 +32,7 @@ const ogImage = new URL('/og-image.png', Astro.site);
 
     <!-- SEO Meta Tags -->
     <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
     <meta name="author" content="Cascadia Mobile Research" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />

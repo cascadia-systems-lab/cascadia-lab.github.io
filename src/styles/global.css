@@ -44,7 +44,7 @@
   }
 
   .btn-primary {
-    @apply bg-accent-blue text-white hover:bg-accent-blue/90;
+    @apply bg-blue-600 text-white hover:bg-blue-700;
   }
 
   .btn-secondary {

@@ -20,7 +20,7 @@ export default {
         text: {
           primary: '#e5e7eb',
           secondary: '#9ca3af',
-          muted: '#6b7280',
+          muted: '#828c9c',
         },
       },
       fontFamily: {

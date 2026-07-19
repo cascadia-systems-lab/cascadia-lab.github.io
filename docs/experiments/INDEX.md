@@ -1,12 +1,12 @@
 # Experiments Index
 
-**Active and completed experiments in Cascadia Mobile Systems Lab**
+**Active, planned, and completed experiments at Cascadia Mobile Research**
 
 ---
 
 ## Purpose
 
-This index tracks all experiments conducted in the lab, their status, and key findings. It serves as a navigation hub for understanding what has been tried, what worked, and what's currently in progress.
+This index tracks all lab experiments, their status, and key findings. It is the repository counterpart of the site's [Lab Notes](https://cascadiasystems.org/research/) page — the two are kept in sync.
 
 ---
 
@@ -20,27 +20,26 @@ This index tracks all experiments conducted in the lab, their status, and key fi
 
 ---
 
-## Completed Experiments
+## Planned Experiments
 
-### 2026-02
+*Experiments on the bench but not yet started. These match the Lab Notes page.*
 
-*No completed experiments yet.*
+| ID | Experiment | Category | Objective | Dependencies |
+|----|------------|----------|-----------|--------------|
+| EXP-001 | Photogrammetry vs. LiDAR SLAM Accuracy | Capture Methods | Capture the same site both ways; compare geometric accuracy, coverage, capture time, and processing cost quantitatively (CloudCompare) | Test site selection; ground-reference workflow |
+| EXP-002 | Self-Hosted Photogrammetry vs. Cloud Services | Processing | Benchmark an open-source pipeline on owned GPU hardware against commercial cloud processing: quality, turnaround, cost per project | Representative capture dataset |
+| EXP-003 | Corridor Mapping Sample Deliverable | Deliverables | Produce and publish a complete corridor package (orthomosaic, elevation model, report) for a public right-of-way segment as a worked example | Site/airspace selection |
+| EXP-004 | Magnetometry Processing Pipeline | Geophysics | Data handling, filtering, and visualization for magnetometer surveys, developed against public geophysical datasets before hardware is fielded | Public dataset selection (in development) |
 
 ---
 
-## Planned Experiments
+## Completed Experiments
 
-*Experiments on the roadmap but not yet started.*
-
-| Experiment | Category | Objective | Dependencies |
-|------------|----------|-----------|--------------|
-| - | - | - | - |
+*No completed experiments yet. Write-ups will be added here and surfaced on the site as they finish.*
 
 ---
 
 ## Archived Experiments
-
-*Experiments that are no longer active but preserved for reference.*
 
 | Experiment | Category | Completed | Outcome | Link |
 |------------|----------|-----------|---------|------|
@@ -50,68 +49,31 @@ This index tracks all experiments conducted in the lab, their status, and key fi
 
 ## Experiments by Category
 
-### GPU Acceleration
-*Experiments focused on GPU performance, CUDA optimization, memory management.*
+### Capture Methods
+*Drone photogrammetry, LiDAR SLAM, repeatable capture planning, ground truth.*
+- EXP-001 (planned)
 
-- No experiments yet
+### Processing
+*Self-hosted photogrammetry/SLAM pipelines, GPU workloads, storage and compute sizing.*
+- EXP-002 (planned)
 
-### Model Serving
-*Experiments on inference engines, serving architectures, and API design.*
+### Deliverables
+*Orthomosaics, elevation models, point clouds, accuracy reporting.*
+- EXP-003 (planned)
 
-- No experiments yet
-
-### Data Pipelines
-*Experiments on ETL, data ingestion, preprocessing, and orchestration.*
-
-- No experiments yet
-
-### Storage Systems
-*Experiments on storage architecture, filesystem performance, tiering strategies.*
-
-- No experiments yet
-
-### Virtualization
-*Experiments on containerization, GPU passthrough, resource isolation.*
-
-- No experiments yet
-
-### Networking
-*Experiments on network topology, distributed communication, performance optimization.*
-
-- No experiments yet
-
----
-
-## Key Findings Summary
-
-*High-level synthesis of important learnings across experiments.*
-
-### Performance Insights
-- TBD: Will be populated as experiments complete
-
-### Architectural Patterns
-- TBD: Will be populated as patterns emerge
-
-### Operational Lessons
-- TBD: Will be populated as infrastructure matures
+### Geophysics
+*Magnetometry and custom sensing.*
+- EXP-004 (in development)
 
 ---
 
 ## Experiment Statistics
 
-**Total Experiments**: 0
+**Total Experiments**: 4
 - Active: 0
 - Completed: 0
-- Planned: 0
+- Planned: 4
 - Archived: 0
-
-**Experiments by Category**:
-- GPU Acceleration: 0
-- Model Serving: 0
-- Data Pipelines: 0
-- Storage Systems: 0
-- Virtualization: 0
-- Networking: 0
 
 ---
 
@@ -122,26 +84,10 @@ This index tracks all experiments conducted in the lab, their status, and key fi
 3. Add entry to this index in "Planned" or "Active" section
 4. Begin experiment execution
 5. Update status as experiment progresses
-6. Move to "Completed" when finished
+6. Move to "Completed" when finished — and update the site's Lab Notes page in the same change
 
 ---
 
-## Search by Topic
-
-*Tag-based navigation (to be implemented as experiments accumulate).*
-
-### Tags
-- `#baseline` - Initial performance characterization
-- `#optimization` - Performance improvement experiments
-- `#comparison` - Comparing multiple approaches
-- `#feasibility` - Testing if something is possible
-- `#debugging` - Investigating issues or anomalies
-- `#scaling` - Testing scalability limits
-
-*No tagged experiments yet.*
-
----
-
-**Last Updated**: 2026-02-11
+**Last Updated**: 2026-07-19
 
 *This index is maintained manually. Update it whenever experiment status changes.*

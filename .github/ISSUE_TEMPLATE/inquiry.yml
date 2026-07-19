@@ -1,0 +1,33 @@
+name: Project Inquiry
+description: Ask about drone mapping, LiDAR scanning, inspection, or GIS work.
+title: "[Inquiry] "
+labels: ["inquiry"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reaching out to **Cascadia Mobile Research**. Tell us a little about your project and how to reach you, and we'll follow up. (Nothing here is binding — it's just a conversation starter.)
+  - type: input
+    id: location
+    attributes:
+      label: Site location (general)
+      description: City/area is enough — no exact addresses needed here.
+      placeholder: e.g., Portland metro, Clackamas County
+    validations:
+      required: false
+  - type: textarea
+    id: need
+    attributes:
+      label: What do you need?
+      description: The question the data should answer, rough timeline, and any required deliverable formats.
+      placeholder: e.g., monthly progress orthomosaics of a jobsite through 2027, GeoTIFF + web viewer
+    validations:
+      required: true
+  - type: input
+    id: reach
+    attributes:
+      label: How should we reach you?
+      description: Email or phone. This issue is public — share only what you're comfortable posting, or just say "reply here."
+      placeholder: e.g., name@company.com, or "reply here"
+    validations:
+      required: true

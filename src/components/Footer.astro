@@ -24,17 +24,17 @@ const currentYear = new Date().getFullYear();
         </h3>
         <ul class="space-y-2 text-sm">
           <li>
-            <a href="/services" class="link">
+            <a href="/services/" class="link">
               Services
             </a>
           </li>
           <li>
-            <a href="/research" class="link">
+            <a href="/research/" class="link">
               Lab Notes
             </a>
           </li>
           <li>
-            <a href="/documentation" class="link">
+            <a href="/documentation/" class="link">
               Documentation
             </a>
           </li>
@@ -53,11 +53,14 @@ const currentYear = new Date().getFullYear();
         </h3>
         <div class="space-y-2 text-sm text-text-secondary">
           <p>
-            Inquiries via
-            <a href="https://github.com/cascadia-systems-lab" class="link">GitHub</a>
-            while our contact page is being set up.
+            Inquiries:
+            <a
+              href="https://github.com/cascadia-systems-lab/cascadia-lab.github.io/issues/new?template=inquiry.yml"
+              class="link"
+            >open a project inquiry</a>
+            (free GitHub account required).
           </p>
-          <p>Last Updated: {new Date().toISOString().split('T')[0]}</p>
+          <p>Last Updated: {new Date().toLocaleDateString('en-CA', { timeZone: 'America/Los_Angeles' })}</p>
         </div>
       </div>
     </div>
