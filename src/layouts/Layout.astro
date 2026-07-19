@@ -14,6 +14,7 @@ const {
 } = Astro.props;
 
 const fullTitle = title === 'Cascadia Mobile Systems Lab' ? title : `${title} | Cascadia Mobile Systems Lab`;
+const ogImage = new URL('/og-image.png', Astro.site);
 ---
 
 <!doctype html>
@@ -32,9 +33,14 @@ const fullTitle = title === 'Cascadia Mobile Systems Lab' ? title : `${title} | 
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
