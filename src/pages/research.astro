@@ -1,103 +1,74 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const repo = 'https://github.com/cascadia-systems-lab/cascadia-lab.github.io';
 ---
 
 <Layout
-  title="Research"
-  description="Experiments, findings, and research initiatives at Cascadia Mobile Systems Lab"
+  title="Lab Notes"
+  description="Open experiments, benchmarks, and field methodology from Cascadia Mobile Research"
 >
   <!-- Hero -->
   <section class="section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
     <div class="container-custom">
       <div class="mx-auto max-w-3xl text-center">
-        <h1 class="mb-6 text-4xl font-bold tracking-tight sm:text-5xl">Research</h1>
+        <h1 class="mb-6 text-4xl font-bold tracking-tight sm:text-5xl">Lab Notes</h1>
         <p class="text-lg text-text-secondary">
-          Infrastructure experiments, performance studies, and operational findings from hands-on
-          systems work.
+          An open notebook of experiments, benchmarks, and field methodology. We publish what we
+          test — including what didn't work — so clients can see the evidence behind the services.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Research Focus -->
+  <!-- Research Questions -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
-      <h2 class="mb-8 text-3xl font-bold">Research Areas</h2>
+      <h2 class="mb-8 text-3xl font-bold">Current Questions</h2>
 
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-6 md:grid-cols-3">
         <div class="card card-hover">
-          <h3 class="mb-3 text-lg font-semibold text-accent-blue">GPU Infrastructure</h3>
+          <h3 class="mb-3 text-lg font-semibold text-accent-blue">Capture Methods</h3>
           <ul class="space-y-2 text-sm text-text-secondary">
-            <li>• CUDA optimization and kernel profiling</li>
-            <li>• GPU utilization patterns under inference loads</li>
-            <li>• Thermal and power characteristics</li>
-            <li>• Multi-GPU communication and scaling</li>
+            <li>• Photogrammetry vs. LiDAR SLAM: accuracy, cost, and fit by site type</li>
+            <li>• What a sub-250g platform can and cannot deliver for mapping work</li>
+            <li>• Repeatable capture planning for change detection</li>
+            <li>• Ground control and error measurement on a small-operator budget</li>
           </ul>
         </div>
 
         <div class="card card-hover">
-          <h3 class="mb-3 text-lg font-semibold text-accent-cyan">Model Serving</h3>
+          <h3 class="mb-3 text-lg font-semibold text-accent-cyan">Self-Hosted Processing</h3>
           <ul class="space-y-2 text-sm text-text-secondary">
-            <li>• vLLM deployment and tuning</li>
-            <li>• Batch size vs. latency trade-offs</li>
-            <li>• Quantization impact on throughput</li>
-            <li>• KV cache optimization strategies</li>
+            <li>• Open-source photogrammetry pipelines on owned GPU hardware</li>
+            <li>• Cost and turnaround vs. commercial cloud processing services</li>
+            <li>• LiDAR SLAM processing and point cloud registration</li>
+            <li>• Storage and compute sizing for reconstruction workloads</li>
           </ul>
         </div>
 
         <div class="card card-hover">
-          <h3 class="mb-3 text-lg font-semibold text-accent-green">Storage Systems</h3>
+          <h3 class="mb-3 text-lg font-semibold text-accent-green">Spatial Analysis</h3>
           <ul class="space-y-2 text-sm text-text-secondary">
-            <li>• Model loading performance (NVMe vs HDD)</li>
-            <li>• Dataset I/O patterns</li>
-            <li>• Filesystem benchmarking (ext4, XFS, ZFS)</li>
-            <li>• Storage tiering strategies</li>
-          </ul>
-        </div>
-
-        <div class="card card-hover">
-          <h3 class="mb-3 text-lg font-semibold text-accent-purple">Network Performance</h3>
-          <ul class="space-y-2 text-sm text-text-secondary">
-            <li>• Inference API latency profiling</li>
-            <li>• Network topology for distributed workloads</li>
-            <li>• Bandwidth requirements for model synchronization</li>
-            <li>• Multi-node communication overhead</li>
-          </ul>
-        </div>
-
-        <div class="card card-hover">
-          <h3 class="mb-3 text-lg font-semibold text-accent-blue">Virtualization</h3>
-          <ul class="space-y-2 text-sm text-text-secondary">
-            <li>• GPU passthrough performance</li>
-            <li>• Container vs. bare metal inference</li>
-            <li>• Resource isolation strategies</li>
-            <li>• Overhead measurements</li>
-          </ul>
-        </div>
-
-        <div class="card card-hover">
-          <h3 class="mb-3 text-lg font-semibold text-accent-cyan">Monitoring & Observability</h3>
-          <ul class="space-y-2 text-sm text-text-secondary">
-            <li>• GPU metrics collection (DCGM)</li>
-            <li>• Inference latency tracking</li>
-            <li>• Resource utilization dashboards</li>
-            <li>• Alerting strategies for compute workloads</li>
+            <li>• Change detection from repeat capture</li>
+            <li>• Terrain, viewshed, and corridor analysis methods</li>
+            <li>• Accuracy reporting clients can actually interpret</li>
+            <li>• Deriving decision-ready products from raw reconstructions</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Active Experiments -->
+  <!-- Planned Experiments -->
   <section class="section bg-dark-surface">
     <div class="container-custom">
-      <h2 class="mb-8 text-3xl font-bold">Planned Experiments</h2>
+      <h2 class="mb-8 text-3xl font-bold">Experiments on the Bench</h2>
 
       <div class="space-y-6">
         <div class="card">
           <div class="mb-4 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
             <div>
-              <h3 class="mb-1 text-xl font-semibold">GPU Baseline Characterization</h3>
+              <h3 class="mb-1 text-xl font-semibold">Photogrammetry vs. LiDAR SLAM Accuracy</h3>
               <p class="text-sm text-text-muted">Experiment ID: EXP-001</p>
             </div>
             <span class="inline-flex w-fit items-center rounded-full bg-accent-blue/20 px-3 py-1 text-sm font-medium text-accent-blue">
@@ -105,22 +76,23 @@ import Layout from '../layouts/Layout.astro';
             </span>
           </div>
           <p class="mb-4 text-text-secondary">
-            Establishing baseline performance metrics for GPU compute under sustained LLM inference
-            workloads. Measuring throughput, latency, power consumption, and thermal behavior across
-            different model sizes and batch configurations.
+            Capture the same site with drone photogrammetry and handheld LiDAR SLAM, reconstruct
+            both, and compare the results quantitatively: geometric accuracy, coverage, capture
+            time, and processing cost. The practical question every client asks — which method for
+            which job — answered with measurements instead of vendor claims.
           </p>
           <div class="flex flex-wrap gap-2">
-            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">NVIDIA GPU</span>
-            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">vLLM</span>
-            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Quantized LLMs</span>
-            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">DCGM</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Photogrammetry</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">LiDAR SLAM</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">CloudCompare</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Accuracy Analysis</span>
           </div>
         </div>
 
         <div class="card">
           <div class="mb-4 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
             <div>
-              <h3 class="mb-1 text-xl font-semibold">Storage Tier Performance Study</h3>
+              <h3 class="mb-1 text-xl font-semibold">Self-Hosted Photogrammetry vs. Cloud Services</h3>
               <p class="text-sm text-text-muted">Experiment ID: EXP-002</p>
             </div>
             <span class="inline-flex w-fit items-center rounded-full bg-accent-blue/20 px-3 py-1 text-sm font-medium text-accent-blue">
@@ -128,14 +100,15 @@ import Layout from '../layouts/Layout.astro';
             </span>
           </div>
           <p class="mb-4 text-text-secondary">
-            Comparing model loading times and I/O patterns across NVMe, SATA SSD, and HDD storage.
-            Evaluating filesystem performance (ext4, XFS, ZFS) for large model weight files and
-            dataset access patterns.
+            Benchmark an open-source photogrammetry pipeline on owned GPU hardware against
+            commercial cloud processing: reconstruction quality, turnaround time, and cost per
+            project. Also the evidence base for our data-sovereignty offering — processing client
+            data without third-party clouds has to be demonstrably competitive, not just principled.
           </p>
           <div class="flex flex-wrap gap-2">
-            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">NVMe</span>
-            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">fio</span>
-            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Model Loading</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Open-Source Pipeline</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">GPU Processing</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Cost Analysis</span>
             <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Benchmarking</span>
           </div>
         </div>
@@ -143,7 +116,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="card">
           <div class="mb-4 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
             <div>
-              <h3 class="mb-1 text-xl font-semibold">Inference Latency Optimization</h3>
+              <h3 class="mb-1 text-xl font-semibold">Corridor Mapping Sample Deliverable</h3>
               <p class="text-sm text-text-muted">Experiment ID: EXP-003</p>
             </div>
             <span class="inline-flex w-fit items-center rounded-full bg-accent-blue/20 px-3 py-1 text-sm font-medium text-accent-blue">
@@ -151,15 +124,38 @@ import Layout from '../layouts/Layout.astro';
             </span>
           </div>
           <p class="mb-4 text-text-secondary">
-            Investigating latency reduction techniques including continuous batching, speculative
-            decoding, and KV cache tuning. Measuring p50, p95, and p99 latency under varying load
-            conditions.
+            Produce a complete corridor mapping package — orthomosaic, elevation model, and analysis
+            report — for a public right-of-way segment, published end to end as a worked example.
+            Both a portfolio piece for infrastructure clients and a documented methodology anyone
+            can evaluate.
           </p>
           <div class="flex flex-wrap gap-2">
-            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">vLLM</span>
-            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Continuous Batching</span>
-            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Latency</span>
-            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Load Testing</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Corridor Mapping</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Orthomosaic</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Case Study</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Public Data</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="mb-4 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+            <div>
+              <h3 class="mb-1 text-xl font-semibold">Magnetometry Processing Pipeline</h3>
+              <p class="text-sm text-text-muted">Experiment ID: EXP-004</p>
+            </div>
+            <span class="inline-flex w-fit items-center rounded-full bg-accent-purple/20 px-3 py-1 text-sm font-medium text-accent-purple">
+              In Development
+            </span>
+          </div>
+          <p class="mb-4 text-text-secondary">
+            Groundwork for drone-based geophysical survey: data handling, filtering, and
+            visualization for magnetometer surveys, developed against public geophysical datasets
+            before hardware is fielded.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Magnetometry</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Signal Processing</span>
+            <span class="rounded bg-dark-border px-2 py-1 text-xs font-mono">Geophysics</span>
           </div>
         </div>
       </div>
@@ -169,16 +165,16 @@ import Layout from '../layouts/Layout.astro';
   <!-- Experiment Methodology -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
-      <h2 class="mb-8 text-3xl font-bold">Experiment Methodology</h2>
+      <h2 class="mb-8 text-3xl font-bold">Methodology</h2>
 
       <div class="grid gap-6 md:grid-cols-2">
         <div class="card">
           <h3 class="mb-3 text-lg font-semibold text-accent-blue">Measurement Principles</h3>
           <ul class="space-y-2 text-sm text-text-secondary">
-            <li>• Benchmark on actual hardware, not cloud instances</li>
+            <li>• Benchmark on actual hardware and real sites, not idealized conditions</li>
             <li>• Run multiple iterations to account for variance</li>
-            <li>• Document environmental conditions (temperature, load)</li>
-            <li>• Use production-representative workloads</li>
+            <li>• Document environmental conditions alongside results</li>
+            <li>• Use workloads representative of real client projects</li>
             <li>• Isolate variables to measure specific impacts</li>
           </ul>
         </div>
@@ -189,8 +185,8 @@ import Layout from '../layouts/Layout.astro';
             <li>• Record hypothesis, methodology, and results</li>
             <li>• Include hardware specs and software versions</li>
             <li>• Document failures and negative results</li>
-            <li>• Share reproducible benchmark scripts</li>
-            <li>• Link to raw data and analysis notebooks</li>
+            <li>• Share reproducible processing scripts</li>
+            <li>• Link to raw data where licensing allows</li>
           </ul>
         </div>
       </div>
@@ -200,17 +196,16 @@ import Layout from '../layouts/Layout.astro';
   <!-- Publications & Findings -->
   <section class="section bg-dark-surface">
     <div class="container-custom">
-      <h2 class="mb-8 text-3xl font-bold">Publications & Findings</h2>
+      <h2 class="mb-8 text-3xl font-bold">Published Findings</h2>
 
       <div class="rounded-lg border border-dark-border bg-dark-bg p-8 text-center">
-        <h3 class="mb-4 text-lg font-semibold text-text-primary">No Publications Yet</h3>
+        <h3 class="mb-4 text-lg font-semibold text-text-primary">Nothing Published Yet</h3>
         <p class="mb-6 text-text-secondary">
-          Research findings and experiment reports will be published here as work progresses.
-          The lab is currently in its foundation phase; the first write-ups will cover baseline
-          hardware characterization.
+          Write-ups will appear here as the experiments above are completed. We would rather show
+          an empty shelf than an inflated one.
         </p>
         <a
-          href="https://github.com/cascadia-systems-lab/cascadia-lab.github.io/tree/main/docs/experiments"
+          href={`${repo}/tree/main/docs/experiments`}
           target="_blank"
           rel="noopener noreferrer"
           class="btn btn-secondary"
@@ -225,29 +220,21 @@ import Layout from '../layouts/Layout.astro';
   <section class="section border-t border-dark-border">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <h2 class="mb-8 text-3xl font-bold">Experimental Standards</h2>
+        <h2 class="mb-8 text-3xl font-bold">Standards</h2>
 
         <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
           <p>
-            All performance claims are backed by empirical measurements on physical hardware under
-            realistic operating conditions. Theoretical estimates and vendor benchmarks are treated
-            as hypotheses requiring validation, not as established facts.
+            Performance and accuracy claims are backed by measurements on physical hardware under
+            realistic conditions. Vendor benchmarks and theoretical estimates are treated as
+            hypotheses to validate, not established facts.
           </p>
           <p>
             Failed experiments receive the same documentation rigor as successful ones. Negative
-            results prevent redundant work and contribute meaningfully to the field's understanding
-            of what approaches do not yield improvements under which conditions.
+            results prevent redundant work — ours and other people's.
           </p>
           <p>
-            Experimental reports include complete methodology, environmental specifications, hardware
-            configurations, software versions, and reproducible benchmark code. This enables
-            independent verification and builds on the scientific principle that claims require
-            evidence that others can examine.
-          </p>
-          <p>
-            All findings, datasets, and analysis code are published openly via the lab's GitHub
-            repositories. This serves both institutional memory and the broader infrastructure
-            research community's need for empirical data from real-world systems.
+            Reports include complete methodology, hardware configuration, and software versions,
+            with reproducible code where possible, so findings can be independently checked.
           </p>
         </div>
       </div>
@@ -258,14 +245,14 @@ import Layout from '../layouts/Layout.astro';
   <section class="section bg-dark-surface">
     <div class="container-custom">
       <div class="mx-auto max-w-3xl text-center">
-        <h2 class="mb-6 text-3xl font-bold">Follow the Research</h2>
+        <h2 class="mb-6 text-3xl font-bold">Follow the Work</h2>
         <p class="mb-8 text-text-secondary">
-          Experiment documentation, findings, and methodology are maintained in the GitHub
-          repository. New results are published as experiments progress.
+          Experiment documentation and methodology live in the GitHub repository. New results are
+          published as experiments complete.
         </p>
         <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
-            href="https://github.com/cascadia-systems-lab/cascadia-lab.github.io/tree/main/docs/experiments"
+            href={`${repo}/tree/main/docs/experiments`}
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-primary"

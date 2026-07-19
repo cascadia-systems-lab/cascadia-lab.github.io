@@ -1,8 +1,8 @@
 {
-  "name": "cascadia-mobile-systems-lab",
+  "name": "cascadia-mobile-research",
   "version": "1.0.0",
   "type": "module",
-  "description": "Independent Infrastructure Research & Development Environment",
+  "description": "Cascadia Mobile Research \u2014 drone-based field data collection and self-hosted spatial data processing",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

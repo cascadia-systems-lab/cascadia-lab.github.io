@@ -1,0 +1,184 @@
+---
+import Layout from '../layouts/Layout.astro';
+// TODO before merge (operator decisions):
+// 1. Confirm FAA Part 107 certificate status — the Compliance section below assumes
+//    certification. If not yet in hand, change to "operations will be conducted under..."
+//    and do not accept paid flight work until certified.
+// 2. Insurance: no coverage is claimed on this page. If liability coverage exists,
+//    add it to the Compliance section — many clients ask.
+// 3. Contact method: this page routes inquiries to GitHub until an email is chosen.
+---
+
+<Layout
+  title="Services"
+  description="Drone mapping, photogrammetry, LiDAR scanning, aerial inspection, and GIS analysis services in Portland, Oregon and the Pacific Northwest"
+>
+  <!-- Hero -->
+  <section class="section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
+    <div class="container-custom">
+      <div class="mx-auto max-w-3xl text-center">
+        <h1 class="mb-6 text-4xl font-bold tracking-tight sm:text-5xl">Services</h1>
+        <p class="text-lg text-text-secondary">
+          Field data collection and spatial data products for property owners, builders,
+          engineering and surveying firms, and public agencies across the Pacific Northwest.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Lines -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="space-y-6">
+        <div class="card">
+          <h2 class="mb-3 text-xl font-semibold text-accent-blue">Aerial Mapping &amp; Photogrammetry</h2>
+          <p class="mb-4 text-text-secondary">
+            Drone-captured imagery processed into georeferenced orthomosaic maps, digital elevation
+            models, and textured 3D reconstructions. Suited to site documentation, earthwork and
+            stockpile estimation, and planning work.
+          </p>
+          <p class="text-sm text-text-muted">
+            Deliverables: GeoTIFF orthomosaics · elevation models · dense point clouds · textured meshes ·
+            processing report with accuracy notes
+          </p>
+        </div>
+
+        <div class="card">
+          <h2 class="mb-3 text-xl font-semibold text-accent-cyan">LiDAR Scanning &amp; 3D Modeling</h2>
+          <p class="mb-4 text-text-secondary">
+            Ground-based 3D LiDAR capture of structures, sites, and interiors — including spaces
+            aerial photogrammetry can't reach. Scans are registered with SLAM processing and
+            delivered as point clouds or cleaned, measurable 3D models.
+          </p>
+          <p class="text-sm text-text-muted">
+            Deliverables: registered point clouds (LAS/PLY) · cleaned meshes · dimensioned model views
+          </p>
+        </div>
+
+        <div class="card">
+          <h2 class="mb-3 text-xl font-semibold text-accent-green">Aerial Inspection &amp; Progress Monitoring</h2>
+          <p class="mb-4 text-text-secondary">
+            Visual documentation of roofs, structures, and hard-to-reach assets, and recurring
+            construction progress capture flown to a repeatable plan so conditions can be compared
+            accurately over time.
+          </p>
+          <p class="text-sm text-text-muted">
+            Deliverables: annotated photo sets · comparison series · condition summaries
+          </p>
+        </div>
+
+        <div class="card">
+          <h2 class="mb-3 text-xl font-semibold text-accent-purple">GIS &amp; Spatial Analysis</h2>
+          <p class="mb-4 text-text-secondary">
+            Analysis and cartography built on captured or existing data: change detection, terrain
+            and viewshed analysis, corridor studies, and custom mapping. Grounded in formal
+            geographic training, not just software operation.
+          </p>
+          <p class="text-sm text-text-muted">
+            Deliverables: analysis reports · print and web maps · GIS-ready data layers
+          </p>
+        </div>
+
+        <div class="card">
+          <h2 class="mb-3 text-xl font-semibold text-accent-blue">Aerial Photo &amp; Video</h2>
+          <p class="mb-4 text-text-secondary">
+            Commercial aerial photography and videography for real estate, marketing, and events —
+            the straightforward version of what we do.
+          </p>
+          <p class="text-sm text-text-muted">
+            Deliverables: edited stills and video in your required formats
+          </p>
+        </div>
+
+        <div class="card border-dashed">
+          <div class="mb-3 flex items-center gap-3">
+            <h2 class="text-xl font-semibold text-text-secondary">Geophysical Survey &amp; Custom Sensing</h2>
+            <span class="inline-flex items-center rounded-full bg-accent-purple/20 px-3 py-1 text-xs font-medium text-accent-purple">
+              In Development
+            </span>
+          </div>
+          <p class="text-text-secondary">
+            Drone magnetometry for mineral exploration and custom sensor integration are on the
+            lab's development roadmap. If you have a sensing problem that doesn't fit a standard
+            service, we're interested in talking about it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-3xl font-bold">How We Work</h2>
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            Every job starts with a scoping conversation: what question the data needs to answer,
+            what accuracy it requires, and what format it has to arrive in. From there we plan the
+            capture, fly or scan the site, process everything in-house, and deliver the products
+            along with notes on methodology and accuracy limits.
+          </p>
+          <p>
+            <strong class="text-text-primary">Your data stays with us.</strong> Processing runs on
+            infrastructure we own — imagery and scan data are not uploaded to third-party cloud
+            platforms. For public agencies and clients with data-governance requirements, we can
+            document the full chain of custody from capture to delivery.
+          </p>
+          <p>
+            We are a small operation and honest about it: one operator, carefully maintained
+            instruments, and published methods. What we commit to, we can demonstrate — and our
+            <a href="/research" class="link">lab notes</a> show the testing behind the services.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-3xl font-bold">Compliance &amp; Safety</h2>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="card">
+            <h3 class="mb-3 text-lg font-semibold text-accent-blue">FAA Part 107 Operations</h3>
+            <p class="text-sm leading-relaxed text-text-secondary">
+              Commercial flights are conducted under FAA Part 107 small-UAS rules, with airspace
+              authorization obtained before any flight in controlled airspace and site-specific
+              safety assessment before every operation.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="mb-3 text-lg font-semibold text-accent-cyan">Lightweight by Design</h3>
+            <p class="text-sm leading-relaxed text-text-secondary">
+              Our primary aerial platform weighs under 250 grams — a deliberate choice that reduces
+              risk to people and property while still producing mapping-grade imagery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="mb-6 text-3xl font-bold">Start a Conversation</h2>
+        <p class="mb-8 text-text-secondary">
+          Tell us about the site, the question you need answered, and the deliverable you have in
+          mind. A dedicated contact page is coming soon — in the meantime, reach us through GitHub.
+        </p>
+        <a
+          href="https://github.com/cascadia-systems-lab"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+        >
+          Contact via GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -3,10 +3,10 @@ const currentPath = Astro.url.pathname;
 
 const navItems = [
   { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
+  { name: 'Services', path: '/services' },
+  { name: 'Lab Notes', path: '/research' },
   { name: 'Infrastructure', path: '/infrastructure' },
-  { name: 'Research', path: '/research' },
-  { name: 'Documentation', path: '/documentation' },
+  { name: 'About', path: '/about' },
 ];
 
 function isActive(path: string) {
@@ -24,7 +24,7 @@ function isActive(path: string) {
       <div class="flex items-center">
         <a href="/" class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
           <div class="h-8 w-8 rounded bg-gradient-to-br from-accent-blue to-accent-cyan"></div>
-          <span class="text-lg font-semibold">Cascadia Mobile Systems Lab</span>
+          <span class="text-lg font-semibold">Cascadia Mobile Research</span>
         </a>
       </div>
 

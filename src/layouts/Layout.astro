@@ -10,10 +10,10 @@ interface Props {
 
 const {
   title,
-  description = 'Independent Infrastructure Research & Development Environment',
+  description = 'Drone-based field data collection and self-hosted spatial data processing — Portland, Oregon',
 } = Astro.props;
 
-const fullTitle = title === 'Cascadia Mobile Systems Lab' ? title : `${title} | Cascadia Mobile Systems Lab`;
+const fullTitle = title === 'Cascadia Mobile Research' ? title : `${title} | Cascadia Mobile Research`;
 const ogImage = new URL('/og-image.png', Astro.site);
 ---
 
@@ -28,7 +28,7 @@ const ogImage = new URL('/og-image.png', Astro.site);
 
     <!-- SEO Meta Tags -->
     <meta name="robots" content="index, follow" />
-    <meta name="author" content="Cascadia Mobile Systems Lab" />
+    <meta name="author" content="Cascadia Mobile Research" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />

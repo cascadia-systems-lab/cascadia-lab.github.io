@@ -2,192 +2,171 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Cascadia Mobile Systems Lab">
+<Layout title="Cascadia Mobile Research">
   <!-- Hero Section -->
   <section class="section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
     <div class="container-custom">
       <div class="mx-auto max-w-5xl">
         <h1 class="mb-8 text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-          Computational Systems for Understanding Complex Reality
+          From Field to Map
         </h1>
         <div class="mb-8 border-l-4 border-accent-blue bg-dark-surface/50 p-6 text-lg leading-relaxed">
           <p class="text-text-primary">
-            <strong>Cascadia Mobile Systems Lab is an independent research institution focused on building
-            computational systems that advance humanity's ability to model and understand complex reality.</strong>
+            <strong>Cascadia Mobile Research is a Portland, Oregon lab that collects field data with
+            drones and LiDAR, processes it on infrastructure we own and operate, and delivers it as
+            maps, 3D models, and measurements.</strong>
           </p>
         </div>
         <div class="mx-auto max-w-3xl space-y-4 text-center text-lg text-text-secondary">
           <p>
-            We build computational infrastructure as instruments for exploration—tools designed
-            to probe intelligence, emergence, and large-scale complexity.
+            We are a small, independent outfit: real instruments, our own compute, and an open lab
+            notebook. Every capability we advertise is one we can demonstrate.
           </p>
           <p>
-            This work is experimental and research-driven, oriented toward deeper understanding rather
-            than short-term commercialization. The systems we design serve as platforms for inquiry
-            into phenomena that resist conventional analysis.
+            Client work funds the lab. The lab publishes its methods. Each makes the other better.
           </p>
+        </div>
+        <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a href="/services" class="btn btn-primary">
+            View Services
+          </a>
+          <a href="/research" class="btn btn-secondary">
+            Read the Lab Notes
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Mission Section -->
+  <!-- Pipeline -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
-      <div class="mx-auto max-w-4xl">
-        <h2 class="mb-8 text-center text-3xl font-bold sm:text-4xl">Mission</h2>
-        <div class="space-y-4 text-lg leading-relaxed text-text-secondary">
-          <p class="text-center">
-            We design and operate computational systems that serve as instruments for exploring
-            intelligence, emergence, and large-scale complexity.
+      <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">One Pipeline, End to End</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="card">
+          <h3 class="mb-3 text-lg font-semibold text-accent-blue">1 · Collect</h3>
+          <p class="text-sm leading-relaxed text-text-secondary">
+            Field data capture with a lightweight sub-250g drone platform and a handheld 3D LiDAR
+            scanner. Planned, repeatable flights and scans — the same site can be captured the same
+            way next month, so change over time is measurable.
           </p>
-          <p class="text-center">
-            Our mission is to advance the computational methods and infrastructure required to model
-            systems that are too complex for purely analytical approaches—to build the tools necessary
-            for understanding reality at scale.
+        </div>
+
+        <div class="card">
+          <h3 class="mb-3 text-lg font-semibold text-accent-cyan">2 · Process</h3>
+          <p class="text-sm leading-relaxed text-text-secondary">
+            Photogrammetry, LiDAR SLAM, and analysis run on our own GPU workstation and
+            virtualization cluster. Your imagery and scan data are processed in-house — they never
+            pass through a third-party cloud service.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="mb-3 text-lg font-semibold text-accent-green">3 · Deliver</h3>
+          <p class="text-sm leading-relaxed text-text-secondary">
+            Orthomosaics, elevation models, point clouds, textured 3D meshes, and GIS analysis —
+            delivered in standard formats with notes on how they were produced and what their
+            accuracy limits are.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Research Focus Areas -->
+  <!-- What We Do -->
   <section class="section bg-dark-surface">
     <div class="container-custom">
-      <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">Research Focus Areas</h2>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <div class="card">
+      <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">What We Do</h2>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div class="card card-hover">
           <h3 class="mb-3 text-lg font-semibold text-accent-blue">
-            Compute Systems & Model Infrastructure
+            Aerial Mapping &amp; Photogrammetry
           </h3>
           <p class="text-sm leading-relaxed text-text-secondary">
-            Computational architectures for training and operating large-scale models. Infrastructure
-            as a substrate for studying intelligence and learning dynamics.
+            Drone-captured imagery reconstructed into orthomosaics, elevation models, and 3D site
+            models.
           </p>
         </div>
 
-        <div class="card">
+        <div class="card card-hover">
           <h3 class="mb-3 text-lg font-semibold text-accent-cyan">
-            Distributed Compute & Storage
+            LiDAR Scanning &amp; 3D Modeling
           </h3>
           <p class="text-sm leading-relaxed text-text-secondary">
-            Systems for managing computation and data across heterogeneous resources. Performance
-            characterization of storage architectures under compute workloads.
+            Ground-based LiDAR capture of structures, sites, and interiors, processed into point
+            clouds and meshes.
           </p>
         </div>
 
-        <div class="card">
+        <div class="card card-hover">
           <h3 class="mb-3 text-lg font-semibold text-accent-green">
-            Emergent Systems & Simulation
+            Inspection &amp; Monitoring
           </h3>
           <p class="text-sm leading-relaxed text-text-secondary">
-            Computational platforms for studying emergence in complex adaptive systems. Simulation
-            environments for multi-agent and evolutionary dynamics.
+            Aerial documentation of roofs, structures, and construction progress with repeatable
+            capture plans.
           </p>
         </div>
 
-        <div class="card">
+        <div class="card card-hover">
           <h3 class="mb-3 text-lg font-semibold text-accent-purple">
-            Instrumentation & Observability
+            GIS &amp; Spatial Analysis
           </h3>
           <p class="text-sm leading-relaxed text-text-secondary">
-            Methods for measuring and characterizing system behavior at scale. Telemetry and analysis
-            infrastructure for understanding computational phenomena.
+            Cartography, spatial analysis, and change detection that turn captured data into
+            answers.
           </p>
         </div>
-
-        <div class="card">
-          <h3 class="mb-3 text-lg font-semibold text-accent-blue">
-            Performance Characterization
-          </h3>
-          <p class="text-sm leading-relaxed text-text-secondary">
-            Empirical study of hardware and software performance under research workloads. Benchmarking
-            methodologies for systems operating at infrastructure scale.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3 class="mb-3 text-lg font-semibold text-accent-cyan">
-            Complex Systems Modeling
-          </h3>
-          <p class="text-sm leading-relaxed text-text-secondary">
-            Computational approaches to modeling systems exhibiting non-linear dynamics, feedback loops,
-            and multi-scale interactions.
-          </p>
-        </div>
+      </div>
+      <div class="mt-10 text-center">
+        <a href="/services" class="btn btn-secondary">Full service details</a>
       </div>
     </div>
   </section>
 
-  <!-- Research Infrastructure -->
+  <!-- Why Self-Hosted -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
-      <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">Research Infrastructure</h2>
-      <div class="mx-auto max-w-4xl space-y-6 text-text-secondary">
-        <p class="text-center text-lg leading-relaxed">
-          The lab operates physical computational infrastructure designed to support sustained inquiry
-          into complex systems. This infrastructure serves as both subject and instrument—a platform
-          for research that is itself an object of study.
-        </p>
-        <div class="grid gap-6 md:grid-cols-2">
-          <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-accent-blue">Computational Systems</h3>
-            <p class="text-sm leading-relaxed">
-              Dedicated GPU compute for self-hosted model inference and fine-tuning, alongside a
-              multi-node virtualization cluster for studying orchestration, isolation, and fault tolerance.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-accent-cyan">Storage & Data Systems</h3>
-            <p class="text-sm leading-relaxed">
-              Heterogeneous storage architectures spanning multiple tiers. Infrastructure for handling
-              large datasets, model checkpoints, and experimental artifacts.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-accent-green">Measurement & Telemetry</h3>
-            <p class="text-sm leading-relaxed">
-              Instrumentation systems for characterizing performance, resource utilization, and system
-              behavior. Tooling for observability across distributed components.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-accent-purple">Experimental Platforms</h3>
-            <p class="text-sm leading-relaxed">
-              Configurable environments for testing hypotheses about system behavior. Frameworks for
-              reproducible experimentation and methodical exploration.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Institutional Character -->
-  <section class="section bg-dark-surface">
-    <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <h2 class="mb-8 text-center text-3xl font-bold sm:text-4xl">
-          Institutional Character
-        </h2>
+        <h2 class="mb-8 text-center text-3xl font-bold sm:text-4xl">Why We Run Our Own Infrastructure</h2>
         <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
           <p>
-            This is not a startup seeking market fit, nor a consulting organization delivering
-            services. It is an independent research institution oriented toward long-term inquiry.
+            Most drone service providers upload client data to third-party cloud platforms for
+            processing. We don't. Every pipeline we use — photogrammetry, LiDAR SLAM, machine
+            learning — runs on hardware we own, in a stack we can inspect end to end.
           </p>
           <p>
-            The lab's work is grounded in the belief that computation—when designed thoughtfully—can
-            serve as a scientific instrument comparable to the telescope or particle accelerator.
-            Infrastructure is not merely utility; it is methodology.
+            That matters for clients who can't ship data to someone else's cloud: public agencies,
+            infrastructure operators, and anyone with data-governance requirements. It also matters
+            for quality — when we control the whole pipeline, we can measure it, tune it, and
+            explain exactly how a deliverable was produced.
           </p>
           <p>
-            Research proceeds through the design, construction, and operation of systems large enough
-            to exhibit non-trivial behavior. The goal is understanding, formalized through measured
-            observation and reproducible experimentation.
+            The infrastructure is also a research subject in its own right. We benchmark and
+            document our processing stack publicly in the <a href="/research" class="link">lab
+            notes</a>.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lab Notes Teaser -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-center text-3xl font-bold sm:text-4xl">An Open Lab Notebook</h2>
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            We publish our experiments, benchmarks, and field methodology as we go — including
+            negative results. Current questions on the bench: how does low-cost drone photogrammetry
+            compare to LiDAR SLAM for site reconstruction accuracy? What does self-hosted
+            photogrammetry actually cost against cloud services? What does a survey-grade corridor
+            mapping deliverable look like from a sub-250g platform?
+          </p>
+        </div>
+        <div class="mt-8 text-center">
+          <a href="/research" class="btn btn-primary">Lab Notes</a>
         </div>
       </div>
     </div>
@@ -200,15 +179,16 @@ import Layout from '../layouts/Layout.astro';
         <h2 class="mb-6 text-3xl font-bold sm:text-4xl">Current Status</h2>
         <div class="mb-8 inline-flex items-center rounded-full border border-accent-green/30 bg-accent-green/10 px-4 py-2">
           <span class="mr-2 h-2 w-2 rounded-full bg-accent-green"></span>
-          <span class="text-sm font-medium text-accent-green">Phase: Foundation</span>
+          <span class="text-sm font-medium text-accent-green">Early Operations</span>
         </div>
         <p class="mb-8 text-text-secondary">
-          This lab is in active development. Expect frequent changes to structure, tooling, and
-          documentation as the infrastructure matures.
+          Cascadia Mobile Research LLC is an Oregon limited liability company in its first year of
+          operations. The instrument kit, processing pipeline, and lab notebook are all under active
+          development — expect this site to grow as work is published.
         </p>
         <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a href="/about" class="btn btn-primary">
-            Learn More About the Lab
+            About the Lab
           </a>
           <a
             href="https://github.com/cascadia-systems-lab"
