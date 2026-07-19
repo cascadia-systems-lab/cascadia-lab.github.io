@@ -70,6 +70,35 @@
   .prose-custom {
     @apply prose prose-invert max-w-none;
   }
+
+  /* Topographic contour backdrop for hero sections */
+  .hero-topo {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-topo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/images/topo-contours.svg') center / cover no-repeat;
+    opacity: 0.22;
+    -webkit-mask-image: radial-gradient(ellipse 90% 80% at center, black 25%, transparent 78%);
+    mask-image: radial-gradient(ellipse 90% 80% at center, black 25%, transparent 78%);
+    pointer-events: none;
+  }
+
+  .hero-topo > * {
+    position: relative;
+  }
+
+  .img-frame {
+    @apply overflow-hidden rounded-lg border border-dark-border shadow-lg shadow-accent-blue/5;
+  }
+
+  .img-caption {
+    @apply mt-3 text-xs text-text-muted;
+  }
 }
 
 @layer utilities {

@@ -4,11 +4,11 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Cascadia Mobile Research">
   <!-- Hero Section -->
-  <section class="section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
+  <section class="hero-topo section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
     <div class="container-custom">
       <div class="mx-auto max-w-5xl">
         <h1 class="mb-8 text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-          From Field to Map
+          From Field to <span class="text-gradient">Map</span>
         </h1>
         <div class="mb-8 border-l-4 border-accent-blue bg-dark-surface/50 p-6 text-lg leading-relaxed">
           <p class="text-text-primary">
@@ -44,6 +44,11 @@ import Layout from '../layouts/Layout.astro';
       <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">One Pipeline, End to End</h2>
       <div class="grid gap-6 md:grid-cols-3">
         <div class="card">
+          <svg class="mb-4 h-8 w-8 text-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="5" cy="5" r="2.4"/><circle cx="19" cy="5" r="2.4"/><circle cx="5" cy="19" r="2.4"/><circle cx="19" cy="19" r="2.4"/>
+            <path stroke-linecap="round" d="M6.8 6.8l3 3m7.4-3l-3 3m-4.4 4.4l-3 3m10.4-3l3 3"/>
+            <rect x="9.8" y="9.8" width="4.4" height="4.4" rx="1.2"/>
+          </svg>
           <h3 class="mb-3 text-lg font-semibold text-accent-blue">1 · Collect</h3>
           <p class="text-sm leading-relaxed text-text-secondary">
             Field data capture with a lightweight sub-250g drone platform and a handheld 3D LiDAR
@@ -53,6 +58,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="card">
+          <svg class="mb-4 h-8 w-8 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="6.5" y="6.5" width="11" height="11" rx="2"/>
+            <rect x="10" y="10" width="4" height="4" rx="1"/>
+            <path stroke-linecap="round" d="M9 6.5V3.5m6 3V3.5M9 20.5v-3m6 3v-3M6.5 9h-3m3 6h-3M20.5 9h-3m3 6h-3"/>
+          </svg>
           <h3 class="mb-3 text-lg font-semibold text-accent-cyan">2 · Process</h3>
           <p class="text-sm leading-relaxed text-text-secondary">
             Photogrammetry, LiDAR SLAM, and analysis run on our own GPU workstation and
@@ -62,6 +72,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="card">
+          <svg class="mb-4 h-8 w-8 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linejoin="round" d="M9 4.5L3.5 6.5v13L9 17.5l6 2 5.5-2v-13l-5.5 2-6-2z"/>
+            <path stroke-linecap="round" d="M9 4.5v13m6-11v13"/>
+            <path stroke-linecap="round" d="M5.5 12.5c1.5-1 2.5.5 4-.5s2-2 3.5-1.5"/>
+          </svg>
           <h3 class="mb-3 text-lg font-semibold text-accent-green">3 · Deliver</h3>
           <p class="text-sm leading-relaxed text-text-secondary">
             Orthomosaics, elevation models, point clouds, textured 3D meshes, and GIS analysis —
@@ -127,25 +142,42 @@ import Layout from '../layouts/Layout.astro';
   <!-- Why Self-Hosted -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
-      <div class="mx-auto max-w-4xl">
-        <h2 class="mb-8 text-center text-3xl font-bold sm:text-4xl">Why We Run Our Own Infrastructure</h2>
-        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
-          <p>
-            Most drone service providers upload client data to third-party cloud platforms for
-            processing. We don't. Every pipeline we use — photogrammetry, LiDAR SLAM, machine
-            learning — runs on hardware we own, in a stack we can inspect end to end.
-          </p>
-          <p>
-            That matters for clients who can't ship data to someone else's cloud: public agencies,
-            infrastructure operators, and anyone with data-governance requirements. It also matters
-            for quality — when we control the whole pipeline, we can measure it, tune it, and
-            explain exactly how a deliverable was produced.
-          </p>
-          <p>
-            The infrastructure is also a research subject in its own right. We benchmark and
-            document our processing stack publicly in the <a href="/research" class="link">lab
-            notes</a>.
-          </p>
+      <div class="mx-auto max-w-6xl">
+        <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">Why We Run Our Own Infrastructure</h2>
+        <div class="grid items-center gap-10 lg:grid-cols-2">
+          <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+            <p>
+              Most drone service providers upload client data to third-party cloud platforms for
+              processing. We don't. Every pipeline we use — photogrammetry, LiDAR SLAM, machine
+              learning — runs on hardware we own, in a stack we can inspect end to end.
+            </p>
+            <p>
+              That matters for clients who can't ship data to someone else's cloud: public agencies,
+              infrastructure operators, and anyone with data-governance requirements. It also matters
+              for quality — when we control the whole pipeline, we can measure it, tune it, and
+              explain exactly how a deliverable was produced.
+            </p>
+            <p>
+              The infrastructure is also a research subject in its own right. We benchmark and
+              document our processing stack publicly in the <a href="/research" class="link">lab
+              notes</a>.
+            </p>
+          </div>
+          <figure>
+            <div class="img-frame">
+              <img
+                src="/images/terrain-flightplan.webp"
+                alt="Dark shaded-relief terrain map with cyan contour lines and a green lawnmower-pattern drone survey flight plan over a marked survey area"
+                width="1400"
+                height="788"
+                loading="lazy"
+                class="w-full"
+              />
+            </div>
+            <figcaption class="img-caption">
+              Survey flight planning over terrain — synthetic data, rendered in-lab on our own stack.
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -154,19 +186,39 @@ import Layout from '../layouts/Layout.astro';
   <!-- Lab Notes Teaser -->
   <section class="section bg-dark-surface">
     <div class="container-custom">
-      <div class="mx-auto max-w-4xl">
-        <h2 class="mb-8 text-center text-3xl font-bold sm:text-4xl">An Open Lab Notebook</h2>
-        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
-          <p>
-            We publish our experiments, benchmarks, and field methodology as we go — including
-            negative results. Current questions on the bench: how does low-cost drone photogrammetry
-            compare to LiDAR SLAM for site reconstruction accuracy? What does self-hosted
-            photogrammetry actually cost against cloud services? What does a survey-grade corridor
-            mapping deliverable look like from a sub-250g platform?
-          </p>
-        </div>
-        <div class="mt-8 text-center">
-          <a href="/research" class="btn btn-primary">Lab Notes</a>
+      <div class="mx-auto max-w-6xl">
+        <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">An Open Lab Notebook</h2>
+        <div class="grid items-center gap-10 lg:grid-cols-2">
+          <figure class="order-last lg:order-first">
+            <div class="img-frame">
+              <img
+                src="/images/pointcloud-scan.webp"
+                alt="LiDAR-style 3D point cloud of terrain with a scanned gabled structure, points colored blue to cyan by elevation on a dark background"
+                width="1280"
+                height="740"
+                loading="lazy"
+                class="w-full"
+              />
+            </div>
+            <figcaption class="img-caption">
+              Point cloud of a structure on terrain — synthetic scan, visualized with our processing
+              pipeline.
+            </figcaption>
+          </figure>
+          <div>
+            <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+              <p>
+                We publish our experiments, benchmarks, and field methodology as we go — including
+                negative results. Current questions on the bench: how does low-cost drone
+                photogrammetry compare to LiDAR SLAM for site reconstruction accuracy? What does
+                self-hosted photogrammetry actually cost against cloud services? What does a
+                survey-grade corridor mapping deliverable look like from a sub-250g platform?
+              </p>
+            </div>
+            <div class="mt-8">
+              <a href="/research" class="btn btn-primary">Lab Notes</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
