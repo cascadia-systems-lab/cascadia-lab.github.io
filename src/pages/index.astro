@@ -6,115 +6,103 @@ import Layout from '../layouts/Layout.astro';
   <!-- Hero -->
   <section class="hero-topo section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
     <div class="container-custom">
-      <div class="mx-auto max-w-5xl">
-        <h1 class="mb-8 text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-          The workflow your team does <span class="text-gradient">by hand</span>
+      <div class="mx-auto max-w-4xl">
+        <h1 class="mb-8 text-4xl font-bold tracking-tight sm:text-5xl">
+          I build the systems that replace the work your staff does by hand.
         </h1>
-        <div class="mb-8 border-l-4 border-accent-blue bg-dark-surface/50 p-6 text-lg leading-relaxed">
-          <p class="text-text-primary">
-            <strong>Cascadia Systems puts a senior engineer inside your organization. In 30 days,
-            the manual process costing you the most staff time runs itself, with an audit trail
-            and a runbook your team can keep.</strong>
-          </p>
-        </div>
-        <div class="mx-auto max-w-3xl space-y-4 text-center text-lg text-text-secondary">
+        <div class="space-y-5 text-lg leading-relaxed text-text-secondary">
           <p>
-            Intake, reconciliation, reporting, re-keying between two systems. Every organization
-            has one process that eats a person's week. We map the five worst, automate the worst
-            one, and leave you a plan for the rest.
+            I'm Devin MacArthur, a data-systems engineer in Portland. For the last few years my
+            day job has been keeping a statewide membership organization's data moving between
+            the places it lives: a Salesforce-based CRM, an older membership database that
+            predates it, SharePoint, a payment processor, an election platform, and the
+            spreadsheets people maintain by hand because nothing else will. Almost everything I've
+            built there started as a task somebody did every week and hated.
           </p>
           <p>
-            Fixed price. One engineer, start to finish. Your data stays in your systems.
+            Cascadia Systems is where I do that work for other organizations. The offer is
+            narrow on purpose. I spend thirty days with you, find out where the hours actually go,
+            automate the worst of it so that it runs on a schedule without me, and write down what
+            I would do next. It costs $12,000. Details are on the <a href="/services/" class="link">services page</a>.
           </p>
         </div>
-        <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a href="/services/" class="btn btn-primary">The 30-Day Diagnostic</a>
-          <a href="/contact/" class="btn btn-secondary">Book a 30-minute call</a>
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          <a href="/contact/" class="btn btn-primary">Email me</a>
+          <a href="/services/" class="btn btn-secondary">What the thirty days look like</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- How it works -->
+  <!-- Examples -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
-      <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">Thirty Days, Three Deliverables</h2>
-      <div class="grid gap-6 md:grid-cols-3">
-        <div class="card">
-          <h3 class="mb-3 text-lg font-semibold text-accent-blue">1 · Map</h3>
-          <p class="text-sm leading-relaxed text-text-secondary">
-            Interviews with the people who do the work. A map of your five costliest manual
-            workflows: who does what, hours per month, where errors and delays enter, and what
-            each one costs.
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-3xl font-bold">Some things I've built, with the names filed off</h2>
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            A membership organization was getting scanned paper applications and paying people to
+            retype them. I built an extractor that reads the scan, pulls the fields into a
+            structured record, checks them against the rules the staff already applied in their
+            heads, and sends anything it isn't sure about to a person instead of guessing.
+          </p>
+          <p>
+            The same organization's payment processor stopped forwarding card transactions and
+            nobody upstream noticed for six weeks. I found it by matching bank deposits against
+            the membership system, line by line, which is a tedious thing to do once and a
+            trivial thing to do every night. It runs every night now.
+          </p>
+          <p>
+            A financial analysis that an analyst used to build by hand, one workbook per district
+            for every district in the state, now fills itself in from the state's published data.
+            The analyst still does the analysis. He just doesn't do the typing.
+          </p>
+          <p>
+            None of these took more than a few weeks. The hard part in each case was not the
+            code. It was sitting with the person who did the job long enough to understand what
+            they were actually checking for, which is never what the procedure document says.
           </p>
         </div>
-        <div class="card">
-          <h3 class="mb-3 text-lg font-semibold text-accent-cyan">2 · Automate</h3>
-          <p class="text-sm leading-relaxed text-text-secondary">
-            The workflow with the best ratio of pain to effort, built and running in production.
-            Audit log, error handling, a runbook, and a training session. Not a prototype.
-          </p>
-        </div>
-        <div class="card">
-          <h3 class="mb-3 text-lg font-semibold text-accent-green">3 · Plan</h3>
-          <p class="text-sm leading-relaxed text-text-secondary">
-            A 12-month roadmap: what to automate next and in what order, what to build versus
-            buy, what it costs, and where AI genuinely helps versus where a spreadsheet is the
-            right answer.
-          </p>
-        </div>
-      </div>
-      <div class="mt-10 text-center">
-        <a href="/services/" class="btn btn-secondary">Full service details</a>
       </div>
     </div>
   </section>
 
-  <!-- Who it's for -->
+  <!-- Limits -->
   <section class="section bg-dark-surface">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <h2 class="mb-8 text-3xl font-bold">Built for Organizations Like Yours</h2>
-        <div class="grid gap-6 md:grid-cols-2">
-          <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-text-primary">Who calls us</h3>
-            <p class="text-sm leading-relaxed text-text-secondary">
-              Clinics and healthcare groups, credit unions, property managers, logistics
-              operators, professional firms, and nonprofits with a few hundred to a few thousand
-              people served, a small team doing too much by hand, and a board asking what the
-              plan for AI is.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-text-primary">What we have built</h3>
-            <p class="text-sm leading-relaxed text-text-secondary">
-              Daily data pipelines and CRM integrations for a statewide membership
-              organization. Document extraction that turns scanned applications into records.
-              Automated financial reporting across a statewide set of public agencies. Event
-              platforms, ServiceDesk automation, and reconciliation tools that caught what
-              upstream vendors missed.
-            </p>
-          </div>
+        <h2 class="mb-8 text-3xl font-bold">What I'm not</h2>
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            I'm one person. Until early 2027 I'm doing this alongside a full-time job, which means
+            I take on one or two engagements at a time and I'm honest about scheduling. I don't
+            hand work to subcontractors, so what you get is me, and what you don't get is a
+            team. If you need a platform rebuilt by six engineers, I'm the wrong call, and I can
+            usually tell you who the right one is.
+          </p>
+          <p>
+            I also won't sell you AI for its own sake. A fair number of the processes I look at
+            need a scheduled script and a shared table, not a model. When that's the answer I'll
+            say so, and the thirty days will cost the same.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Data handling -->
+  <!-- Data -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
-      <div class="mx-auto max-w-6xl">
-        <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">Your Data Stays in Your Systems</h2>
-        <div class="mx-auto max-w-4xl space-y-6 text-lg leading-relaxed text-text-secondary">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-3xl font-bold">Where your data goes</h2>
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
           <p>
-            We work through read-only access first, and write access only for the workflow
-            being automated. Sensitive processing runs in your environment or on
-            infrastructure we own and control, with no third-party model provider involved.
-          </p>
-          <p>
-            Where a hosted AI model is the right tool, it is a provider under a signed
-            data-processing agreement with no training on your data. Every engagement ships
-            with a written data-handling sheet, and everything we build is yours.
+            Nowhere, if I can help it. I start with read-only access and ask for write access only
+            to the one thing I'm automating. If the data is sensitive, the processing runs on your
+            machines or on hardware I own in Portland, with no outside model provider in the loop.
+            When a hosted model is the right tool I'll name the provider, show you the
+            data-processing agreement, and put it in the scope in writing. At the end I rotate
+            every credential back to you and delete my working copies. I'll put that in writing too.
           </p>
         </div>
       </div>
@@ -124,16 +112,13 @@ import Layout from '../layouts/Layout.astro';
   <!-- CTA -->
   <section class="section bg-dark-surface">
     <div class="container-custom">
-      <div class="mx-auto max-w-2xl text-center">
-        <h2 class="mb-6 text-3xl font-bold sm:text-4xl">Start With a Call</h2>
-        <p class="mb-8 text-text-secondary">
-          Thirty minutes. Tell us the process that eats the most time. If a spreadsheet would
-          fix it, we will say so on the call.
+      <div class="mx-auto max-w-2xl">
+        <h2 class="mb-6 text-3xl font-bold">If this sounds like your problem</h2>
+        <p class="mb-8 text-lg text-text-secondary">
+          Email me a paragraph about the process that costs you the most time. Thirty minutes on
+          a call is enough for both of us to know whether it's a fit.
         </p>
-        <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a href="/contact/" class="btn btn-primary">Book a call</a>
-          <a href="/about/" class="btn btn-secondary">Who does the work</a>
-        </div>
+        <a href="/contact/" class="btn btn-primary">devin.macarthur@cascadiasystems.org</a>
       </div>
     </div>
   </section>

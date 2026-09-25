@@ -4,123 +4,107 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout
   title="About"
-  description="About Cascadia Systems — operations automation, data systems, and AI engineering in Portland, Oregon"
+  description="Who runs Cascadia Systems, how it started as a mapping lab, and how I work — Devin MacArthur, Portland, Oregon"
 >
   <!-- Hero -->
   <section class="hero-topo section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <h1 class="mb-8 text-center text-4xl font-bold tracking-tight sm:text-5xl">About</h1>
-        <div class="mb-8 border-l-4 border-accent-blue bg-dark-surface/50 p-6 text-lg leading-relaxed">
-          <p class="text-text-primary">
-            <strong>Cascadia Systems is a one-engineer practice in Portland, Oregon. We build the
-            systems that sit between an organization's people and its data: pipelines,
-            integrations, document extraction, and internal tools that replace work done by
-            hand.</strong>
+        <h1 class="mb-8 text-4xl font-bold tracking-tight sm:text-5xl">Who I am</h1>
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            I'm Devin MacArthur. I live in East Portland and I've spent the last few years as the
+            data-systems person at a statewide membership organization, which is a job title that
+            means "the one who makes the systems talk to each other." The CRM is Salesforce with a
+            lot of custom objects. Under it is an older membership database that everything still
+            depends on. Around them are SharePoint, a payment processor, an election platform, and
+            the spreadsheets that hold an organization together whether anyone admits it or not.
+          </p>
+          <p>
+            Most of what I've built there began as somebody's weekly chore. A snapshot of the
+            whole membership every morning at 6:30, because the questions people asked on Tuesday
+            couldn't be answered from Friday's data. A map of which field staff cover which local
+            units, because the answer used to live in one person's head. An extractor for scanned
+            applications. A reconciliation that caught a payment outage nobody upstream had
+            reported. The pattern is the same each time: find the person doing the tedious
+            thing, understand exactly what they're checking for, and then make the computer check
+            it every night.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Who runs this -->
+  <!-- How it started -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <h2 class="mb-6 text-3xl font-bold">Who Runs This</h2>
+        <h2 class="mb-6 text-3xl font-bold">How this company started, and why it changed</h2>
         <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
           <p>
-            <strong class="text-text-primary">Devin MacArthur</strong> is a data-systems engineer.
-            His day-to-day work is the data platform and automation behind a statewide
-            membership organization: a daily pipeline over a Salesforce-based CRM, a routing layer
-            that links field staff to the local units they serve, automated financial analysis
-            across a statewide set of public agencies, an AI document extractor that turns scanned
-            applications into records, and the platform behind the organization's largest annual
-            governance event.
-          </p>
-          <p>
-            Outside that work he runs a personal operations system built on agentic AI tooling
-            and local AI infrastructure on hardware he owns. He has graduate training in urban
-            studies at Portland State University.
-          </p>
-          <p>
-            The person who scopes your engagement is the one who builds it, documents it, and
-            trains your team on it. There are no handoffs because there is no one to hand off to.
+            I registered Cascadia Mobile Research LLC in March 2026 as a drone and LiDAR mapping
+            lab. I still have the drone, the scanner, and the GPU workstation I built to process
+            the scans, and the mapping work was genuinely interesting. But the thing people kept
+            actually asking me for, once they knew what I did all day, was the data work. So in
+            September I stopped pretending the company was about aircraft. Cascadia Systems is
+            the same LLC pointed at the work I'm good at. The old site is archived, not deleted;
+            if you came here for photogrammetry, email me anyway and I'll tell you what I can and
+            can't do.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Principles -->
+  <!-- How I work -->
   <section class="section bg-dark-surface">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <h2 class="mb-8 text-3xl font-bold">How We Work</h2>
-        <div class="space-y-6 text-text-secondary">
-          <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-text-primary">Sit with the people who do the work</h3>
-            <p class="leading-relaxed">
-              Every engagement starts with interviews, not requirements documents. The process
-              as it actually runs is never the process on the org chart.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-text-primary">Production or nothing</h3>
-            <p class="leading-relaxed">
-              We do not deliver prototypes. What ships runs on a schedule, logs what it did,
-              handles the errors that will happen, and comes with a runbook.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-text-primary">Your data stays yours</h3>
-            <p class="leading-relaxed">
-              Read-only access first. Sensitive processing in your environment or on
-              infrastructure we own. Hosted AI only under a data-processing agreement. Everything
-              built is handed to you, credentials rotated, working copies deleted.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-text-primary">Say so when it's a spreadsheet</h3>
-            <p class="leading-relaxed">
-              Not every problem needs software, and most do not need AI. The roadmap says which
-              is which, and the free call does too.
-            </p>
-          </div>
+        <h2 class="mb-6 text-3xl font-bold">How I work</h2>
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            I start by interviewing, not by reading requirements. The procedure document says
+            what the process is supposed to be; the person doing it knows the four exceptions
+            that make it take twice as long. I build for the exceptions.
+          </p>
+          <p>
+            I don't deliver prototypes. If I show you something running, it is running on a
+            schedule with logs, and there's a written procedure for the day it fails. I take
+            that seriously because I once watched a vendor's outage go unnoticed for six weeks,
+            and the only reason it was noticed at all was a check that happened to be running.
+          </p>
+          <p>
+            I write everything down as I go, partly because that's how I think and partly because
+            I'm one person and the documentation is the only thing that makes it safe to hire one
+            person. Outside of work I write essays about institutions and measurement at
+            <a href="https://devinmacarthur.substack.com" class="link" rel="noopener noreferrer">The Systems Inquiry</a>,
+            which will tell you more about how I think than this page can.
+          </p>
+          <p>
+            I have graduate training in urban studies at Portland State. It's where I learned to
+            distrust summary statistics, which turns out to be most of the job.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- The business -->
+  <!-- Business -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <h2 class="mb-6 text-3xl font-bold">The Business</h2>
+        <h2 class="mb-6 text-3xl font-bold">The business, plainly</h2>
         <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
           <p>
-            <strong class="text-text-primary">This is a working business, not a venture-backed
-            startup.</strong> Cascadia Systems is the practice of Cascadia Mobile Research LLC,
-            a registered Oregon company. There is no growth-at-all-costs trajectory. The goal is
-            a durable, competent practice that compounds slowly.
+            Cascadia Systems is the practice of Cascadia Mobile Research LLC, an Oregon company.
+            It's one person, part-time until early 2027, taking one or two engagements at a time.
+            There is no investor, no growth target, and no plan to become an agency. I'd like it
+            to still exist in ten years, doing roughly this, a little better each year.
           </p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="section bg-dark-surface">
-    <div class="container-custom">
-      <div class="mx-auto max-w-2xl text-center">
-        <h2 class="mb-6 text-3xl font-bold">Contact</h2>
-        <p class="mb-8 text-text-secondary">
-          <a href="mailto:devin.macarthur@cascadiasystems.org" class="link">devin.macarthur@cascadiasystems.org</a>
-          &middot; we reply within two business days.
-        </p>
-        <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a href="/contact/" class="btn btn-primary">Book a 30-minute call</a>
-          <a href="/services/" class="btn btn-secondary">View Services</a>
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          <a href="/contact/" class="btn btn-primary">Email me</a>
+          <a href="/services/" class="btn btn-secondary">What I do</a>
         </div>
       </div>
     </div>

@@ -4,16 +4,16 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout
   title="Services"
-  description="The 30-Day Operations Diagnostic, fixed-scope automation builds, and embedded engineering for organizations in Portland, Oregon and beyond"
+  description="A fixed thirty-day engagement to map and automate manual work, fixed-scope builds, and embedded engineering from 2027 — Devin MacArthur, Portland, Oregon"
 >
   <!-- Hero -->
   <section class="hero-topo section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
     <div class="container-custom">
-      <div class="mx-auto max-w-3xl text-center">
-        <h1 class="mb-6 text-4xl font-bold tracking-tight sm:text-5xl">Services</h1>
+      <div class="mx-auto max-w-4xl">
+        <h1 class="mb-6 text-4xl font-bold tracking-tight sm:text-5xl">What I do, and what it costs</h1>
         <p class="text-lg text-text-secondary">
-          Operations automation, data systems, and AI engineering. Fixed price, one engineer,
-          production results.
+          Two things now, a third starting in 2027. The prices are fixed because I would rather
+          argue about scope once, on paper, than about hours every month.
         </p>
       </div>
     </div>
@@ -23,69 +23,40 @@ import Layout from '../layouts/Layout.astro';
   <section class="section border-t border-dark-border">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <div class="mb-3 flex flex-wrap items-center gap-3">
-          <h2 class="text-3xl font-bold">The 30-Day Operations Diagnostic</h2>
-          <span class="inline-flex items-center rounded-full bg-accent-green/20 px-3 py-1 text-xs font-medium text-accent-green">
-            Available now
-          </span>
-        </div>
+        <h2 class="mb-3 text-3xl font-bold">The thirty days</h2>
         <p class="mb-8 text-lg text-text-secondary">
-          <strong class="text-text-primary">$12,000. Half at signing, half at delivery. Thirty days from kickoff.</strong>
+          <strong class="text-text-primary">$12,000. Half when we start, half when I hand it over.</strong>
         </p>
-
-        <div class="space-y-6">
-          <div class="card">
-            <h3 class="mb-3 text-xl font-semibold text-accent-blue">1 · A process map of your five costliest manual workflows</h3>
-            <p class="text-text-secondary">
-              Who does what, how many hours a month it takes, where errors and delays enter, and
-              what each one costs you. Built from interviews with the people who do the work, not
-              from an org chart.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="mb-3 text-xl font-semibold text-accent-cyan">2 · One workflow automated and running in production</h3>
-            <p class="text-text-secondary">
-              Not a prototype. The one with the best ratio of pain to effort. It ships with an
-              audit log, error handling, a runbook your team can follow, and a 30-minute training
-              session.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="mb-3 text-xl font-semibold text-accent-green">3 · A 12-month roadmap</h3>
-            <p class="text-text-secondary">
-              What to automate next and in what order, what to build versus buy, what each item
-              costs, and where AI genuinely helps versus where a spreadsheet is the right answer.
-            </p>
-          </div>
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            The first week I talk to the people who do the work. Not managers, or not only
+            managers: the person who exports the report on Monday, the person who re-keys the
+            form, the person who knows which spreadsheet is the real one. Five to eight
+            conversations, an hour each. I also ask for read-only access to the systems they
+            mention, so I can see what they're describing instead of imagining it.
+          </p>
+          <p>
+            By the end of the second week you get a map of the five processes that cost the most
+            hours, with the hours counted, the places errors get in, and what each one is costing
+            you. We pick one together. I write the scope for it on a single page and we both sign
+            it, because the most common way these things go wrong is the scope growing quietly.
+          </p>
+          <p>
+            Weeks three and four I build it and put it into production. That word means
+            something specific to me: it runs on a schedule, it logs what it did and what it
+            couldn't do, it fails in a way someone will notice, and there is a written procedure
+            for the day it breaks. I train whoever will own it, usually in half an hour, and I
+            leave a twelve-month plan for the other four processes: which to do next, which to buy
+            software for instead, and which to leave alone.
+          </p>
+          <p>
+            What I need from you is one person who can make a decision within two days, about six
+            hours of your staff's time across the month, and the access I mentioned. Write access
+            only to the one thing we're automating, and you can revoke it whenever you like.
+          </p>
         </div>
-
-        <h3 class="mb-4 mt-12 text-2xl font-bold">How the 30 days run</h3>
-        <div class="overflow-x-auto">
-          <table class="w-full text-left text-sm text-text-secondary">
-            <thead class="text-text-primary">
-              <tr class="border-b border-dark-border">
-                <th class="py-2 pr-4">Week</th>
-                <th class="py-2">What happens</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="border-b border-dark-border"><td class="py-2 pr-4">1</td><td class="py-2">Kickoff. Interviews with 5–8 staff. Read-only access to the systems involved.</td></tr>
-              <tr class="border-b border-dark-border"><td class="py-2 pr-4">2</td><td class="py-2">Process map delivered. Together we pick the workflow to automate. Scope agreed in writing.</td></tr>
-              <tr class="border-b border-dark-border"><td class="py-2 pr-4">3</td><td class="py-2">Build, in your environment or ours, under your data-handling rules.</td></tr>
-              <tr><td class="py-2 pr-4">4</td><td class="py-2">Production cutover, runbook, training. Roadmap delivered. Closing session with leadership.</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3 class="mb-4 mt-12 text-2xl font-bold">What we need from you</h3>
-        <ul class="list-disc space-y-2 pl-6 text-text-secondary">
-          <li>One sponsor who can make decisions inside 48 hours.</li>
-          <li>Access to the people who do the work, about six hours of their time in total.</li>
-          <li>Read access to the systems in scope. Write access only for the workflow we automate, scoped and revocable.</li>
-        </ul>
-
         <div class="mt-10">
-          <a href="/contact/" class="btn btn-primary">Book a 30-minute call</a>
+          <a href="/contact/" class="btn btn-primary">Ask about the thirty days</a>
         </div>
       </div>
     </div>
@@ -95,21 +66,21 @@ import Layout from '../layouts/Layout.astro';
   <section class="section bg-dark-surface">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <div class="mb-3 flex flex-wrap items-center gap-3">
-          <h2 class="text-3xl font-bold">Fixed-Scope Builds</h2>
-          <span class="inline-flex items-center rounded-full bg-accent-green/20 px-3 py-1 text-xs font-medium text-accent-green">
-            Available now
-          </span>
+        <h2 class="mb-3 text-3xl font-bold">A single build</h2>
+        <p class="mb-8 text-lg text-text-secondary">
+          <strong class="text-text-primary">$5,000 to $15,000, quoted after a call.</strong>
+        </p>
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            For organizations that already know which process they want gone and don't need the
+            thirty days to find it. The things I get asked for most are intake forms that file
+            themselves and their attachments into the right place, a nightly reconciliation that
+            names every mismatch between two systems, a morning report that assembles itself from
+            three sources, and scanned documents turned into records without anyone retyping.
+            Each one ships the same way the thirty-day build does: scheduled, logged, documented,
+            handed over.
+          </p>
         </div>
-        <p class="mb-6 text-lg text-text-secondary">
-          <strong class="text-text-primary">$5,000–$15,000 per workflow, quoted after a call.</strong>
-        </p>
-        <p class="text-text-secondary">
-          For organizations that already know the process they want gone. Intake forms that file
-          themselves. Reconciliation that names every mismatch. Reports that assemble from the
-          source systems every morning. Documents that become records without re-keying. Each
-          build ships with an audit log, a runbook, and training, and runs without us.
-        </p>
       </div>
     </div>
   </section>
@@ -118,97 +89,62 @@ import Layout from '../layouts/Layout.astro';
   <section class="section border-t border-dark-border">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <div class="mb-3 flex flex-wrap items-center gap-3">
-          <h2 class="text-3xl font-bold">Embedded Engineering</h2>
-          <span class="inline-flex items-center rounded-full bg-accent-purple/20 px-3 py-1 text-xs font-medium text-accent-purple">
-            From early 2027
-          </span>
-        </div>
-        <p class="mb-6 text-lg text-text-secondary">
-          <strong class="text-text-primary">$25,000–$35,000 per month. Six-month minimum. Roughly half-time presence.</strong>
+        <h2 class="mb-3 text-3xl font-bold">Embedded, from early 2027</h2>
+        <p class="mb-8 text-lg text-text-secondary">
+          <strong class="text-text-primary">$25,000 to $35,000 a month, six months minimum, about half my time.</strong>
         </p>
-        <div class="space-y-4 text-text-secondary">
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
           <p>
-            An engineer inside your organization rather than a vendor outside it. In the first 90
-            days, your worst manual process runs itself with an audit trail and a runbook. After
-            that, one new workflow into production every 30 to 45 days.
+            This is the engagement I actually want to do, and I can't do it properly until I'm
+            doing this full time, which I expect to be by early 2027. I sit inside your organization,
+            on site or remote depending on the work, and take ownership of the manual work as a
+            whole rather than one process at a time. The first ninety days go to the worst
+            process. After that, one more into production every month or six weeks.
           </p>
           <p>
-            Scope in writing every 30 days. A one-page written report every week. A 45-minute
-            steering session with leadership every month. Everything documented as it is built,
-            so that if the engagement ended tomorrow your team could run what exists.
+            Every thirty days we agree in writing what ships next. Every week you get a page from
+            me saying what shipped, what's stuck, and what I'm doing about it. Everything is
+            documented as it's built, so if I got hit by a bus your team could keep running what
+            exists. When it ends, the last month is handover.
           </p>
           <p>
-            Not staff augmentation, not an agency, not a black box. Your systems, your data, your
-            repositories.
+            If you want to be first in line for this, say so now. I'm keeping a short list.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Data handling -->
+  <!-- Data -->
   <section class="section bg-dark-surface">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <h2 class="mb-8 text-3xl font-bold">Data Handling</h2>
-        <div class="grid gap-6 md:grid-cols-3">
-          <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-accent-blue">In your environment</h3>
-            <p class="text-sm leading-relaxed text-text-secondary">
-              Code runs on your infrastructure. Nothing leaves.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-accent-cyan">On ours</h3>
-            <p class="text-sm leading-relaxed text-text-secondary">
-              For sensitive data, processing runs on hardware we own and control, with no
-              third-party model provider. Transcription, document extraction, and classification
-              can all run this way.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-accent-green">Hosted, under agreement</h3>
-            <p class="text-sm leading-relaxed text-text-secondary">
-              Where a hosted model is the right tool: a provider with a signed data-processing
-              agreement, no training on your data, and configurable retention. Named in scope.
-            </p>
-          </div>
+        <h2 class="mb-6 text-3xl font-bold">Your data</h2>
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            I've written a one-page data-handling sheet that I'll send before we sign anything.
+            The short version: your data stays in your systems; anything sensitive is processed
+            on your machines or on hardware I own, not on a hosted model; if a hosted model is
+            the right tool for something, it's a provider with a data-processing agreement, named
+            in the scope; named accounts only; credentials rotated back to you at the end; my
+            working copies deleted and confirmed in writing. I don't train anything on your data
+            and I don't reuse one client's work for another.
+          </p>
         </div>
-        <p class="mt-8 text-sm leading-relaxed text-text-muted">
-          Named accounts only, credentials rotated to you at handover, working copies deleted at
-          engagement end and confirmed in writing. We never train models on your data and never
-          reuse anything from one client for another. Full data-handling sheet available on request.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Who -->
-  <section class="section border-t border-dark-border">
-    <div class="container-custom">
-      <div class="mx-auto max-w-4xl">
-        <h2 class="mb-6 text-3xl font-bold">Who Does the Work</h2>
-        <p class="text-lg leading-relaxed text-text-secondary">
-          Devin MacArthur. A data-systems engineer who has built the daily pipelines, CRM
-          integrations, document-extraction tools, and internal platforms behind a statewide
-          membership organization, and who ships production systems with agentic
-          AI tooling. One engineer, start to finish. No handoffs. <a href="/about/" class="link">More on the About page.</a>
-        </p>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="section bg-dark-surface">
+  <section class="section border-t border-dark-border">
     <div class="container-custom">
-      <div class="mx-auto max-w-2xl text-center">
-        <h2 class="mb-6 text-3xl font-bold">Start With a Call</h2>
-        <p class="mb-8 text-text-secondary">
-          Thirty minutes. Tell us the process that eats the most time. If a spreadsheet would fix
-          it, we will say so on the call.
+      <div class="mx-auto max-w-2xl">
+        <h2 class="mb-6 text-3xl font-bold">Questions</h2>
+        <p class="mb-8 text-lg text-text-secondary">
+          The fastest way to find out if this fits is a thirty-minute call. Email me with the
+          process in mind and a couple of times that work.
         </p>
-        <a href="/contact/" class="btn btn-primary">Book a call</a>
+        <a href="/contact/" class="btn btn-primary">Contact</a>
       </div>
     </div>
   </section>
