@@ -1,0 +1,175 @@
+---
+import Layout from '../layouts/Layout.astro';
+// TODO before merge (operator decision): the founder is currently unnamed on this page.
+// Decide which public name (and optionally email) to publish, then fill in the
+// "Who Runs This" section. Anonymity + service business is a hard sell; a named
+// operator with modest claims is the strongest configuration.
+---
+
+<Layout
+  title="About"
+  description="About Cascadia Mobile Research — an independent field-data and spatial computing lab in Portland, Oregon"
+>
+  <!-- Hero -->
+  <section class="hero-topo section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <h1 class="mb-8 text-center text-4xl font-bold tracking-tight sm:text-5xl">About</h1>
+        <div class="mb-8 border-l-4 border-accent-blue bg-dark-surface/50 p-6 text-lg leading-relaxed">
+          <p class="text-text-primary">
+            <strong>Cascadia Mobile Research LLC is an independent lab in Portland, Oregon that
+            pairs field data collection — drones, LiDAR, and sensors — with spatial data processing
+            on infrastructure it owns and operates.</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Statement -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl space-y-6 text-lg leading-relaxed text-text-secondary">
+        <p>
+          The premise is simple: the interesting problems in small-scale geospatial work live in
+          the whole pipeline, not just the aircraft. Anyone can buy a drone. Producing a
+          measurement someone can rely on — knowing its accuracy and documenting its
+          provenance — takes instruments, compute, and method working together. That combination
+          is what this lab builds.
+        </p>
+        <p>
+          The structure is deliberate: client services and open research under one roof. Services
+          keep the lab honest about what actually matters in the field and fund the equipment and
+          time that research requires. Research keeps the services honest — every capability we
+          sell is one we can demonstrate, with the testing written up as experiments complete.
+          Neither side is decoration for the other.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Operator -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            The lab is run by one engineer, with a background in data systems and graduate
+            training in geography and spatial analysis. The person who scopes your project is
+            the one who flies it, processes it, and stands behind the numbers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Principles -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-3xl font-bold">Principles</h2>
+        <div class="space-y-6 text-text-secondary">
+          <div class="card">
+            <h3 class="mb-3 text-lg font-semibold text-text-primary">
+              Empirical Grounding
+            </h3>
+            <p class="leading-relaxed">
+              Claims are backed by measurement. Methods are evaluated on real hardware and real
+              sites, and accuracy limits are stated rather than implied. Hypotheses are tested,
+              not assumed.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="mb-3 text-lg font-semibold text-text-primary">
+              Open Methods
+            </h3>
+            <p class="leading-relaxed">
+              Experiments, benchmarks, and methodology are published in the open — including
+              failures and negative results. Clients can read the testing behind the services;
+              other practitioners can check the work.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="mb-3 text-lg font-semibold text-text-primary">
+              Data Sovereignty
+            </h3>
+            <p class="leading-relaxed">
+              Processing runs on infrastructure the lab owns. Client data does not pass through
+              third-party cloud platforms, and the full chain from capture to deliverable can be
+              documented.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="mb-3 text-lg font-semibold text-text-primary">
+              Long-Term Orientation
+            </h3>
+            <p class="leading-relaxed">
+              The lab is built for sustained work over years: instruments that are maintained,
+              documentation that serves as institutional memory, and a notebook that compounds
+              rather than resets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What This Is / Is Not -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-3xl font-bold">What This Is — and Isn't</h2>
+        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+          <p>
+            <strong class="text-text-primary">This is a working business.</strong> Cascadia Mobile
+            Research LLC is a registered Oregon company that takes on client work. Revenue funds
+            the instruments, the infrastructure, and the research time.
+          </p>
+          <p>
+            <strong class="text-text-primary">This is also a real lab.</strong> The open notebook
+            isn't marketing garnish — experiments are run and documented to the standards described
+            in the <a href="/research/" class="link">lab notes</a>, whether or not a client is
+            paying for them.
+          </p>
+          <p>
+            <strong class="text-text-primary">This is not a venture-backed startup.</strong> There
+            is no growth-at-all-costs trajectory and no investor deck. The goal is a durable,
+            competent practice that compounds slowly.
+          </p>
+          <p>
+            <strong class="text-text-primary">This is not a cloud service.</strong> All processing
+            runs on self-hosted, physical infrastructure — a choice made for data governance,
+            cost control, and the ability to understand our own pipeline end to end.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="mb-6 text-3xl font-bold">Contact</h2>
+        <p class="mb-8 text-text-secondary">
+          While our contact page is being set up, the way to reach the lab is a short project
+          inquiry form on GitHub — describe your site and your question, leave a way to reach you,
+          and we'll follow up. A free GitHub account is required.
+        </p>
+        <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a
+            href="https://github.com/cascadia-systems-lab/cascadia-lab.github.io/issues/new?template=inquiry.yml"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            Open a Project Inquiry
+          </a>
+          <a href="/services/" class="btn btn-secondary">
+            View Services
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
