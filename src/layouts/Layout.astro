@@ -10,12 +10,12 @@ interface Props {
 
 const {
   title,
-  description = 'Devin MacArthur builds the systems that replace the work your staff does by hand. A fixed thirty-day engagement, from Portland, Oregon.',
+  description = 'Cascadia Systems builds the systems that replace the work your staff does by hand. A fixed thirty-day engagement, from Portland, Oregon.',
 } = Astro.props;
 
 const fullTitle =
   title === 'Cascadia Systems'
-    ? 'Cascadia Systems — Devin MacArthur, data systems and automation, Portland, Oregon'
+    ? 'Cascadia Systems — data systems and automation, Portland, Oregon'
     : `${title} | Cascadia Systems`;
 const ogImage = new URL('/og-image.png', Astro.site);
 const canonical = new URL(Astro.url.pathname, Astro.site);
