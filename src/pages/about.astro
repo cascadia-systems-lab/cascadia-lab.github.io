@@ -1,14 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-// TODO before merge (operator decision): the founder is currently unnamed on this page.
-// Decide which public name (and optionally email) to publish, then fill in the
-// "Who Runs This" section. Anonymity + service business is a hard sell; a named
-// operator with modest claims is the strongest configuration.
 ---
 
 <Layout
   title="About"
-  description="About Cascadia Mobile Research — an independent field-data and spatial computing lab in Portland, Oregon"
+  description="About Cascadia Systems — operations automation, data systems, and AI engineering, plus a field-data lab, in Portland, Oregon"
 >
   <!-- Hero -->
   <section class="hero-topo section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
@@ -17,46 +13,40 @@ import Layout from '../layouts/Layout.astro';
         <h1 class="mb-8 text-center text-4xl font-bold tracking-tight sm:text-5xl">About</h1>
         <div class="mb-8 border-l-4 border-accent-blue bg-dark-surface/50 p-6 text-lg leading-relaxed">
           <p class="text-text-primary">
-            <strong>Cascadia Mobile Research LLC is an independent lab in Portland, Oregon that
-            pairs field data collection — drones, LiDAR, and sensors — with spatial data processing
-            on infrastructure it owns and operates.</strong>
+            <strong>Cascadia Systems is a one-engineer practice in Portland, Oregon. We build the
+            systems that sit between an organization's people and its data: pipelines,
+            integrations, document extraction, and internal tools that replace work done by
+            hand.</strong>
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Core Statement -->
+  <!-- Who runs this -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
-      <div class="mx-auto max-w-4xl space-y-6 text-lg leading-relaxed text-text-secondary">
-        <p>
-          The premise is simple: the interesting problems in small-scale geospatial work live in
-          the whole pipeline, not just the aircraft. Anyone can buy a drone. Producing a
-          measurement someone can rely on — knowing its accuracy and documenting its
-          provenance — takes instruments, compute, and method working together. That combination
-          is what this lab builds.
-        </p>
-        <p>
-          The structure is deliberate: client services and open research under one roof. Services
-          keep the lab honest about what actually matters in the field and fund the equipment and
-          time that research requires. Research keeps the services honest — every capability we
-          sell is one we can demonstrate, with the testing written up as experiments complete.
-          Neither side is decoration for the other.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- The Operator -->
-  <section class="section bg-dark-surface">
-    <div class="container-custom">
       <div class="mx-auto max-w-4xl">
+        <h2 class="mb-6 text-3xl font-bold">Who Runs This</h2>
         <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
           <p>
-            The lab is run by one engineer, with a background in data systems and graduate
-            training in geography and spatial analysis. The person who scopes your project is
-            the one who flies it, processes it, and stands behind the numbers.
+            <strong class="text-text-primary">Devin MacArthur</strong> is a data-systems engineer.
+            His day-to-day work is the data platform and automation behind a 41,000-member
+            statewide organization: a daily pipeline over a Salesforce-based CRM, a routing layer
+            that links field staff to the 230 local units they serve, automated financial analysis
+            across 216 school districts, an AI document extractor that turns scanned applications
+            into records, and the platform behind the organization's largest annual governance
+            event.
+          </p>
+          <p>
+            Outside that work he runs a personal operations system built on agentic AI tooling,
+            local AI infrastructure on hardware he owns, and a field-data lab with a mapping drone
+            and a LiDAR scanner. He has graduate training in urban studies and spatial analysis at
+            Portland State University.
+          </p>
+          <p>
+            The person who scopes your engagement is the one who builds it, documents it, and
+            trains your team on it. There are no handoffs because there is no one to hand off to.
           </p>
         </div>
       </div>
@@ -64,49 +54,38 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Principles -->
-  <section class="section border-t border-dark-border">
+  <section class="section bg-dark-surface">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <h2 class="mb-8 text-3xl font-bold">Principles</h2>
+        <h2 class="mb-8 text-3xl font-bold">How We Work</h2>
         <div class="space-y-6 text-text-secondary">
           <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-text-primary">
-              Empirical Grounding
-            </h3>
+            <h3 class="mb-3 text-lg font-semibold text-text-primary">Sit with the people who do the work</h3>
             <p class="leading-relaxed">
-              Claims are backed by measurement. Methods are evaluated on real hardware and real
-              sites, and accuracy limits are stated rather than implied. Hypotheses are tested,
-              not assumed.
+              Every engagement starts with interviews, not requirements documents. The process
+              as it actually runs is never the process on the org chart.
             </p>
           </div>
           <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-text-primary">
-              Open Methods
-            </h3>
+            <h3 class="mb-3 text-lg font-semibold text-text-primary">Production or nothing</h3>
             <p class="leading-relaxed">
-              Experiments, benchmarks, and methodology are published in the open — including
-              failures and negative results. Clients can read the testing behind the services;
-              other practitioners can check the work.
+              We do not deliver prototypes. What ships runs on a schedule, logs what it did,
+              handles the errors that will happen, and comes with a runbook.
             </p>
           </div>
           <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-text-primary">
-              Data Sovereignty
-            </h3>
+            <h3 class="mb-3 text-lg font-semibold text-text-primary">Your data stays yours</h3>
             <p class="leading-relaxed">
-              Processing runs on infrastructure the lab owns. Client data does not pass through
-              third-party cloud platforms, and the full chain from capture to deliverable can be
-              documented.
+              Read-only access first. Sensitive processing in your environment or on
+              infrastructure we own. Hosted AI only under a data-processing agreement. Everything
+              built is handed to you, credentials rotated, working copies deleted.
             </p>
           </div>
           <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-text-primary">
-              Long-Term Orientation
-            </h3>
+            <h3 class="mb-3 text-lg font-semibold text-text-primary">Say so when it's a spreadsheet</h3>
             <p class="leading-relaxed">
-              The lab is built for sustained work over years: instruments that are maintained,
-              documentation that serves as institutional memory, and a notebook that compounds
-              rather than resets.
+              Not every problem needs software, and most do not need AI. The roadmap says which
+              is which, and the free call does too.
             </p>
           </div>
         </div>
@@ -114,32 +93,24 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- What This Is / Is Not -->
+  <!-- The lab -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <h2 class="mb-8 text-3xl font-bold">What This Is — and Isn't</h2>
+        <h2 class="mb-6 text-3xl font-bold">The Lab</h2>
         <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
           <p>
-            <strong class="text-text-primary">This is a working business.</strong> Cascadia Mobile
-            Research LLC is a registered Oregon company that takes on client work. Revenue funds
-            the instruments, the infrastructure, and the research time.
+            Cascadia Systems began as Cascadia Mobile Research, a field-data lab pairing drone and
+            LiDAR capture with spatial processing on infrastructure it owns. That work continues
+            on the <a href="/field-data/" class="link">Field Data</a> page, and the
+            <a href="/research/" class="link">lab notes</a> still publish methods, benchmarks, and
+            negative results as they complete.
           </p>
           <p>
-            <strong class="text-text-primary">This is also a real lab.</strong> The open notebook
-            isn't marketing garnish — experiments are run and documented to the standards described
-            in the <a href="/research/" class="link">lab notes</a>, whether or not a client is
-            paying for them.
-          </p>
-          <p>
-            <strong class="text-text-primary">This is not a venture-backed startup.</strong> There
-            is no growth-at-all-costs trajectory and no investor deck. The goal is a durable,
-            competent practice that compounds slowly.
-          </p>
-          <p>
-            <strong class="text-text-primary">This is not a cloud service.</strong> All processing
-            runs on self-hosted, physical infrastructure — a choice made for data governance,
-            cost control, and the ability to understand our own pipeline end to end.
+            <strong class="text-text-primary">This is a working business, not a venture-backed
+            startup.</strong> Cascadia Mobile Research LLC is a registered Oregon company. There
+            is no growth-at-all-costs trajectory. The goal is a durable, competent practice that
+            compounds slowly.
           </p>
         </div>
       </div>
@@ -152,22 +123,12 @@ import Layout from '../layouts/Layout.astro';
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="mb-6 text-3xl font-bold">Contact</h2>
         <p class="mb-8 text-text-secondary">
-          While our contact page is being set up, the way to reach the lab is a short project
-          inquiry form on GitHub — describe your site and your question, leave a way to reach you,
-          and we'll follow up. A free GitHub account is required.
+          <a href="mailto:devin.macarthur@cascadiasystems.org" class="link">devin.macarthur@cascadiasystems.org</a>
+          &middot; we reply within two business days.
         </p>
         <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            href="https://github.com/cascadia-systems-lab/cascadia-lab.github.io/issues/new?template=inquiry.yml"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-          >
-            Open a Project Inquiry
-          </a>
-          <a href="/services/" class="btn btn-secondary">
-            View Services
-          </a>
+          <a href="/contact/" class="btn btn-primary">Book a 30-minute call</a>
+          <a href="/services/" class="btn btn-secondary">View Services</a>
         </div>
       </div>
     </div>

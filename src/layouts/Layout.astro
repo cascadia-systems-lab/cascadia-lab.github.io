@@ -10,13 +10,13 @@ interface Props {
 
 const {
   title,
-  description = 'Drone-based field data collection and self-hosted spatial data processing — Portland, Oregon',
+  description = 'Operations automation, data systems, and AI engineering for organizations that run on too much manual work — Portland, Oregon',
 } = Astro.props;
 
 const fullTitle =
-  title === 'Cascadia Mobile Research'
-    ? 'Cascadia Mobile Research — Drone Mapping, LiDAR & Spatial Data | Portland, Oregon'
-    : `${title} | Cascadia Mobile Research`;
+  title === 'Cascadia Systems'
+    ? 'Cascadia Systems — Operations Automation, Data Systems & AI Engineering | Portland, Oregon'
+    : `${title} | Cascadia Systems`;
 const ogImage = new URL('/og-image.png', Astro.site);
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -33,7 +33,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <!-- SEO Meta Tags -->
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonical} />
-    <meta name="author" content="Cascadia Mobile Research" />
+    <meta name="author" content="Cascadia Systems" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />

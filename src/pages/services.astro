@@ -1,17 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-// TODO before merge (operator decisions):
-// 1. Confirm FAA Part 107 certificate status — the Compliance section below assumes
-//    certification. If not yet in hand, change to "operations will be conducted under..."
-//    and do not accept paid flight work until certified.
-// 2. Insurance: no coverage is claimed on this page. If liability coverage exists,
-//    add it to the Compliance section — many clients ask.
-// 3. Contact method: this page routes inquiries to GitHub until an email is chosen.
 ---
 
 <Layout
   title="Services"
-  description="Drone mapping, photogrammetry, LiDAR scanning, aerial inspection, and GIS analysis services in Portland, Oregon and the Pacific Northwest"
+  description="The 30-Day Operations Diagnostic, fixed-scope automation builds, and embedded engineering for organizations in Portland, Oregon and beyond"
 >
   <!-- Hero -->
   <section class="hero-topo section bg-gradient-to-b from-dark-bg via-dark-surface to-dark-bg">
@@ -19,150 +12,188 @@ import Layout from '../layouts/Layout.astro';
       <div class="mx-auto max-w-3xl text-center">
         <h1 class="mb-6 text-4xl font-bold tracking-tight sm:text-5xl">Services</h1>
         <p class="text-lg text-text-secondary">
-          Field data collection and spatial data products for property owners, builders,
-          engineering and surveying firms, and public agencies across the Pacific Northwest.
+          Operations automation, data systems, and AI engineering. Fixed price, one engineer,
+          production results. Field data services are on their <a href="/field-data/" class="link">own page</a>.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Service Lines -->
-  <section class="section border-t border-dark-border">
-    <div class="container-custom">
-      <div class="space-y-6">
-        <div class="card">
-          <h2 class="mb-3 text-xl font-semibold text-accent-blue">Aerial Mapping &amp; Photogrammetry</h2>
-          <p class="mb-4 text-text-secondary">
-            Drone-captured imagery processed into georeferenced orthomosaic maps, digital elevation
-            models, and textured 3D reconstructions. Suited to site documentation, earthwork and
-            stockpile estimation, and planning work.
-          </p>
-          <p class="text-sm text-text-muted">
-            Deliverables: GeoTIFF orthomosaics · elevation models · dense point clouds · textured meshes ·
-            processing report with accuracy notes
-          </p>
-        </div>
-
-        <div class="card">
-          <h2 class="mb-3 text-xl font-semibold text-accent-cyan">LiDAR Scanning &amp; 3D Modeling</h2>
-          <p class="mb-4 text-text-secondary">
-            Ground-based 3D LiDAR capture of structures, sites, and interiors — including spaces
-            aerial photogrammetry can't reach. Scans are registered with SLAM processing and
-            delivered as point clouds or cleaned, measurable 3D models.
-          </p>
-          <p class="text-sm text-text-muted">
-            Deliverables: registered point clouds (LAS/PLY) · cleaned meshes · dimensioned model views
-          </p>
-        </div>
-
-        <div class="card">
-          <h2 class="mb-3 text-xl font-semibold text-accent-green">Aerial Inspection &amp; Progress Monitoring</h2>
-          <p class="mb-4 text-text-secondary">
-            Visual documentation of roofs, structures, and hard-to-reach assets, and recurring
-            construction progress capture flown to a repeatable plan so conditions can be compared
-            accurately over time.
-          </p>
-          <p class="text-sm text-text-muted">
-            Deliverables: annotated photo sets · comparison series · condition summaries
-          </p>
-        </div>
-
-        <div class="card">
-          <h2 class="mb-3 text-xl font-semibold text-accent-purple">GIS &amp; Spatial Analysis</h2>
-          <p class="mb-4 text-text-secondary">
-            Analysis and cartography built on captured or existing data: change detection, terrain
-            and viewshed analysis, corridor studies, and custom mapping. Grounded in graduate
-            training in geography and spatial analysis.
-          </p>
-          <p class="text-sm text-text-muted">
-            Deliverables: analysis reports · print and web maps · GIS-ready data layers
-          </p>
-        </div>
-
-        <div class="card">
-          <h2 class="mb-3 text-xl font-semibold text-accent-blue">Aerial Photo &amp; Video</h2>
-          <p class="mb-4 text-text-secondary">
-            Commercial aerial photography and videography for real estate, marketing, and events —
-            the straightforward version of what we do.
-          </p>
-          <p class="text-sm text-text-muted">
-            Deliverables: edited stills and video in your required formats
-          </p>
-        </div>
-
-        <div class="card border-dashed">
-          <div class="mb-3 flex items-center gap-3">
-            <h2 class="text-xl font-semibold text-text-secondary">Geophysical Survey &amp; Custom Sensing</h2>
-            <span class="inline-flex items-center rounded-full bg-accent-purple/20 px-3 py-1 text-xs font-medium text-accent-purple">
-              In Development
-            </span>
-          </div>
-          <p class="text-text-secondary">
-            Drone magnetometry for mineral exploration and custom sensor integration are on the
-            lab's development roadmap. If you have a sensing problem that doesn't fit a standard
-            service, we're interested in talking about it.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How We Work -->
-  <section class="section bg-dark-surface">
-    <div class="container-custom">
-      <div class="mx-auto max-w-4xl">
-        <h2 class="mb-8 text-3xl font-bold">How We Work</h2>
-        <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
-          <p>
-            Every job starts with a scoping conversation: what question the data needs to answer,
-            what accuracy it requires, and what format it has to arrive in. From there we plan the
-            capture, fly or scan the site, process everything in-house, and deliver the products
-            along with notes on methodology and accuracy limits.
-          </p>
-          <p>
-            <strong class="text-text-primary">Your data stays with us.</strong> Processing runs on
-            infrastructure we own — imagery and scan data are not uploaded to third-party cloud
-            platforms. For public agencies and clients with data-governance requirements, we can
-            document the full chain of custody from capture to delivery.
-          </p>
-          <p>
-            We are a small operation and honest about it: one operator, carefully maintained
-            instruments, and open methods. What we commit to, we can demonstrate — the
-            <a href="/research/" class="link">lab notes</a> document that testing as it's
-            written up.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Compliance -->
+  <!-- Diagnostic -->
   <section class="section border-t border-dark-border">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl">
-        <h2 class="mb-8 text-3xl font-bold">Compliance &amp; Safety</h2>
-        <div class="grid gap-6 md:grid-cols-2">
+        <div class="mb-3 flex flex-wrap items-center gap-3">
+          <h2 class="text-3xl font-bold">The 30-Day Operations Diagnostic</h2>
+          <span class="inline-flex items-center rounded-full bg-accent-green/20 px-3 py-1 text-xs font-medium text-accent-green">
+            Available now
+          </span>
+        </div>
+        <p class="mb-8 text-lg text-text-secondary">
+          <strong class="text-text-primary">$12,000. Half at signing, half at delivery. Thirty days from kickoff.</strong>
+        </p>
+
+        <div class="space-y-6">
           <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-accent-blue">FAA Part 107 Operations</h3>
-            <p class="text-sm leading-relaxed text-text-secondary">
-              Commercial flights are conducted under FAA Part 107 small-UAS rules, with airspace
-              authorization obtained before any flight in controlled airspace and site-specific
-              safety assessment before every operation.
+            <h3 class="mb-3 text-xl font-semibold text-accent-blue">1 · A process map of your five costliest manual workflows</h3>
+            <p class="text-text-secondary">
+              Who does what, how many hours a month it takes, where errors and delays enter, and
+              what each one costs you. Built from interviews with the people who do the work, not
+              from an org chart.
             </p>
           </div>
           <div class="card">
-            <h3 class="mb-3 text-lg font-semibold text-accent-cyan">Lightweight by Design</h3>
+            <h3 class="mb-3 text-xl font-semibold text-accent-cyan">2 · One workflow automated and running in production</h3>
+            <p class="text-text-secondary">
+              Not a prototype. The one with the best ratio of pain to effort. It ships with an
+              audit log, error handling, a runbook your team can follow, and a 30-minute training
+              session.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="mb-3 text-xl font-semibold text-accent-green">3 · A 12-month roadmap</h3>
+            <p class="text-text-secondary">
+              What to automate next and in what order, what to build versus buy, what each item
+              costs, and where AI genuinely helps versus where a spreadsheet is the right answer.
+            </p>
+          </div>
+        </div>
+
+        <h3 class="mb-4 mt-12 text-2xl font-bold">How the 30 days run</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm text-text-secondary">
+            <thead class="text-text-primary">
+              <tr class="border-b border-dark-border">
+                <th class="py-2 pr-4">Week</th>
+                <th class="py-2">What happens</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-dark-border"><td class="py-2 pr-4">1</td><td class="py-2">Kickoff. Interviews with 5–8 staff. Read-only access to the systems involved.</td></tr>
+              <tr class="border-b border-dark-border"><td class="py-2 pr-4">2</td><td class="py-2">Process map delivered. Together we pick the workflow to automate. Scope agreed in writing.</td></tr>
+              <tr class="border-b border-dark-border"><td class="py-2 pr-4">3</td><td class="py-2">Build, in your environment or ours, under your data-handling rules.</td></tr>
+              <tr><td class="py-2 pr-4">4</td><td class="py-2">Production cutover, runbook, training. Roadmap delivered. Closing session with leadership.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="mb-4 mt-12 text-2xl font-bold">What we need from you</h3>
+        <ul class="list-disc space-y-2 pl-6 text-text-secondary">
+          <li>One sponsor who can make decisions inside 48 hours.</li>
+          <li>Access to the people who do the work, about six hours of their time in total.</li>
+          <li>Read access to the systems in scope. Write access only for the workflow we automate, scoped and revocable.</li>
+        </ul>
+
+        <div class="mt-10">
+          <a href="/contact/" class="btn btn-primary">Book a 30-minute call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fixed-scope builds -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <div class="mb-3 flex flex-wrap items-center gap-3">
+          <h2 class="text-3xl font-bold">Fixed-Scope Builds</h2>
+          <span class="inline-flex items-center rounded-full bg-accent-green/20 px-3 py-1 text-xs font-medium text-accent-green">
+            Available now
+          </span>
+        </div>
+        <p class="mb-6 text-lg text-text-secondary">
+          <strong class="text-text-primary">$5,000–$15,000 per workflow, quoted after a call.</strong>
+        </p>
+        <p class="text-text-secondary">
+          For organizations that already know the process they want gone. Intake forms that file
+          themselves. Reconciliation that names every mismatch. Reports that assemble from the
+          source systems every morning. Documents that become records without re-keying. Each
+          build ships with an audit log, a runbook, and training, and runs without us.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Embedded -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <div class="mb-3 flex flex-wrap items-center gap-3">
+          <h2 class="text-3xl font-bold">Embedded Engineering</h2>
+          <span class="inline-flex items-center rounded-full bg-accent-purple/20 px-3 py-1 text-xs font-medium text-accent-purple">
+            From early 2027
+          </span>
+        </div>
+        <p class="mb-6 text-lg text-text-secondary">
+          <strong class="text-text-primary">$25,000–$35,000 per month. Six-month minimum. Roughly half-time presence.</strong>
+        </p>
+        <div class="space-y-4 text-text-secondary">
+          <p>
+            An engineer inside your organization rather than a vendor outside it. In the first 90
+            days, your worst manual process runs itself with an audit trail and a runbook. After
+            that, one new workflow into production every 30 to 45 days.
+          </p>
+          <p>
+            Scope in writing every 30 days. A one-page written report every week. A 45-minute
+            steering session with leadership every month. Everything documented as it is built,
+            so that if the engagement ended tomorrow your team could run what exists.
+          </p>
+          <p>
+            Not staff augmentation, not an agency, not a black box. Your systems, your data, your
+            repositories.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data handling -->
+  <section class="section bg-dark-surface">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-8 text-3xl font-bold">Data Handling</h2>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="card">
+            <h3 class="mb-3 text-lg font-semibold text-accent-blue">In your environment</h3>
             <p class="text-sm leading-relaxed text-text-secondary">
-              Our primary aerial platform weighs under 250 grams — a deliberate choice that reduces
-              risk to people and property while still producing mapping-grade imagery.
+              Code runs on your infrastructure. Nothing leaves.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="mb-3 text-lg font-semibold text-accent-cyan">On ours</h3>
+            <p class="text-sm leading-relaxed text-text-secondary">
+              For sensitive data, processing runs on hardware we own and control, with no
+              third-party model provider. Transcription, document extraction, and classification
+              can all run this way.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="mb-3 text-lg font-semibold text-accent-green">Hosted, under agreement</h3>
+            <p class="text-sm leading-relaxed text-text-secondary">
+              Where a hosted model is the right tool: a provider with a signed data-processing
+              agreement, no training on your data, and configurable retention. Named in scope.
             </p>
           </div>
         </div>
         <p class="mt-8 text-sm leading-relaxed text-text-muted">
-          <strong class="text-text-secondary">Scope note:</strong> our deliverables are mapping and
-          documentation products, not boundary or legal surveys. We are not licensed Professional
-          Land Surveyors; where certified survey control or legally recorded results are required,
-          we work with or under a licensed PLS.
+          Named accounts only, credentials rotated to you at handover, working copies deleted at
+          engagement end and confirmed in writing. We never train models on your data and never
+          reuse anything from one client for another. Full data-handling sheet available on request.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who -->
+  <section class="section border-t border-dark-border">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="mb-6 text-3xl font-bold">Who Does the Work</h2>
+        <p class="text-lg leading-relaxed text-text-secondary">
+          Devin MacArthur. A data-systems engineer who has built the daily pipelines, CRM
+          integrations, document-extraction tools, and internal platforms behind a
+          41,000-member statewide organization, and who ships production systems with agentic
+          AI tooling. One engineer, start to finish. No handoffs. <a href="/about/" class="link">More on the About page.</a>
         </p>
       </div>
     </div>
@@ -172,20 +203,12 @@ import Layout from '../layouts/Layout.astro';
   <section class="section bg-dark-surface">
     <div class="container-custom">
       <div class="mx-auto max-w-2xl text-center">
-        <h2 class="mb-6 text-3xl font-bold">Start a Conversation</h2>
+        <h2 class="mb-6 text-3xl font-bold">Start With a Call</h2>
         <p class="mb-8 text-text-secondary">
-          Tell us about the site, the question you need answered, and the deliverable you have in
-          mind. While our contact page is being set up, inquiries run through a short GitHub form —
-          it takes a minute and a free GitHub account, and we'll follow up from there.
+          Thirty minutes. Tell us the process that eats the most time. If a spreadsheet would fix
+          it, we will say so on the call.
         </p>
-        <a
-          href="https://github.com/cascadia-systems-lab/cascadia-lab.github.io/issues/new?template=inquiry.yml"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary"
-        >
-          Open a Project Inquiry
-        </a>
+        <a href="/contact/" class="btn btn-primary">Book a call</a>
       </div>
     </div>
   </section>

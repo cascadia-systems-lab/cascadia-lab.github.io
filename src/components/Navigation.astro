@@ -4,10 +4,10 @@ const currentPath = Astro.url.pathname;
 const navItems = [
   { name: 'Home', path: '/' },
   { name: 'Services', path: '/services/' },
+  { name: 'Field Data', path: '/field-data/' },
   { name: 'Lab Notes', path: '/research/' },
-  { name: 'Infrastructure', path: '/infrastructure/' },
-  { name: 'Documentation', path: '/documentation/' },
   { name: 'About', path: '/about/' },
+  { name: 'Contact', path: '/contact/' },
 ];
 
 function isActive(path: string) {
@@ -38,7 +38,7 @@ function isActive(path: string) {
             </g>
             <circle cx="54" cy="44" r="5.5" fill="#ffffff" />
           </svg>
-          <span class="text-lg font-semibold">Cascadia Mobile Research</span>
+          <span class="text-lg font-semibold">Cascadia Systems</span>
         </a>
       </div>
 
