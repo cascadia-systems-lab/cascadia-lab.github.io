@@ -7,10 +7,10 @@ analysis, the open lab notebook, and the infrastructure and documentation pages.
 Kept here on purpose. Nothing in this folder is built or served. Astro only builds files under
 `src/pages/`, so these render nowhere.
 
-- `pages/` — index, about, services, research, infrastructure, documentation as they were at
+- `pages/` (stored as `.astro.txt` so the site build ignores them) — index, about, services, research, infrastructure, documentation as they were at
   commit `1e70682`, plus `field-data.astro`, the briefly published consolidation of the drone
   and LiDAR service lines.
 - `components/` and `Layout.astro` — the matching navigation, footer, and layout.
 
-To bring any page back, copy it into `src/pages/` and add it to the nav in
+To bring any page back, copy it into `src/pages/`, drop the `.txt` suffix, and add it to the nav in
 `src/components/Navigation.astro`. The images they reference are still in `public/images/`.
